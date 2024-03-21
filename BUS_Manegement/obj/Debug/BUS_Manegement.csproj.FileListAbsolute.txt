@@ -20,3 +20,14 @@ H:\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.csproj.CoreCompileInputs.cache
 H:\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.csproj.CopyComplete
 H:\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.dll
 H:\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.pdb
+D:\code\c#\qlmt\BUS_Manegement\bin\Debug\BUS_Manegement.dll
+D:\code\c#\qlmt\BUS_Manegement\bin\Debug\BUS_Manegement.pdb
+D:\code\c#\qlmt\BUS_Manegement\bin\Debug\DAL_Manegement.dll
+D:\code\c#\qlmt\BUS_Manegement\bin\Debug\DTO_Manegement.dll
+D:\code\c#\qlmt\BUS_Manegement\bin\Debug\DAL_Manegement.pdb
+D:\code\c#\qlmt\BUS_Manegement\bin\Debug\DTO_Manegement.pdb
+D:\code\c#\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.csproj.AssemblyReference.cache
+D:\code\c#\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.csproj.CoreCompileInputs.cache
+D:\code\c#\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.csproj.CopyComplete
+D:\code\c#\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.dll
+D:\code\c#\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.pdb

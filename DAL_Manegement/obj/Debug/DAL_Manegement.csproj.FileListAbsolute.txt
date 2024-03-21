@@ -16,3 +16,12 @@ H:\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.csproj.CoreCompileInputs.cache
 H:\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.csproj.CopyComplete
 H:\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.dll
 H:\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.pdb
+D:\code\c#\qlmt\DAL_Manegement\bin\Debug\DAL_Manegement.dll
+D:\code\c#\qlmt\DAL_Manegement\bin\Debug\DAL_Manegement.pdb
+D:\code\c#\qlmt\DAL_Manegement\bin\Debug\DTO_Manegement.dll
+D:\code\c#\qlmt\DAL_Manegement\bin\Debug\DTO_Manegement.pdb
+D:\code\c#\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.csproj.AssemblyReference.cache
+D:\code\c#\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.csproj.CoreCompileInputs.cache
+D:\code\c#\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.csproj.CopyComplete
+D:\code\c#\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.dll
+D:\code\c#\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.pdb
