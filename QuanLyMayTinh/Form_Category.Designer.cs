@@ -34,6 +34,7 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.excelExport = new System.Windows.Forms.Button();
             this.deleteCate = new System.Windows.Forms.Button();
             this.saveCate = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
@@ -51,6 +52,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.import_excel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -110,6 +112,8 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.import_excel);
+            this.groupBox5.Controls.Add(this.excelExport);
             this.groupBox5.Controls.Add(this.deleteCate);
             this.groupBox5.Controls.Add(this.saveCate);
             this.groupBox5.Controls.Add(this.cancel);
@@ -126,6 +130,18 @@
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Form";
+            // 
+            // excelExport
+            // 
+            this.excelExport.Image = ((System.Drawing.Image)(resources.GetObject("excelExport.Image")));
+            this.excelExport.Location = new System.Drawing.Point(47, 558);
+            this.excelExport.Name = "excelExport";
+            this.excelExport.Size = new System.Drawing.Size(143, 74);
+            this.excelExport.TabIndex = 9;
+            this.excelExport.Text = "Xuất Excel";
+            this.excelExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.excelExport.UseVisualStyleBackColor = true;
+            this.excelExport.Click += new System.EventHandler(this.excelExport_Click);
             // 
             // deleteCate
             // 
@@ -306,6 +322,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách danh mục";
             // 
+            // import_excel
+            // 
+            this.import_excel.Location = new System.Drawing.Point(246, 566);
+            this.import_excel.Name = "import_excel";
+            this.import_excel.Size = new System.Drawing.Size(143, 66);
+            this.import_excel.TabIndex = 10;
+            this.import_excel.Text = "Nhập Excel";
+            this.import_excel.UseVisualStyleBackColor = true;
+            this.import_excel.Click += new System.EventHandler(this.import_excel_Click);
+            // 
             // Form_Category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -353,6 +379,8 @@
         private System.Windows.Forms.Button saveCate;
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Button addCate;
+        private System.Windows.Forms.Button excelExport;
+        private System.Windows.Forms.Button import_excel;
     }
 }
 
