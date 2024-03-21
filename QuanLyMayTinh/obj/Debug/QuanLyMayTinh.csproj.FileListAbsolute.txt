@@ -32,3 +32,4 @@ H:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.exe
 H:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.pdb
 H:\qlmt\QuanLyMayTinh\bin\Debug\DAL_Manegement.dll
 H:\qlmt\QuanLyMayTinh\bin\Debug\DAL_Manegement.pdb
+H:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Sidebar.resources
