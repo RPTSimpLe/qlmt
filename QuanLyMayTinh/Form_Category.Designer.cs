@@ -34,6 +34,7 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.excelExport = new System.Windows.Forms.Button();
             this.deleteCate = new System.Windows.Forms.Button();
             this.saveCate = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
@@ -110,6 +111,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.excelExport);
             this.groupBox5.Controls.Add(this.deleteCate);
             this.groupBox5.Controls.Add(this.saveCate);
             this.groupBox5.Controls.Add(this.cancel);
@@ -126,6 +128,18 @@
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Form";
+            // 
+            // excelExport
+            // 
+            this.excelExport.Image = ((System.Drawing.Image)(resources.GetObject("excelExport.Image")));
+            this.excelExport.Location = new System.Drawing.Point(47, 558);
+            this.excelExport.Name = "excelExport";
+            this.excelExport.Size = new System.Drawing.Size(143, 74);
+            this.excelExport.TabIndex = 9;
+            this.excelExport.Text = "Xuất Excel";
+            this.excelExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.excelExport.UseVisualStyleBackColor = true;
+            this.excelExport.Click += new System.EventHandler(this.excelExport_Click);
             // 
             // deleteCate
             // 
@@ -353,6 +367,7 @@
         private System.Windows.Forms.Button saveCate;
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Button addCate;
+        private System.Windows.Forms.Button excelExport;
     }
 }
 

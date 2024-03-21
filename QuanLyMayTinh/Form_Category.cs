@@ -9,6 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using OfficeOpenXml;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace QuanLyMayTinh
 {
@@ -146,6 +149,44 @@ namespace QuanLyMayTinh
                 MessageBox.Show("Không có kết quả nào được tìm thấy.");
             }
         }
+        private void ExportExcel(string path)
+        {
+            Excel.Application application = new Excel.Application();
+            application.Application.Workbooks.Add(Type.Missing);
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
 
+                application.Cells[1, i + 1] = dataGridView1.Columns[i].HeaderText;
+            }
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+                    application.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value;
+                 
+                }
+            }
+            application.Columns.AutoFit();
+            application.ActiveWorkbook.SaveCopyAs(path);
+            application.ActiveWorkbook.Saved = true;
+        }
+        private void excelExport_Click(object sender, EventArgs e)
+        {
+           SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "Export Excel";
+            saveFileDialog.Filter = "Excel (*.xlsx|*.xlsx|Excel 2003 (*.xls)|*.xls";
+            if(saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    ExportExcel(saveFileDialog.FileName);
+                    MessageBox.Show("Xuất file Excel thành công !");
+                }catch(Exception ex)
+                {
+                    MessageBox.Show("Xuất file không thành công !\n"+ex.Message);
+                }
+            }
+
+        }
     }
 }

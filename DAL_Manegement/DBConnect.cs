@@ -11,7 +11,7 @@ namespace DAL_Manegement
     public class DBConnect
     {
         protected SqlConnection conn = new SqlConnection(
-        "Data Source=XuanTruong\\SQLEXPRESS;Initial Catalog=qlmt;Integrated Security=True"
+        "Data Source=XuanTruong\\SQLEXPRESS;Initial Catalog=qlmt2;Integrated Security=True"
         );
     }
 }
