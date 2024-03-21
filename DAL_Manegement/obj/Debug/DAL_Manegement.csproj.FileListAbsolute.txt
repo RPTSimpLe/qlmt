@@ -7,3 +7,12 @@ E:\BaiTapLon_NET\QuanLyMayTinh\DAL_Manegement\obj\Debug\DAL_Manegement.csproj.Co
 E:\BaiTapLon_NET\QuanLyMayTinh\DAL_Manegement\obj\Debug\DAL_Manegement.csproj.CopyComplete
 E:\BaiTapLon_NET\QuanLyMayTinh\DAL_Manegement\obj\Debug\DAL_Manegement.dll
 E:\BaiTapLon_NET\QuanLyMayTinh\DAL_Manegement\obj\Debug\DAL_Manegement.pdb
+H:\qlmt\DAL_Manegement\bin\Debug\DAL_Manegement.dll
+H:\qlmt\DAL_Manegement\bin\Debug\DAL_Manegement.pdb
+H:\qlmt\DAL_Manegement\bin\Debug\DTO_Manegement.dll
+H:\qlmt\DAL_Manegement\bin\Debug\DTO_Manegement.pdb
+H:\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.csproj.AssemblyReference.cache
+H:\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.csproj.CoreCompileInputs.cache
+H:\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.csproj.CopyComplete
+H:\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.dll
+H:\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.pdb
