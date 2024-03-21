@@ -1,0 +1,11 @@
+E:\BaiTapLon_NET\QuanLyMayTinh\BUS_Manegement\bin\Debug\BUS_Manegement.dll
+E:\BaiTapLon_NET\QuanLyMayTinh\BUS_Manegement\bin\Debug\BUS_Manegement.pdb
+E:\BaiTapLon_NET\QuanLyMayTinh\BUS_Manegement\bin\Debug\DAL_Manegement.dll
+E:\BaiTapLon_NET\QuanLyMayTinh\BUS_Manegement\bin\Debug\DTO_Manegement.dll
+E:\BaiTapLon_NET\QuanLyMayTinh\BUS_Manegement\bin\Debug\DAL_Manegement.pdb
+E:\BaiTapLon_NET\QuanLyMayTinh\BUS_Manegement\bin\Debug\DTO_Manegement.pdb
+E:\BaiTapLon_NET\QuanLyMayTinh\BUS_Manegement\obj\Debug\BUS_Manegement.csproj.AssemblyReference.cache
+E:\BaiTapLon_NET\QuanLyMayTinh\BUS_Manegement\obj\Debug\BUS_Manegement.csproj.CoreCompileInputs.cache
+E:\BaiTapLon_NET\QuanLyMayTinh\BUS_Manegement\obj\Debug\BUS_Manegement.csproj.CopyComplete
+E:\BaiTapLon_NET\QuanLyMayTinh\BUS_Manegement\obj\Debug\BUS_Manegement.dll
+E:\BaiTapLon_NET\QuanLyMayTinh\BUS_Manegement\obj\Debug\BUS_Manegement.pdb

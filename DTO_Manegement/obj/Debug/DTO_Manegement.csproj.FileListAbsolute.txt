@@ -1,0 +1,6 @@
+E:\BaiTapLon_NET\QuanLyMayTinh\DTO_Manegement\bin\Debug\DTO_Manegement.dll
+E:\BaiTapLon_NET\QuanLyMayTinh\DTO_Manegement\bin\Debug\DTO_Manegement.pdb
+E:\BaiTapLon_NET\QuanLyMayTinh\DTO_Manegement\obj\Debug\DTO_Manegement.csproj.AssemblyReference.cache
+E:\BaiTapLon_NET\QuanLyMayTinh\DTO_Manegement\obj\Debug\DTO_Manegement.csproj.CoreCompileInputs.cache
+E:\BaiTapLon_NET\QuanLyMayTinh\DTO_Manegement\obj\Debug\DTO_Manegement.dll
+E:\BaiTapLon_NET\QuanLyMayTinh\DTO_Manegement\obj\Debug\DTO_Manegement.pdb

@@ -1,0 +1,16 @@
+E:\BaiTapLon_NET\QuanLyMayTinh\QuanLyMayTinh\bin\Debug\QuanLyMayTinh.exe.config
+E:\BaiTapLon_NET\QuanLyMayTinh\QuanLyMayTinh\bin\Debug\QuanLyMayTinh.exe
+E:\BaiTapLon_NET\QuanLyMayTinh\QuanLyMayTinh\bin\Debug\QuanLyMayTinh.pdb
+E:\BaiTapLon_NET\QuanLyMayTinh\QuanLyMayTinh\bin\Debug\BUS_Manegement.dll
+E:\BaiTapLon_NET\QuanLyMayTinh\QuanLyMayTinh\bin\Debug\DTO_Manegement.dll
+E:\BaiTapLon_NET\QuanLyMayTinh\QuanLyMayTinh\bin\Debug\BUS_Manegement.pdb
+E:\BaiTapLon_NET\QuanLyMayTinh\QuanLyMayTinh\bin\Debug\DTO_Manegement.pdb
+E:\BaiTapLon_NET\QuanLyMayTinh\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.csproj.AssemblyReference.cache
+E:\BaiTapLon_NET\QuanLyMayTinh\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Properties.Resources.resources
+E:\BaiTapLon_NET\QuanLyMayTinh\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.csproj.GenerateResource.cache
+E:\BaiTapLon_NET\QuanLyMayTinh\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.csproj.CoreCompileInputs.cache
+E:\BaiTapLon_NET\QuanLyMayTinh\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.csproj.CopyComplete
+E:\BaiTapLon_NET\QuanLyMayTinh\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.exe
+E:\BaiTapLon_NET\QuanLyMayTinh\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.pdb
+E:\BaiTapLon_NET\QuanLyMayTinh\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Category.resources
+E:\BaiTapLon_NET\QuanLyMayTinh\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Product.resources
