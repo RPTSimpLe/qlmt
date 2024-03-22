@@ -31,3 +31,14 @@ D:\code\c#\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.csproj.CoreCompileInputs
 D:\code\c#\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.csproj.CopyComplete
 D:\code\c#\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.dll
 D:\code\c#\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.pdb
+E:\qlmt\BUS_Manegement\bin\Debug\BUS_Manegement.dll
+E:\qlmt\BUS_Manegement\bin\Debug\BUS_Manegement.pdb
+E:\qlmt\BUS_Manegement\bin\Debug\DAL_Manegement.dll
+E:\qlmt\BUS_Manegement\bin\Debug\DTO_Manegement.dll
+E:\qlmt\BUS_Manegement\bin\Debug\DAL_Manegement.pdb
+E:\qlmt\BUS_Manegement\bin\Debug\DTO_Manegement.pdb
+E:\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.csproj.AssemblyReference.cache
+E:\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.csproj.CoreCompileInputs.cache
+E:\qlmt\BUS_Manegement\obj\Debug\BUS_Mane.B033C982.Up2Date
+E:\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.dll
+E:\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.pdb
