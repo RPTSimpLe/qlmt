@@ -25,3 +25,12 @@ D:\code\c#\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.csproj.CoreCompileInputs
 D:\code\c#\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.csproj.CopyComplete
 D:\code\c#\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.dll
 D:\code\c#\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.pdb
+E:\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.csproj.AssemblyReference.cache
+E:\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.csproj.CoreCompileInputs.cache
+E:\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.dll
+E:\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.pdb
+E:\qlmt\DAL_Manegement\bin\Debug\DAL_Manegement.dll
+E:\qlmt\DAL_Manegement\bin\Debug\DAL_Manegement.pdb
+E:\qlmt\DAL_Manegement\bin\Debug\DTO_Manegement.dll
+E:\qlmt\DAL_Manegement\bin\Debug\DTO_Manegement.pdb
+E:\qlmt\DAL_Manegement\obj\Debug\DAL_Mane.5BC357D5.Up2Date

@@ -16,3 +16,9 @@ D:\code\c#\qlmt\DTO_Manegement\obj\Debug\DTO_Manegement.csproj.AssemblyReference
 D:\code\c#\qlmt\DTO_Manegement\obj\Debug\DTO_Manegement.csproj.CoreCompileInputs.cache
 D:\code\c#\qlmt\DTO_Manegement\obj\Debug\DTO_Manegement.dll
 D:\code\c#\qlmt\DTO_Manegement\obj\Debug\DTO_Manegement.pdb
+E:\qlmt\DTO_Manegement\bin\Debug\DTO_Manegement.dll
+E:\qlmt\DTO_Manegement\bin\Debug\DTO_Manegement.pdb
+E:\qlmt\DTO_Manegement\obj\Debug\DTO_Manegement.csproj.AssemblyReference.cache
+E:\qlmt\DTO_Manegement\obj\Debug\DTO_Manegement.csproj.CoreCompileInputs.cache
+E:\qlmt\DTO_Manegement\obj\Debug\DTO_Manegement.dll
+E:\qlmt\DTO_Manegement\obj\Debug\DTO_Manegement.pdb
