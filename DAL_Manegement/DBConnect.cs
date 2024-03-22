@@ -14,11 +14,11 @@ namespace DAL_Manegement
         //Dxt
         //"Data Source=XuanTruong\\SQLEXPRESS;Initial Catalog=qlmt;Integrated Security=True"
         //Bmv
-        //"Data Source=DESKTOP-RIDI94M\SQLEXPRESS;Initial Catalog=qlmt;Integrated Security=True"
+        //"Data Source=DESKTOP-RIDI94M\\SQLEXPRESS;Initial Catalog=qlmt;Integrated Security=True"
         //Nnm
-        "Data Source=LAPTOP-4FSB8OCK\\SQLEXPRESS;Initial Catalog=qlmt;Integrated Security=True"
+        //"Data Source=LAPTOP-4FSB8OCK\\SQLEXPRESS;Initial Catalog=qlmt;Integrated Security=True"
         //Ltd
-        //"Data Source=localhost\\SQLEXPRESS;Initial Catalog=qlmt;Integrated Security=True"
+        "Data Source=localhost\\SQLEXPRESS;Initial Catalog=qlmt;Integrated Security=True"
         //Ltl
         //"Data Source=XuanTruong\\SQLEXPRESS;Initial Catalog=qlmt;Integrated Security=True"
         );

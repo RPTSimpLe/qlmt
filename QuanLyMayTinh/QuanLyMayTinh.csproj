@@ -78,6 +78,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_Producer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Producer.Designer.cs">
+      <DependentUpon>Form_Producer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Category.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="Form_Category.resx">
       <DependentUpon>Form_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Producer.resx">
+      <DependentUpon>Form_Producer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Product.resx">
       <DependentUpon>Form_Product.cs</DependentUpon>

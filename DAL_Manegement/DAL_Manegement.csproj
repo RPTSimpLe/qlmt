@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="DAL_Category.cs" />
     <Compile Include="DAL_Producer.cs" />
+    <Compile Include="DAL_product.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
