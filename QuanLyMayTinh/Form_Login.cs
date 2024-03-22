@@ -10,23 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyMayTinh
 {
-    public partial class Form_Product : Form
+    public partial class Form_Login : Form
     {
-        public Form_Product()
+        public Form_Login()
         {
-      
             InitializeComponent();
         }
-
-        private void saveProduct_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form_Product_Load(object sender, EventArgs e)
-        {
-
-        }
-       
     }
 }

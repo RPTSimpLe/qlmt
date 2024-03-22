@@ -37,6 +37,7 @@ namespace DTO_Manegement
         public String getNameProducer() { return nameProducer;}
         public void setId(int id) { this.id = id; }
         public void setNameProduct(String nameProduct) { this.nameProduct = nameProduct; }
+
         public void setYears(int years) { this.years = years; }
         public void setDescription(String description) { this.description = description; }
         public void setNameCategory(String nameCategory) { this.nameCategory = nameCategory; }

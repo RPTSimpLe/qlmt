@@ -119,3 +119,5 @@ E:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.csproj.CoreCompileInputs.cache
 E:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMa.84C635F4.Up2Date
 E:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.exe
 E:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.pdb
+H:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Producer.resources
+H:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Account.resources

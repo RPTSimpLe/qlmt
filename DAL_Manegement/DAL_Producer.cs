@@ -14,7 +14,7 @@ namespace DAL_Manegement
         public DataTable getAll()
         {
             SqlDataAdapter dataAdapter = new SqlDataAdapter(
-                "select id as [ID], code as [Mã NSX], nameCategory as [Tên NSX] from producer", conn
+                "select id as [ID], code as [Mã NSX], nameProducer as [Tên NSX] from producer", conn
                 );
             DataTable dt = new DataTable();
             dataAdapter.Fill(dt);
@@ -161,7 +161,7 @@ namespace DAL_Manegement
             {
                 conn.Open();
 
-                string sql = "SELECT id AS [ID], code AS [Mã NSX], nameCategory AS [Tên NSX] FROM producer WHERE code LIKE @code";
+                string sql = "SELECT id AS [ID], code AS [Mã NSX], nameProducer AS [Tên NSX] FROM producer WHERE code LIKE @code";
 
                 SqlCommand comm = new SqlCommand(sql, conn);
                 comm.Parameters.AddWithValue("@code", "%" + code + "%");

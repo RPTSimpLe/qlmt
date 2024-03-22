@@ -8,12 +8,14 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using DAL_Manegement;
 
 namespace DAL_Manegement
 {
     public class DAL_Product : DBConnect
     {
         private SqlDataAdapter dataAdapter;
+   
         public DataTable findProduct(String name, String type, String hang)
         {
             string sql = "SELECT product.id AS [ID], product.nameProduct AS [Tên sản phẩm], product.years AS [Năm sản xuất], product.warranty AS [Bảo hành], product.descriptions AS [Ghi chú]," +
@@ -33,7 +35,7 @@ namespace DAL_Manegement
             return dt;
         }
 
-        public bool addProducer(DTO_product product)
+        public bool addProducer( DTO_product product)
         {
             try
             {

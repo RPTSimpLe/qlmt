@@ -16,6 +16,7 @@ create table users(
 	id int identity(1,1) primary key,
 	fullname nvarchar(30),
 	username nvarchar(30),
+	gender nvarchar(30),
 	pass nvarchar(30),
 	phone nvarchar(10),
 	birthday date,

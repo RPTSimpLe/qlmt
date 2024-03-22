@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BUS_Manegement
 {
-    internal class BUS_Producer
+    public class BUS_Producer
     {
         private static DAL_Producer producer = new DAL_Producer();
         public DataTable getAllData()
