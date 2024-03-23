@@ -121,3 +121,6 @@ E:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.exe
 E:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.pdb
 H:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Producer.resources
 H:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Account.resources
+D:\code\c#\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Account.resources
+D:\code\c#\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Producer.resources
+D:\code\c#\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Detail_Product.resources

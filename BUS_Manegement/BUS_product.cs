@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BUS_Manegement
 {
-    internal class BUS_product
+    public class BUS_product
     {
         private static DAL_Product DAL_Product = new DAL_Product();
 
@@ -17,25 +17,29 @@ namespace BUS_Manegement
         {
             return DAL_Product.findProduct("","","");
         }
-        public bool AddProducer(DTO_product p)
+        public bool AddProduct(DTO_product p)
         {
-            return DAL_Product.addProducer(p);
+            return DAL_Product.addProduct(p);
         }
-        public bool updateProducer(DTO_product p)
+        public bool updateProduct(DTO_product p)
         {
-            return DAL_Product.updateProducer(p);
+            return DAL_Product.updateProduct(p);
         }
-        public bool deleteProducer(int id)
+        public bool deleteProduct(int id)
         {
-            return DAL_Product.deleteProducerById(id);
+            return DAL_Product.deleteProductById(id);
         }
-        public bool CheckDuplicateProducer(string code, string name)
+        public bool CheckDuplicateProduct(string code, string name)
         {
-            return DAL_Product.checkDuplicateProducer(code, name);
+            return DAL_Product.checkDuplicateProduct(code, name);
         }
         public DataTable FindProduct(String name, String type, String hang)
         {
             return DAL_Product.findProduct(name,type,hang);
+        }
+        public DataTable FindProductById(int id)
+        {
+            return DAL_Product.findProductById(id);
         }
     }
 }

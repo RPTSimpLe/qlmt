@@ -273,6 +273,7 @@
             this.code_producer.Name = "code_producer";
             this.code_producer.Size = new System.Drawing.Size(233, 30);
             this.code_producer.TabIndex = 3;
+            this.code_producer.Click += new System.EventHandler(this.code_producer_Click);
             // 
             // label2
             // 
@@ -289,6 +290,7 @@
             this.name_producer.Name = "name_producer";
             this.name_producer.Size = new System.Drawing.Size(230, 30);
             this.name_producer.TabIndex = 1;
+            this.name_producer.Click += new System.EventHandler(this.name_producer_Click);
             // 
             // label1
             // 

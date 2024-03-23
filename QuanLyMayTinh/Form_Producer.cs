@@ -188,6 +188,15 @@ namespace QuanLyMayTinh
             codes.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
             names.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
         }
-      
+
+        private void name_producer_Click(object sender, EventArgs e)
+        {
+            code_producer.Text = string.Empty;
+        }
+
+        private void code_producer_Click(object sender, EventArgs e)
+        {
+            name_producer.Text = string.Empty;
+        }
     }
 }
