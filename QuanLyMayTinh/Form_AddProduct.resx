@@ -18773,16 +18773,6 @@
         /9k=
 </value>
   </data>
-  <data name="btnsExits.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAARJJREFUaEPt
-        mOEJwjAUhDuCozmCm+sGuoHmoAchpDFNcskrvA8Oi0LuO+qvbI7jOI6Se8gz5L0/zwJd6ER3Vy8O+UZ5
-        hKhBR9wJh2Y+IfFhiHJEKo/AoRm8vvRARDEiJ490/3WPDh45Qt6hLJDLE0XRNHkysnC6PBlRvEye9Ags
-        lyctImbkyRkhc/KkRsysPCkJmpcnR6K5mJMnNSPMypPSCPPy4NIDSvKM2RE18oy5EUfy+L70mwlqBM2O
-        OCNmbkSLkJkRPSLLR4wQWDZiZPH0EYrCaSOURfIR8oKArOPyV4u43k4PVMiT3Ag4NPMKiQ9TypN0BBya
-        wevD9TYyQ56gi73dt9O3/XMFK7sdx3H+sm0/Ua5ggKm6nYQAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btnsAdd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAcxJREFUaEPt

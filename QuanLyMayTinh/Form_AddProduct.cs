@@ -16,5 +16,18 @@ namespace QuanLyMayTinh
         {
             InitializeComponent();
         }
+
+        private void btnImagesProduct_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = ofd.Filter = "JPG files (*.jpg) | *.jpg|All files (*.*)|*.*";
+            ofd.FilterIndex = 1;
+            ofd.RestoreDirectory = true;
+            if(ofd.ShowDialog() == DialogResult.OK)
+            {
+                picture.ImageLocation = ofd.FileName;
+                image.Text = ofd.FileName;
+            }
+        }
     }
 }

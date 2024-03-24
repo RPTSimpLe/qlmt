@@ -23,6 +23,16 @@ create table users(
 	address nvarchar(255),
 	email varchar(255),
 		);
+create table role(
+	id int identity(1,1) primary key,
+	roles nvarchar(30)
+);
+ALTER TABLE users
+ADD role_id int,
+FOREIGN KEY (role_id) REFERENCES role(id);
+
+INSERT INTO role (roles) VALUES ('ADMIN'), ('USER');
+
 create table product(
 	id int identity(1,1) primary key,
 	nameProduct nvarchar(30),
