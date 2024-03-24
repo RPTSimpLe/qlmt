@@ -58,5 +58,12 @@ namespace QuanLyMayTinh
             this.getAll();
             MessageBox.Show("Xóa thành công");
         }
+
+        private void addUser_Click(object sender, EventArgs e)
+        {
+            Form_AddProduct f = new Form_AddProduct();
+            f.ShowDialog();
+
+        }
     }
 }

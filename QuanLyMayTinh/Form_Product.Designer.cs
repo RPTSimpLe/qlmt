@@ -250,6 +250,7 @@
             this.addUser.Text = "Thêm";
             this.addUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.addUser.UseVisualStyleBackColor = true;
+            this.addUser.Click += new System.EventHandler(this.addUser_Click);
             // 
             // groupBox4
             // 

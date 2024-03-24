@@ -125,5 +125,12 @@ namespace QuanLyMayTinh
         {
             OpenChildForm(new Form_Account(), sender);
         }
+
+        private void btnRole_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Form_Role(), sender);
+        }
+
+      
     }
 }

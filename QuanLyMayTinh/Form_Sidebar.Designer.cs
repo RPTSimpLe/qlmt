@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Sidebar));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnRole = new System.Windows.Forms.Button();
             this.btAccounts = new System.Windows.Forms.Button();
             this.btProducers = new System.Windows.Forms.Button();
             this.btCategorys = new System.Windows.Forms.Button();
@@ -50,8 +51,9 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.button5);
-            this.panelMenu.Controls.Add(this.button4);
+            this.panelMenu.Controls.Add(this.btnRole);
             this.panelMenu.Controls.Add(this.btAccounts);
             this.panelMenu.Controls.Add(this.btProducers);
             this.panelMenu.Controls.Add(this.btCategorys);
@@ -62,6 +64,24 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(305, 709);
             this.panelMenu.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(0, 497);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(305, 71);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Friday";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
@@ -81,23 +101,24 @@
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnRole
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(0, 358);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(305, 68);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "NoName";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnRole.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRole.FlatAppearance.BorderSize = 0;
+            this.btnRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRole.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnRole.Image = ((System.Drawing.Image)(resources.GetObject("btnRole.Image")));
+            this.btnRole.Location = new System.Drawing.Point(0, 358);
+            this.btnRole.Name = "btnRole";
+            this.btnRole.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnRole.Size = new System.Drawing.Size(305, 68);
+            this.btnRole.TabIndex = 5;
+            this.btnRole.Text = "Quyền";
+            this.btnRole.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRole.UseVisualStyleBackColor = false;
+            this.btnRole.Click += new System.EventHandler(this.btnRole_Click);
             // 
             // btAccounts
             // 
@@ -265,7 +286,7 @@
         private System.Windows.Forms.FlowLayoutPanel panelLogo;
         private System.Windows.Forms.Button btProducts;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnRole;
         private System.Windows.Forms.Button btAccounts;
         private System.Windows.Forms.Button btProducers;
         private System.Windows.Forms.Button btCategorys;
@@ -274,5 +295,6 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelDesktopPane;
         private System.Windows.Forms.Button btnCloseChildForm;
+        private System.Windows.Forms.Button button1;
     }
 }

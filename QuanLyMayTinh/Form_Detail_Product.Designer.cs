@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.producer = new System.Windows.Forms.TextBox();
-            this.category = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,65 +44,53 @@
             this.totalQuantity = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.category = new System.Windows.Forms.ComboBox();
+            this.producer = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // producer
-            // 
-            this.producer.Location = new System.Drawing.Point(387, 293);
-            this.producer.Name = "producer";
-            this.producer.Size = new System.Drawing.Size(327, 22);
-            this.producer.TabIndex = 57;
-            // 
-            // category
-            // 
-            this.category.Location = new System.Drawing.Point(387, 236);
-            this.category.Name = "category";
-            this.category.Size = new System.Drawing.Size(327, 22);
-            this.category.TabIndex = 56;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(268, 296);
+            this.label7.Location = new System.Drawing.Point(258, 301);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 16);
+            this.label7.Size = new System.Drawing.Size(110, 22);
             this.label7.TabIndex = 55;
             this.label7.Text = "Nhà sản xuất";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(268, 236);
+            this.label6.Location = new System.Drawing.Point(259, 236);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 16);
+            this.label6.Size = new System.Drawing.Size(88, 22);
             this.label6.TabIndex = 54;
             this.label6.Text = "Danh mục";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(268, 369);
+            this.label5.Location = new System.Drawing.Point(259, 371);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 16);
+            this.label5.Size = new System.Drawing.Size(56, 22);
             this.label5.TabIndex = 53;
             this.label5.Text = "Mô tả";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(267, 133);
+            this.label4.Location = new System.Drawing.Point(259, 136);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 16);
+            this.label4.Size = new System.Drawing.Size(83, 22);
             this.label4.TabIndex = 52;
             this.label4.Text = "Bảo hành";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(264, 73);
+            this.label3.Location = new System.Drawing.Point(259, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 16);
+            this.label3.Size = new System.Drawing.Size(115, 22);
             this.label3.TabIndex = 51;
             this.label3.Text = "Năm sản xuất";
             // 
@@ -113,44 +99,44 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(259, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 16);
+            this.label2.Size = new System.Drawing.Size(118, 22);
             this.label2.TabIndex = 50;
             this.label2.Text = "Tên sản phẩm";
             // 
             // descrption
             // 
-            this.descrption.Location = new System.Drawing.Point(387, 366);
+            this.descrption.Location = new System.Drawing.Point(387, 357);
             this.descrption.Multiline = true;
             this.descrption.Name = "descrption";
-            this.descrption.Size = new System.Drawing.Size(327, 185);
+            this.descrption.Size = new System.Drawing.Size(327, 194);
             this.descrption.TabIndex = 49;
             // 
             // warrantly
             // 
             this.warrantly.Location = new System.Drawing.Point(387, 133);
             this.warrantly.Name = "warrantly";
-            this.warrantly.Size = new System.Drawing.Size(327, 22);
+            this.warrantly.Size = new System.Drawing.Size(327, 30);
             this.warrantly.TabIndex = 48;
             // 
             // years
             // 
             this.years.Location = new System.Drawing.Point(387, 70);
             this.years.Name = "years";
-            this.years.Size = new System.Drawing.Size(327, 22);
+            this.years.Size = new System.Drawing.Size(327, 30);
             this.years.TabIndex = 47;
             // 
             // nameProduct
             // 
             this.nameProduct.Location = new System.Drawing.Point(387, 9);
             this.nameProduct.Name = "nameProduct";
-            this.nameProduct.Size = new System.Drawing.Size(322, 22);
+            this.nameProduct.Size = new System.Drawing.Size(322, 30);
             this.nameProduct.TabIndex = 46;
             // 
             // ids
             // 
-            this.ids.Location = new System.Drawing.Point(354, -19);
+            this.ids.Location = new System.Drawing.Point(387, -15);
             this.ids.Name = "ids";
-            this.ids.Size = new System.Drawing.Size(303, 22);
+            this.ids.Size = new System.Drawing.Size(303, 30);
             this.ids.TabIndex = 45;
             this.ids.Visible = false;
             // 
@@ -166,9 +152,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(267, 185);
+            this.label1.Location = new System.Drawing.Point(257, 185);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 16);
+            this.label1.Size = new System.Drawing.Size(124, 22);
             this.label1.TabIndex = 60;
             this.label1.Text = "Tổng số lượng";
             // 
@@ -176,20 +162,20 @@
             // 
             this.totalQuantity.Location = new System.Drawing.Point(387, 185);
             this.totalQuantity.Name = "totalQuantity";
-            this.totalQuantity.Size = new System.Drawing.Size(327, 22);
+            this.totalQuantity.Size = new System.Drawing.Size(327, 30);
             this.totalQuantity.TabIndex = 59;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.producer);
+            this.groupBox1.Controls.Add(this.category);
             this.groupBox1.Controls.Add(this.totalQuantity);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.ids);
             this.groupBox1.Controls.Add(this.nameProduct);
             this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.years);
-            this.groupBox1.Controls.Add(this.producer);
             this.groupBox1.Controls.Add(this.warrantly);
-            this.groupBox1.Controls.Add(this.category);
             this.groupBox1.Controls.Add(this.descrption);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label2);
@@ -197,6 +183,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(724, 680);
@@ -206,12 +193,29 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(764, 21);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(774, 671);
             this.groupBox2.TabIndex = 62;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tùy chọn";
+            // 
+            // category
+            // 
+            this.category.FormattingEnabled = true;
+            this.category.Location = new System.Drawing.Point(389, 233);
+            this.category.Name = "category";
+            this.category.Size = new System.Drawing.Size(324, 30);
+            this.category.TabIndex = 61;
+            // 
+            // producer
+            // 
+            this.producer.FormattingEnabled = true;
+            this.producer.Location = new System.Drawing.Point(392, 293);
+            this.producer.Name = "producer";
+            this.producer.Size = new System.Drawing.Size(321, 30);
+            this.producer.TabIndex = 62;
             // 
             // Form_Detail_Product
             // 
@@ -231,9 +235,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox producer;
-        private System.Windows.Forms.TextBox category;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -250,5 +251,7 @@
         private System.Windows.Forms.TextBox totalQuantity;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox producer;
+        private System.Windows.Forms.ComboBox category;
     }
 }
