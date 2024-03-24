@@ -192,10 +192,11 @@
             // 
             // cancel
             // 
+            this.cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancel.Image = ((System.Drawing.Image)(resources.GetObject("cancel.Image")));
             this.cancel.Location = new System.Drawing.Point(293, 649);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(146, 76);
+            this.cancel.Size = new System.Drawing.Size(170, 76);
             this.cancel.TabIndex = 22;
             this.cancel.Text = "Hủy";
             this.cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -204,22 +205,24 @@
             // 
             // saveUser
             // 
+            this.saveUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveUser.Image = ((System.Drawing.Image)(resources.GetObject("saveUser.Image")));
-            this.saveUser.Location = new System.Drawing.Point(72, 649);
+            this.saveUser.Location = new System.Drawing.Point(58, 649);
             this.saveUser.Name = "saveUser";
-            this.saveUser.Size = new System.Drawing.Size(154, 76);
+            this.saveUser.Size = new System.Drawing.Size(168, 76);
             this.saveUser.TabIndex = 21;
-            this.saveUser.Text = "Lưu";
+            this.saveUser.Text = "Cập nhập";
             this.saveUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.saveUser.UseVisualStyleBackColor = true;
             this.saveUser.Click += new System.EventHandler(this.saveUser_Click);
             // 
             // deleteUser
             // 
+            this.deleteUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteUser.Image = ((System.Drawing.Image)(resources.GetObject("deleteUser.Image")));
             this.deleteUser.Location = new System.Drawing.Point(293, 539);
             this.deleteUser.Name = "deleteUser";
-            this.deleteUser.Size = new System.Drawing.Size(151, 75);
+            this.deleteUser.Size = new System.Drawing.Size(170, 75);
             this.deleteUser.TabIndex = 20;
             this.deleteUser.Text = "Xóa";
             this.deleteUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -228,10 +231,11 @@
             // 
             // addUser
             // 
+            this.addUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addUser.Image = ((System.Drawing.Image)(resources.GetObject("addUser.Image")));
-            this.addUser.Location = new System.Drawing.Point(81, 539);
+            this.addUser.Location = new System.Drawing.Point(58, 539);
             this.addUser.Name = "addUser";
-            this.addUser.Size = new System.Drawing.Size(145, 75);
+            this.addUser.Size = new System.Drawing.Size(168, 75);
             this.addUser.TabIndex = 19;
             this.addUser.Text = "Thêm";
             this.addUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -399,6 +403,7 @@
             // 
             // export_excel
             // 
+            this.export_excel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.export_excel.Image = ((System.Drawing.Image)(resources.GetObject("export_excel.Image")));
             this.export_excel.Location = new System.Drawing.Point(1519, 18);
             this.export_excel.Name = "export_excel";
@@ -411,8 +416,9 @@
             // 
             // searchUser
             // 
+            this.searchUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchUser.Image = ((System.Drawing.Image)(resources.GetObject("searchUser.Image")));
-            this.searchUser.Location = new System.Drawing.Point(1230, 18);
+            this.searchUser.Location = new System.Drawing.Point(948, 18);
             this.searchUser.Name = "searchUser";
             this.searchUser.Size = new System.Drawing.Size(201, 72);
             this.searchUser.TabIndex = 2;

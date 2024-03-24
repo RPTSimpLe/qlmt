@@ -84,6 +84,7 @@
             // 
             this.groupBox6.Controls.Add(this.dataGridView1);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(3, 113);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(1131, 647);
@@ -97,11 +98,11 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 18);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 26);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1125, 626);
+            this.dataGridView1.Size = new System.Drawing.Size(1125, 618);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -118,6 +119,7 @@
             this.groupBox5.Controls.Add(this.label5);
             this.groupBox5.Controls.Add(this.label4);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(1134, 113);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(434, 647);
@@ -127,6 +129,7 @@
             // 
             // excelExport
             // 
+            this.excelExport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.excelExport.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.excelExport.Image = ((System.Drawing.Image)(resources.GetObject("excelExport.Image")));
             this.excelExport.Location = new System.Drawing.Point(112, 567);
@@ -145,7 +148,7 @@
             this.deleteCate.Image = ((System.Drawing.Image)(resources.GetObject("deleteCate.Image")));
             this.deleteCate.Location = new System.Drawing.Point(246, 337);
             this.deleteCate.Name = "deleteCate";
-            this.deleteCate.Size = new System.Drawing.Size(143, 68);
+            this.deleteCate.Size = new System.Drawing.Size(154, 68);
             this.deleteCate.TabIndex = 8;
             this.deleteCate.Text = "Xóa";
             this.deleteCate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -157,11 +160,11 @@
             this.saveCate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveCate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveCate.Image = ((System.Drawing.Image)(resources.GetObject("saveCate.Image")));
-            this.saveCate.Location = new System.Drawing.Point(47, 460);
+            this.saveCate.Location = new System.Drawing.Point(47, 451);
             this.saveCate.Name = "saveCate";
-            this.saveCate.Size = new System.Drawing.Size(143, 66);
+            this.saveCate.Size = new System.Drawing.Size(175, 75);
             this.saveCate.TabIndex = 7;
-            this.saveCate.Text = "Lưu";
+            this.saveCate.Text = "Cập nhập";
             this.saveCate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.saveCate.UseVisualStyleBackColor = true;
             this.saveCate.Click += new System.EventHandler(this.saveCate_Click);
@@ -171,9 +174,9 @@
             this.cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancel.Image = ((System.Drawing.Image)(resources.GetObject("cancel.Image")));
-            this.cancel.Location = new System.Drawing.Point(246, 458);
+            this.cancel.Location = new System.Drawing.Point(246, 451);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(143, 68);
+            this.cancel.Size = new System.Drawing.Size(154, 75);
             this.cancel.TabIndex = 6;
             this.cancel.Text = "Hủy";
             this.cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -187,7 +190,7 @@
             this.addCate.Image = ((System.Drawing.Image)(resources.GetObject("addCate.Image")));
             this.addCate.Location = new System.Drawing.Point(47, 337);
             this.addCate.Name = "addCate";
-            this.addCate.Size = new System.Drawing.Size(143, 68);
+            this.addCate.Size = new System.Drawing.Size(175, 68);
             this.addCate.TabIndex = 5;
             this.addCate.Text = "Thêm";
             this.addCate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -198,7 +201,7 @@
             // 
             this.ids.Location = new System.Drawing.Point(38, 29);
             this.ids.Name = "ids";
-            this.ids.Size = new System.Drawing.Size(361, 22);
+            this.ids.Size = new System.Drawing.Size(361, 30);
             this.ids.TabIndex = 4;
             this.ids.Visible = false;
             // 
@@ -206,14 +209,14 @@
             // 
             this.names.Location = new System.Drawing.Point(47, 245);
             this.names.Name = "names";
-            this.names.Size = new System.Drawing.Size(353, 22);
+            this.names.Size = new System.Drawing.Size(353, 30);
             this.names.TabIndex = 3;
             // 
             // codes
             // 
             this.codes.Location = new System.Drawing.Point(41, 115);
             this.codes.Name = "codes";
-            this.codes.Size = new System.Drawing.Size(359, 22);
+            this.codes.Size = new System.Drawing.Size(359, 30);
             this.codes.TabIndex = 2;
             // 
             // label5

@@ -87,9 +87,9 @@
             this.groupBox5.Controls.Add(this.groupBox6);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(3, 133);
+            this.groupBox5.Location = new System.Drawing.Point(3, 127);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1556, 657);
+            this.groupBox5.Size = new System.Drawing.Size(1556, 663);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
             // 
@@ -99,7 +99,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(3, 26);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1125, 628);
+            this.groupBox2.Size = new System.Drawing.Size(1125, 634);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hiển thị";
@@ -114,7 +114,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1119, 599);
+            this.dataGridView1.Size = new System.Drawing.Size(1119, 605);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -134,7 +134,7 @@
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(1128, 26);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(425, 628);
+            this.groupBox6.Size = new System.Drawing.Size(425, 634);
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Form";
@@ -148,6 +148,7 @@
             // 
             // export_excel
             // 
+            this.export_excel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.export_excel.Image = ((System.Drawing.Image)(resources.GetObject("export_excel.Image")));
             this.export_excel.Location = new System.Drawing.Point(139, 569);
             this.export_excel.Name = "export_excel";
@@ -160,10 +161,11 @@
             // 
             // cancel
             // 
+            this.cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancel.Image = ((System.Drawing.Image)(resources.GetObject("cancel.Image")));
-            this.cancel.Location = new System.Drawing.Point(263, 469);
+            this.cancel.Location = new System.Drawing.Point(250, 469);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(131, 62);
+            this.cancel.Size = new System.Drawing.Size(153, 62);
             this.cancel.TabIndex = 8;
             this.cancel.Text = "Hủy";
             this.cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -172,22 +174,24 @@
             // 
             // saveProducer
             // 
+            this.saveProducer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveProducer.Image = ((System.Drawing.Image)(resources.GetObject("saveProducer.Image")));
-            this.saveProducer.Location = new System.Drawing.Point(35, 469);
+            this.saveProducer.Location = new System.Drawing.Point(35, 459);
             this.saveProducer.Name = "saveProducer";
-            this.saveProducer.Size = new System.Drawing.Size(138, 62);
+            this.saveProducer.Size = new System.Drawing.Size(174, 72);
             this.saveProducer.TabIndex = 7;
-            this.saveProducer.Text = "Lưu";
+            this.saveProducer.Text = "Cập nhập";
             this.saveProducer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.saveProducer.UseVisualStyleBackColor = true;
             this.saveProducer.Click += new System.EventHandler(this.saveProducer_Click);
             // 
             // deleteProducer
             // 
+            this.deleteProducer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteProducer.Image = ((System.Drawing.Image)(resources.GetObject("deleteProducer.Image")));
-            this.deleteProducer.Location = new System.Drawing.Point(263, 351);
+            this.deleteProducer.Location = new System.Drawing.Point(250, 351);
             this.deleteProducer.Name = "deleteProducer";
-            this.deleteProducer.Size = new System.Drawing.Size(131, 66);
+            this.deleteProducer.Size = new System.Drawing.Size(153, 66);
             this.deleteProducer.TabIndex = 6;
             this.deleteProducer.Text = "Xóa";
             this.deleteProducer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -196,10 +200,11 @@
             // 
             // addProducer
             // 
+            this.addProducer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addProducer.Image = ((System.Drawing.Image)(resources.GetObject("addProducer.Image")));
             this.addProducer.Location = new System.Drawing.Point(35, 351);
             this.addProducer.Name = "addProducer";
-            this.addProducer.Size = new System.Drawing.Size(138, 66);
+            this.addProducer.Size = new System.Drawing.Size(174, 66);
             this.addProducer.TabIndex = 4;
             this.addProducer.Text = "Thêm";
             this.addProducer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -250,15 +255,16 @@
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(3, 18);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1556, 115);
+            this.groupBox3.Size = new System.Drawing.Size(1556, 109);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tìm kiếm";
             // 
             // searchProducer
             // 
+            this.searchProducer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchProducer.Image = ((System.Drawing.Image)(resources.GetObject("searchProducer.Image")));
-            this.searchProducer.Location = new System.Drawing.Point(1290, 29);
+            this.searchProducer.Location = new System.Drawing.Point(1174, 29);
             this.searchProducer.Name = "searchProducer";
             this.searchProducer.Size = new System.Drawing.Size(196, 68);
             this.searchProducer.TabIndex = 4;

@@ -38,13 +38,11 @@
             this.btCategorys = new System.Windows.Forms.Button();
             this.btProducts = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
-            this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +60,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(305, 709);
+            this.panelMenu.Size = new System.Drawing.Size(315, 805);
             this.panelMenu.TabIndex = 0;
             // 
             // button1
@@ -74,10 +72,10 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(0, 497);
+            this.button1.Location = new System.Drawing.Point(0, 514);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(305, 71);
+            this.button1.Size = new System.Drawing.Size(315, 71);
             this.button1.TabIndex = 7;
             this.button1.Text = "Friday";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -92,10 +90,10 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(0, 426);
+            this.button5.Location = new System.Drawing.Point(0, 443);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(305, 71);
+            this.button5.Size = new System.Drawing.Size(315, 71);
             this.button5.TabIndex = 6;
             this.button5.Text = "Friday";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -104,16 +102,17 @@
             // btnRole
             // 
             this.btnRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnRole.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRole.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRole.FlatAppearance.BorderSize = 0;
             this.btnRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRole.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnRole.Image = ((System.Drawing.Image)(resources.GetObject("btnRole.Image")));
-            this.btnRole.Location = new System.Drawing.Point(0, 358);
+            this.btnRole.Location = new System.Drawing.Point(0, 375);
             this.btnRole.Name = "btnRole";
             this.btnRole.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnRole.Size = new System.Drawing.Size(305, 68);
+            this.btnRole.Size = new System.Drawing.Size(315, 68);
             this.btnRole.TabIndex = 5;
             this.btnRole.Text = "Quyền";
             this.btnRole.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -123,16 +122,17 @@
             // btAccounts
             // 
             this.btAccounts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btAccounts.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAccounts.Dock = System.Windows.Forms.DockStyle.Top;
             this.btAccounts.FlatAppearance.BorderSize = 0;
             this.btAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAccounts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAccounts.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btAccounts.Image = ((System.Drawing.Image)(resources.GetObject("btAccounts.Image")));
-            this.btAccounts.Location = new System.Drawing.Point(0, 287);
+            this.btAccounts.Location = new System.Drawing.Point(0, 304);
             this.btAccounts.Name = "btAccounts";
             this.btAccounts.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btAccounts.Size = new System.Drawing.Size(305, 71);
+            this.btAccounts.Size = new System.Drawing.Size(315, 71);
             this.btAccounts.TabIndex = 4;
             this.btAccounts.Text = "Tài khoản";
             this.btAccounts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -142,16 +142,17 @@
             // btProducers
             // 
             this.btProducers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btProducers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btProducers.Dock = System.Windows.Forms.DockStyle.Top;
             this.btProducers.FlatAppearance.BorderSize = 0;
             this.btProducers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btProducers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btProducers.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btProducers.Image = ((System.Drawing.Image)(resources.GetObject("btProducers.Image")));
-            this.btProducers.Location = new System.Drawing.Point(0, 221);
+            this.btProducers.Location = new System.Drawing.Point(0, 238);
             this.btProducers.Name = "btProducers";
             this.btProducers.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btProducers.Size = new System.Drawing.Size(305, 66);
+            this.btProducers.Size = new System.Drawing.Size(315, 66);
             this.btProducers.TabIndex = 3;
             this.btProducers.Text = "Nhà sản xuất";
             this.btProducers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -161,16 +162,17 @@
             // btCategorys
             // 
             this.btCategorys.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btCategorys.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btCategorys.Dock = System.Windows.Forms.DockStyle.Top;
             this.btCategorys.FlatAppearance.BorderSize = 0;
             this.btCategorys.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCategorys.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCategorys.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btCategorys.Image = ((System.Drawing.Image)(resources.GetObject("btCategorys.Image")));
-            this.btCategorys.Location = new System.Drawing.Point(0, 156);
+            this.btCategorys.Location = new System.Drawing.Point(0, 173);
             this.btCategorys.Name = "btCategorys";
             this.btCategorys.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btCategorys.Size = new System.Drawing.Size(305, 65);
+            this.btCategorys.Size = new System.Drawing.Size(315, 65);
             this.btCategorys.TabIndex = 2;
             this.btCategorys.Text = "Danh mục";
             this.btCategorys.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -180,16 +182,17 @@
             // btProducts
             // 
             this.btProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btProducts.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btProducts.Dock = System.Windows.Forms.DockStyle.Top;
             this.btProducts.FlatAppearance.BorderSize = 0;
             this.btProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btProducts.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.btProducts.Image = ((System.Drawing.Image)(resources.GetObject("btProducts.Image")));
-            this.btProducts.Location = new System.Drawing.Point(0, 80);
+            this.btProducts.Location = new System.Drawing.Point(0, 97);
             this.btProducts.Name = "btProducts";
             this.btProducts.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btProducts.Size = new System.Drawing.Size(305, 76);
+            this.btProducts.Size = new System.Drawing.Size(315, 76);
             this.btProducts.TabIndex = 1;
             this.btProducts.Text = "Sản phẩm";
             this.btProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -199,22 +202,11 @@
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panelLogo.Controls.Add(this.label1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(305, 80);
+            this.panelLogo.Size = new System.Drawing.Size(315, 97);
             this.panelLogo.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "COMPUTER";
             // 
             // panelTitleBar
             // 
@@ -222,9 +214,9 @@
             this.panelTitleBar.Controls.Add(this.btnCloseChildForm);
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(305, 0);
+            this.panelTitleBar.Location = new System.Drawing.Point(315, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1396, 80);
+            this.panelTitleBar.Size = new System.Drawing.Size(1386, 97);
             this.panelTitleBar.TabIndex = 1;
             // 
             // btnCloseChildForm
@@ -247,7 +239,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTitle.Location = new System.Drawing.Point(767, 25);
+            this.lblTitle.Location = new System.Drawing.Point(762, 33);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(150, 36);
             this.lblTitle.TabIndex = 0;
@@ -255,25 +247,25 @@
             // 
             // panelDesktopPane
             // 
+            this.panelDesktopPane.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelDesktopPane.BackgroundImage")));
+            this.panelDesktopPane.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panelDesktopPane.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktopPane.Location = new System.Drawing.Point(305, 80);
+            this.panelDesktopPane.Location = new System.Drawing.Point(315, 97);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(1396, 629);
+            this.panelDesktopPane.Size = new System.Drawing.Size(1386, 708);
             this.panelDesktopPane.TabIndex = 2;
             // 
             // Form_Sidebar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1701, 709);
+            this.ClientSize = new System.Drawing.Size(1701, 805);
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Name = "Form_Sidebar";
             this.Text = "Form_Sidebar";
             this.panelMenu.ResumeLayout(false);
-            this.panelLogo.ResumeLayout(false);
-            this.panelLogo.PerformLayout();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);
@@ -291,10 +283,9 @@
         private System.Windows.Forms.Button btProducers;
         private System.Windows.Forms.Button btCategorys;
         private System.Windows.Forms.Panel panelTitleBar;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Panel panelDesktopPane;
         private System.Windows.Forms.Button btnCloseChildForm;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panelDesktopPane;
     }
 }

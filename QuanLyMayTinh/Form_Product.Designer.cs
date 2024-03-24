@@ -149,6 +149,7 @@
             // 
             // btnDetail
             // 
+            this.btnDetail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetail.Image = ((System.Drawing.Image)(resources.GetObject("btnDetail.Image")));
             this.btnDetail.Location = new System.Drawing.Point(45, 473);
             this.btnDetail.Name = "btnDetail";
@@ -219,6 +220,7 @@
             // 
             // cancel
             // 
+            this.cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancel.Image = ((System.Drawing.Image)(resources.GetObject("cancel.Image")));
             this.cancel.Location = new System.Drawing.Point(262, 473);
             this.cancel.Name = "cancel";
@@ -230,6 +232,7 @@
             // 
             // deleteUser
             // 
+            this.deleteUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteUser.Image = ((System.Drawing.Image)(resources.GetObject("deleteUser.Image")));
             this.deleteUser.Location = new System.Drawing.Point(262, 363);
             this.deleteUser.Name = "deleteUser";
@@ -242,6 +245,7 @@
             // 
             // addUser
             // 
+            this.addUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addUser.Image = ((System.Drawing.Image)(resources.GetObject("addUser.Image")));
             this.addUser.Location = new System.Drawing.Point(41, 363);
             this.addUser.Name = "addUser";
@@ -270,6 +274,7 @@
             // 
             // searchProduct
             // 
+            this.searchProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchProduct.Image = ((System.Drawing.Image)(resources.GetObject("searchProduct.Image")));
             this.searchProduct.Location = new System.Drawing.Point(631, 14);
             this.searchProduct.Name = "searchProduct";
