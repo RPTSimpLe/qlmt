@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO_Category.cs" />
+    <Compile Include="DTO_optionProduct.cs" />
     <Compile Include="DTO_Producer.cs" />
     <Compile Include="DTO_product.cs" />
     <Compile Include="DTO_Role.cs" />

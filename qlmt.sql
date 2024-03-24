@@ -1,4 +1,4 @@
-﻿create database qlmt;
+﻿﻿create database qlmt;
 use qlmt;
 create table category(
 	id int identity(1,1) primary key,
@@ -23,16 +23,6 @@ create table users(
 	address nvarchar(255),
 	email varchar(255),
 		);
-create table role(
-	id int identity(1,1) primary key,
-	roles nvarchar(30)
-);
-ALTER TABLE users
-ADD role_id int,
-FOREIGN KEY (role_id) REFERENCES role(id);
-
-INSERT INTO role (roles) VALUES ('ADMIN'), ('USER');
-
 create table product(
 	id int identity(1,1) primary key,
 	nameProduct nvarchar(30),
@@ -61,6 +51,18 @@ create table options(
 	product_id int,
 	foreign key (product_id) references product(id),
 )
+
+INSERT INTO options(ram, storage, quantity, importPrice, sellingPrice, product_id) VALUES ('100bg','100tb',11,15,55,2)
+select * from options
+create table role(
+	id int identity(1,1) primary key,
+	roles nvarchar(30)
+);
+		ALTER TABLE users
+ADD role_id int,
+FOREIGN KEY (role_id) REFERENCES role(id);
+
+INSERT INTO role (roles) VALUES ('ADMIN'), ('USER');
 -- drop function findCategoryId
 create function findCategoryId(@nameCategory nvarchar(30))
 returns int
@@ -132,3 +134,4 @@ end
 
 --exec sp_update_product 2,N'asus tuf f15',2020,'test',N'4 tháng',N'category1',N'prodcer1'
 --select * from product
+
