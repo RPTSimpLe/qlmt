@@ -131,6 +131,19 @@ namespace QuanLyMayTinh
             OpenChildForm(new Form_Role(), sender);
         }
 
-      
+        private void btnSell_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Form_Sell(), sender);
+        }
+
+        private void btnThongKeChi_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Form_ThongKeChi(), sender);
+        }
+
+        private void btnThongKeThu_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Form_ThongKeThu(), sender);
+        }
     }
 }

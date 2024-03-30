@@ -127,3 +127,6 @@ D:\code\c#\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Detail_Product.resour
 H:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Detail_Product.resources
 H:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Role.resources
 H:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_AddProduct.resources
+H:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Sell.resources
+H:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_ThongKeThu.resources
+H:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_ThongKeChi.resources

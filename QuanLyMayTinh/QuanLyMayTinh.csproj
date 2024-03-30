@@ -120,11 +120,29 @@
     <Compile Include="Form_Role.Designer.cs">
       <DependentUpon>Form_Role.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Sell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Sell.Designer.cs">
+      <DependentUpon>Form_Sell.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Sidebar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Sidebar.Designer.cs">
       <DependentUpon>Form_Sidebar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ThongKeChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ThongKeChi.Designer.cs">
+      <DependentUpon>Form_ThongKeChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ThongKeThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ThongKeThu.Designer.cs">
+      <DependentUpon>Form_ThongKeThu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,8 +168,17 @@
     <EmbeddedResource Include="Form_Role.resx">
       <DependentUpon>Form_Role.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Sell.resx">
+      <DependentUpon>Form_Sell.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Sidebar.resx">
       <DependentUpon>Form_Sidebar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ThongKeChi.resx">
+      <DependentUpon>Form_ThongKeChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ThongKeThu.resx">
+      <DependentUpon>Form_ThongKeThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

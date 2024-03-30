@@ -216,9 +216,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(31, 228);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 22);
+            this.label4.Size = new System.Drawing.Size(140, 22);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Tên danh mục";
+            this.label4.Text = "Tên nhà sản xuất";
             // 
             // codes
             // 
@@ -232,9 +232,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(28, 99);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 22);
+            this.label3.Size = new System.Drawing.Size(136, 22);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Mã danh mục";
+            this.label3.Text = "Mã nhà sản xuất";
             // 
             // ids
             // 
