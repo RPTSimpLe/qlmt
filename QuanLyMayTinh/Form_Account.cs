@@ -20,7 +20,6 @@ namespace QuanLyMayTinh
 {
     public partial class Form_Account : Form
     {
-        string str = @"Data Source=XuanTruong\SQLEXPRESS;Initial Catalog=qlmt;Integrated Security=True;";
         public static BUS_Users bus = new BUS_Users();
         public static DAL_Users dal = new DAL_Users();
         public Form_Account()

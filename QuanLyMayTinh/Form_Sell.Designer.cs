@@ -42,14 +42,23 @@
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.nameUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.product1 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.product1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -98,10 +107,11 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(990, 545);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.dataGridView2);
+            this.groupBox5.Controls.Add(this.product1);
             this.groupBox5.Controls.Add(this.deleteProduct);
             this.groupBox5.Controls.Add(this.payments);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Right;
@@ -117,7 +127,7 @@
             // 
             this.deleteProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteProduct.Image = ((System.Drawing.Image)(resources.GetObject("deleteProduct.Image")));
-            this.deleteProduct.Location = new System.Drawing.Point(527, 420);
+            this.deleteProduct.Location = new System.Drawing.Point(522, 483);
             this.deleteProduct.Name = "deleteProduct";
             this.deleteProduct.Size = new System.Drawing.Size(151, 75);
             this.deleteProduct.TabIndex = 24;
@@ -129,7 +139,7 @@
             // 
             this.payments.Cursor = System.Windows.Forms.Cursors.Hand;
             this.payments.Image = ((System.Drawing.Image)(resources.GetObject("payments.Image")));
-            this.payments.Location = new System.Drawing.Point(202, 420);
+            this.payments.Location = new System.Drawing.Point(197, 483);
             this.payments.Name = "payments";
             this.payments.Size = new System.Drawing.Size(179, 75);
             this.payments.TabIndex = 23;
@@ -199,16 +209,89 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tìm kiếm theo tên";
             // 
-            // dataGridView2
+            // label2
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 26);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(821, 339);
-            this.dataGridView2.TabIndex = 25;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Location = new System.Drawing.Point(0, 0);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            // 
+            // product1
+            // 
+            this.product1.Controls.Add(this.textBox2);
+            this.product1.Controls.Add(this.label4);
+            this.product1.Controls.Add(this.label3);
+            this.product1.Controls.Add(this.btnXoa);
+            this.product1.Controls.Add(this.comboBox2);
+            this.product1.Location = new System.Drawing.Point(18, 29);
+            this.product1.Name = "product1";
+            this.product1.Size = new System.Drawing.Size(792, 102);
+            this.product1.TabIndex = 25;
+            this.product1.TabStop = false;
+            this.product1.Text = "groupBox2";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(6, 29);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(664, 30);
+            this.comboBox2.TabIndex = 0;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(692, 29);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(80, 30);
+            this.btnXoa.TabIndex = 1;
+            this.btnXoa.Text = "button2";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 22);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Giá:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(258, 77);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 22);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "label4";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(67, 69);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 30);
+            this.textBox2.TabIndex = 4;
             // 
             // Form_Sell
             // 
@@ -218,6 +301,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form_Sell";
             this.Text = "Danh sách sản phẩm trong cửa hàng";
+            this.Load += new System.EventHandler(this.Form_Sell_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
@@ -225,7 +309,8 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.product1.ResumeLayout(false);
+            this.product1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -245,6 +330,15 @@
         private System.Windows.Forms.ComboBox comboBoxType;
         private System.Windows.Forms.TextBox nameUser;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox product1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

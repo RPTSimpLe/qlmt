@@ -15,15 +15,10 @@ namespace DAL_Manegement
     public class DAL_Product : DBConnect
     {
         private SqlDataAdapter dataAdapter;
-   
+
         public DataTable findProduct(String name, String type, String hang)
         {
-            string sql = "SELECT product.id AS [ID], product.nameProduct AS [Tên sản phẩm],"+
-                "category.nameCategory as [Loại], producer.nameProducer as [Hãng] "+
-                "from product "+
-                "join category on category.id = product.category_id "+
-                "join producer on producer.id = product.producer_id "+ 
-                "WHERE nameCategory LIKE @type and nameProduct like @name and nameProducer like @hang";
+            string sql = "exec sp_select_product @nameProduct = @name, @nameCategory = @type, @nameProducer = @hang";
 
             SqlCommand comm = new SqlCommand(sql, conn);
             comm.Parameters.AddWithValue("@name", "%" + name + "%");
@@ -38,34 +33,36 @@ namespace DAL_Manegement
         public DataTable findProductById(int id)
         {
             string sql = "SELECT product.id AS [ID], product.nameProduct AS [Tên sản phẩm],product.warranty AS [Bảo hành]," +
-                "product.descriptions AS [Mô tả],product.years AS [Năm sx],category.nameCategory as [Loại], producer.nameProducer as [Hãng] " +
+                "product.descriptions AS [Mô tả],product.years AS [Năm sx],category.nameCategory as [Loại], producer.nameProducer as [Hãng], " +
+                "(select Sum(options.quantity) from options where product.id = 2) as [Tồn kho] " +
                 "from product " +
                 "join category on category.id = product.category_id " +
                 "join producer on producer.id = product.producer_id " +
                 "WHERE product.id LIKE @id";
 
             SqlCommand comm = new SqlCommand(sql, conn);
-            comm.Parameters.AddWithValue("@id", id );
+            comm.Parameters.AddWithValue("@id", id);
             dataAdapter = new SqlDataAdapter(comm);
             DataTable dt = new DataTable();
             dataAdapter.Fill(dt);
             return dt;
         }
 
-        public bool addProduct( DTO_product product)
+        public bool addProduct(DTO_product product)
         {
             try
             {
                 conn.Open();
 
-                string s1 = "exec sp_insert_product @nameProduct,@year,@description,@warrantly,@nameCategory,@nameProduct";
+                string s1 = "exec sp_insert_product @nameProduct,@year,@description,@warrantly,@nameCategory,@nameProducer";
                 SqlCommand comm = new SqlCommand(s1, conn);
-                comm.Parameters.AddWithValue("@nameProduct", "N'%"+product.getNameProduct()+"%'");
+                comm.Parameters.AddWithValue("@nameProduct", product.getNameProduct());
                 comm.Parameters.AddWithValue("@year", product.getYears());
-                comm.Parameters.AddWithValue("@description", "N'%" + product.getDescription() + "%'");
-                comm.Parameters.AddWithValue("@warrantly", "N'%" + product.getWarranty() + "%'");
-                comm.Parameters.AddWithValue("@nameCategory", "N'%" + product.getNameCategory() + "%'");
-                comm.Parameters.AddWithValue("@nameProduct", "N'%" + product.getNameProduct() + "%'");
+                comm.Parameters.AddWithValue("@id", product.getId());
+                comm.Parameters.AddWithValue("@description", product.getDescription());
+                comm.Parameters.AddWithValue("@warrantly", product.getWarranty());
+                comm.Parameters.AddWithValue("@nameCategory", product.getNameCategory());
+                comm.Parameters.AddWithValue("@nameProducer", product.getNameProducer());
 
                 if (comm.ExecuteNonQuery() > 0)
                 {
@@ -89,15 +86,15 @@ namespace DAL_Manegement
             {
                 conn.Open();
 
-                string s1 = "exec sp_update_product @nameProduct,@year,@description,@warrantly,@nameCategory,@nameProduct";
+                string s1 = "exec sp_update_product @id,@nameProduct,@year,@description,@warrantly,@nameCategory,@nameProducer";
                 SqlCommand comm = new SqlCommand(s1, conn);
-                comm.Parameters.AddWithValue("@nameProduct", "N'%" + product.getNameProduct() + "%'");
+                comm.Parameters.AddWithValue("@nameProduct", product.getNameProduct() );
                 comm.Parameters.AddWithValue("@year", product.getYears());
-                comm.Parameters.AddWithValue("@id", product.getYears());
-                comm.Parameters.AddWithValue("@description", "N'%" + product.getDescription() + "%'");
-                comm.Parameters.AddWithValue("@warrantly", "N'%" + product.getWarranty() + "%'");
-                comm.Parameters.AddWithValue("@nameCategory", "N'%" + product.getNameCategory() + "%'");
-                comm.Parameters.AddWithValue("@nameProduct", "N'%" + product.getNameProduct() + "%'");
+                comm.Parameters.AddWithValue("@id", product.getId());
+                comm.Parameters.AddWithValue("@description", product.getDescription() );
+                comm.Parameters.AddWithValue("@warrantly", product.getWarranty() );
+                comm.Parameters.AddWithValue("@nameCategory", product.getNameCategory() );
+                comm.Parameters.AddWithValue("@nameProducer", product.getNameProducer() );
 
                 if (comm.ExecuteNonQuery() > 0)
                 {
@@ -170,6 +167,6 @@ namespace DAL_Manegement
                 conn.Close();
             }
         }
-       
+
     }
 }

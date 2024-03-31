@@ -38,19 +38,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnsAdd = new System.Windows.Forms.Button();
-            this.comboPro = new System.Windows.Forms.ComboBox();
-            this.comboCate = new System.Windows.Forms.ComboBox();
-            this.notes = new System.Windows.Forms.TextBox();
-            this.quantity = new System.Windows.Forms.TextBox();
-            this.wranntlys = new System.Windows.Forms.TextBox();
+            this.cbo_Producer = new System.Windows.Forms.ComboBox();
+            this.cbo_category = new System.Windows.Forms.ComboBox();
+            this.descrption = new System.Windows.Forms.TextBox();
+            this.warrantly = new System.Windows.Forms.TextBox();
             this.years = new System.Windows.Forms.TextBox();
-            this.namep = new System.Windows.Forms.TextBox();
-            this.ids = new System.Windows.Forms.TextBox();
+            this.nameProduct = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -64,7 +61,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1521, 1055);
+            this.groupBox1.Size = new System.Drawing.Size(1924, 1055);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -77,19 +74,16 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.btnsAdd);
-            this.groupBox2.Controls.Add(this.comboPro);
-            this.groupBox2.Controls.Add(this.comboCate);
-            this.groupBox2.Controls.Add(this.notes);
-            this.groupBox2.Controls.Add(this.quantity);
-            this.groupBox2.Controls.Add(this.wranntlys);
+            this.groupBox2.Controls.Add(this.cbo_Producer);
+            this.groupBox2.Controls.Add(this.cbo_category);
+            this.groupBox2.Controls.Add(this.descrption);
+            this.groupBox2.Controls.Add(this.warrantly);
             this.groupBox2.Controls.Add(this.years);
-            this.groupBox2.Controls.Add(this.namep);
-            this.groupBox2.Controls.Add(this.ids);
+            this.groupBox2.Controls.Add(this.nameProduct);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(610, 114);
@@ -101,7 +95,7 @@
             // btnImagesProduct
             // 
             this.btnImagesProduct.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImagesProduct.Location = new System.Drawing.Point(743, 498);
+            this.btnImagesProduct.Location = new System.Drawing.Point(743, 420);
             this.btnImagesProduct.Name = "btnImagesProduct";
             this.btnImagesProduct.Size = new System.Drawing.Size(101, 31);
             this.btnImagesProduct.TabIndex = 22;
@@ -111,7 +105,7 @@
             // 
             // image
             // 
-            this.image.Location = new System.Drawing.Point(393, 499);
+            this.image.Location = new System.Drawing.Point(393, 421);
             this.image.Name = "image";
             this.image.Size = new System.Drawing.Size(315, 30);
             this.image.TabIndex = 21;
@@ -127,7 +121,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(250, 501);
+            this.label9.Location = new System.Drawing.Point(250, 423);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 22);
             this.label9.TabIndex = 18;
@@ -136,7 +130,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(250, 569);
+            this.label8.Location = new System.Drawing.Point(250, 491);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 22);
             this.label8.TabIndex = 17;
@@ -145,7 +139,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(247, 441);
+            this.label7.Location = new System.Drawing.Point(247, 363);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(110, 22);
             this.label7.TabIndex = 16;
@@ -154,20 +148,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(247, 371);
+            this.label6.Location = new System.Drawing.Point(247, 293);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 22);
             this.label6.TabIndex = 15;
             this.label6.Text = "Danh mục";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(247, 298);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 22);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Số lượng";
             // 
             // label4
             // 
@@ -200,51 +185,45 @@
             // 
             this.btnsAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnsAdd.Image")));
-            this.btnsAdd.Location = new System.Drawing.Point(408, 704);
+            this.btnsAdd.Location = new System.Drawing.Point(408, 626);
             this.btnsAdd.Name = "btnsAdd";
             this.btnsAdd.Size = new System.Drawing.Size(147, 75);
             this.btnsAdd.TabIndex = 9;
             this.btnsAdd.Text = "Thêm";
             this.btnsAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnsAdd.UseVisualStyleBackColor = true;
+            this.btnsAdd.Click += new System.EventHandler(this.btnsAdd_Click);
             // 
-            // comboPro
+            // cbo_Producer
             // 
-            this.comboPro.FormattingEnabled = true;
-            this.comboPro.Location = new System.Drawing.Point(390, 433);
-            this.comboPro.Name = "comboPro";
-            this.comboPro.Size = new System.Drawing.Size(321, 30);
-            this.comboPro.TabIndex = 8;
+            this.cbo_Producer.FormattingEnabled = true;
+            this.cbo_Producer.Location = new System.Drawing.Point(390, 355);
+            this.cbo_Producer.Name = "cbo_Producer";
+            this.cbo_Producer.Size = new System.Drawing.Size(321, 30);
+            this.cbo_Producer.TabIndex = 8;
             // 
-            // comboCate
+            // cbo_category
             // 
-            this.comboCate.FormattingEnabled = true;
-            this.comboCate.Location = new System.Drawing.Point(390, 363);
-            this.comboCate.Name = "comboCate";
-            this.comboCate.Size = new System.Drawing.Size(321, 30);
-            this.comboCate.TabIndex = 7;
+            this.cbo_category.FormattingEnabled = true;
+            this.cbo_category.Location = new System.Drawing.Point(390, 285);
+            this.cbo_category.Name = "cbo_category";
+            this.cbo_category.Size = new System.Drawing.Size(321, 30);
+            this.cbo_category.TabIndex = 7;
             // 
-            // notes
+            // descrption
             // 
-            this.notes.Location = new System.Drawing.Point(390, 566);
-            this.notes.Multiline = true;
-            this.notes.Name = "notes";
-            this.notes.Size = new System.Drawing.Size(319, 113);
-            this.notes.TabIndex = 6;
+            this.descrption.Location = new System.Drawing.Point(390, 488);
+            this.descrption.Multiline = true;
+            this.descrption.Name = "descrption";
+            this.descrption.Size = new System.Drawing.Size(319, 113);
+            this.descrption.TabIndex = 6;
             // 
-            // quantity
+            // warrantly
             // 
-            this.quantity.Location = new System.Drawing.Point(390, 295);
-            this.quantity.Name = "quantity";
-            this.quantity.Size = new System.Drawing.Size(319, 30);
-            this.quantity.TabIndex = 5;
-            // 
-            // wranntlys
-            // 
-            this.wranntlys.Location = new System.Drawing.Point(390, 229);
-            this.wranntlys.Name = "wranntlys";
-            this.wranntlys.Size = new System.Drawing.Size(321, 30);
-            this.wranntlys.TabIndex = 4;
+            this.warrantly.Location = new System.Drawing.Point(390, 229);
+            this.warrantly.Name = "warrantly";
+            this.warrantly.Size = new System.Drawing.Size(321, 30);
+            this.warrantly.TabIndex = 4;
             // 
             // years
             // 
@@ -253,20 +232,12 @@
             this.years.Size = new System.Drawing.Size(319, 30);
             this.years.TabIndex = 3;
             // 
-            // namep
+            // nameProduct
             // 
-            this.namep.Location = new System.Drawing.Point(392, 99);
-            this.namep.Name = "namep";
-            this.namep.Size = new System.Drawing.Size(319, 30);
-            this.namep.TabIndex = 2;
-            // 
-            // ids
-            // 
-            this.ids.Location = new System.Drawing.Point(390, 63);
-            this.ids.Name = "ids";
-            this.ids.Size = new System.Drawing.Size(321, 30);
-            this.ids.TabIndex = 1;
-            this.ids.Visible = false;
+            this.nameProduct.Location = new System.Drawing.Point(392, 99);
+            this.nameProduct.Name = "nameProduct";
+            this.nameProduct.Size = new System.Drawing.Size(319, 30);
+            this.nameProduct.TabIndex = 2;
             // 
             // label1
             // 
@@ -282,10 +253,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1521, 1055);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form_AddProduct";
             this.Text = "Form_AddProduct";
+            this.Load += new System.EventHandler(this.Form_AddProduct_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -299,19 +271,16 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox quantity;
-        private System.Windows.Forms.TextBox wranntlys;
+        private System.Windows.Forms.TextBox warrantly;
         private System.Windows.Forms.TextBox years;
-        private System.Windows.Forms.TextBox namep;
-        private System.Windows.Forms.TextBox ids;
+        private System.Windows.Forms.TextBox nameProduct;
         private System.Windows.Forms.Button btnsAdd;
-        private System.Windows.Forms.ComboBox comboPro;
-        private System.Windows.Forms.ComboBox comboCate;
-        private System.Windows.Forms.TextBox notes;
+        private System.Windows.Forms.ComboBox cbo_Producer;
+        private System.Windows.Forms.ComboBox cbo_category;
+        private System.Windows.Forms.TextBox descrption;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

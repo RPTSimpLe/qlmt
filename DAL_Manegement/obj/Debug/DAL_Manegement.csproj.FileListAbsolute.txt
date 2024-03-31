@@ -34,3 +34,12 @@ E:\qlmt\DAL_Manegement\bin\Debug\DAL_Manegement.pdb
 E:\qlmt\DAL_Manegement\bin\Debug\DTO_Manegement.dll
 E:\qlmt\DAL_Manegement\bin\Debug\DTO_Manegement.pdb
 E:\qlmt\DAL_Manegement\obj\Debug\DAL_Mane.5BC357D5.Up2Date
+C:\Users\simpLe\Downloads\qlmt\DAL_Manegement\bin\Debug\DAL_Manegement.dll
+C:\Users\simpLe\Downloads\qlmt\DAL_Manegement\bin\Debug\DAL_Manegement.pdb
+C:\Users\simpLe\Downloads\qlmt\DAL_Manegement\bin\Debug\DTO_Manegement.dll
+C:\Users\simpLe\Downloads\qlmt\DAL_Manegement\bin\Debug\DTO_Manegement.pdb
+C:\Users\simpLe\Downloads\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.csproj.AssemblyReference.cache
+C:\Users\simpLe\Downloads\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.csproj.CoreCompileInputs.cache
+C:\Users\simpLe\Downloads\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.csproj.CopyComplete
+C:\Users\simpLe\Downloads\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.dll
+C:\Users\simpLe\Downloads\qlmt\DAL_Manegement\obj\Debug\DAL_Manegement.pdb

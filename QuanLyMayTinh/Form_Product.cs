@@ -1,4 +1,5 @@
 ﻿using BUS_Manegement;
+using DTO_Manegement;
 using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections.Generic;
@@ -9,15 +10,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.AxHost;
 
 namespace QuanLyMayTinh
 {
     public partial class Form_Product : Form
     {
-        public static BUS_product product = new BUS_product(); 
+        public static BUS_product product = new BUS_product();
+        public static BUS_Producer bus_producer = new BUS_Producer();
+        public static BUS_Category bus_category = new BUS_Category();
+
         public Form_Product()
         {
-      
+
             InitializeComponent();
         }
 
@@ -29,6 +34,24 @@ namespace QuanLyMayTinh
         private void Form_Product_Load(object sender, EventArgs e)
         {
             this.getAll();
+
+            this.resetCbo();
+        }
+        public void resetCbo()
+        {
+            cbo_category.Items.Clear();
+            System.Data.DataTable dtCate = bus_category.getAllData();
+            foreach (DataRow dr in dtCate.Rows)
+            {
+                cbo_category.Items.Add(dr["Tên danh mục"]);
+            }
+
+            cbo_Producer.Items.Clear();
+            System.Data.DataTable dtProducer = bus_producer.getAllData();
+            foreach (DataRow dr in dtProducer.Rows)
+            {
+                cbo_Producer.Items.Add(dr["Tên NSX"]);
+            }
         }
 
         public void getAll()
@@ -59,11 +82,27 @@ namespace QuanLyMayTinh
             MessageBox.Show("Xóa thành công");
         }
 
+        private void searchProduct_Click(object sender, EventArgs e)
+        {
+            String categoryva = "";
+            if (cbo_category.SelectedIndex != -1)
+            {
+                categoryva = cbo_category.SelectedItem.ToString().Trim();
+            }
+            String producerva = "";
+            if (cbo_Producer.SelectedIndex != -1)
+            {
+                producerva = cbo_Producer.SelectedItem.ToString().Trim();
+            }
+            String namePro = txt_findName.Text.Trim();
+
+            dataGridView1.DataSource = product.FindProduct(namePro, categoryva, producerva);
+        }
+
         private void addUser_Click(object sender, EventArgs e)
         {
-            Form_AddProduct f = new Form_AddProduct();
-            f.ShowDialog();
-
+            Form_AddProduct form_AddProduct = new Form_AddProduct();
+            form_AddProduct.ShowDialog();
         }
     }
 }

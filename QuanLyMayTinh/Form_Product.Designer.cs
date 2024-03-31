@@ -49,9 +49,9 @@
             this.addUser = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.searchProduct = new System.Windows.Forms.Button();
-            this.comboBoxProducer = new System.Windows.Forms.ComboBox();
-            this.comboBoxType = new System.Windows.Forms.ComboBox();
-            this.nameUser = new System.Windows.Forms.TextBox();
+            this.cbo_Producer = new System.Windows.Forms.ComboBox();
+            this.cbo_category = new System.Windows.Forms.ComboBox();
+            this.txt_findName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -259,9 +259,9 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.searchProduct);
-            this.groupBox4.Controls.Add(this.comboBoxProducer);
-            this.groupBox4.Controls.Add(this.comboBoxType);
-            this.groupBox4.Controls.Add(this.nameUser);
+            this.groupBox4.Controls.Add(this.cbo_Producer);
+            this.groupBox4.Controls.Add(this.cbo_category);
+            this.groupBox4.Controls.Add(this.txt_findName);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -283,31 +283,32 @@
             this.searchProduct.Text = "Tìm kiếm";
             this.searchProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.searchProduct.UseVisualStyleBackColor = true;
+            this.searchProduct.Click += new System.EventHandler(this.searchProduct_Click);
             // 
-            // comboBoxProducer
+            // cbo_Producer
             // 
-            this.comboBoxProducer.FormattingEnabled = true;
-            this.comboBoxProducer.Location = new System.Drawing.Point(1014, 44);
-            this.comboBoxProducer.Name = "comboBoxProducer";
-            this.comboBoxProducer.Size = new System.Drawing.Size(179, 30);
-            this.comboBoxProducer.TabIndex = 3;
-            this.comboBoxProducer.Text = "Lọc theo hãng";
+            this.cbo_Producer.FormattingEnabled = true;
+            this.cbo_Producer.Location = new System.Drawing.Point(1014, 44);
+            this.cbo_Producer.Name = "cbo_Producer";
+            this.cbo_Producer.Size = new System.Drawing.Size(179, 30);
+            this.cbo_Producer.TabIndex = 3;
+            this.cbo_Producer.Text = "Lọc theo hãng";
             // 
-            // comboBoxType
+            // cbo_category
             // 
-            this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Location = new System.Drawing.Point(731, 41);
-            this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(176, 30);
-            this.comboBoxType.TabIndex = 2;
-            this.comboBoxType.Text = "Lọc theo loại";
+            this.cbo_category.FormattingEnabled = true;
+            this.cbo_category.Location = new System.Drawing.Point(731, 41);
+            this.cbo_category.Name = "cbo_category";
+            this.cbo_category.Size = new System.Drawing.Size(176, 30);
+            this.cbo_category.TabIndex = 2;
+            this.cbo_category.Text = "Lọc theo loại";
             // 
-            // nameUser
+            // txt_findName
             // 
-            this.nameUser.Location = new System.Drawing.Point(305, 41);
-            this.nameUser.Name = "nameUser";
-            this.nameUser.Size = new System.Drawing.Size(283, 30);
-            this.nameUser.TabIndex = 1;
+            this.txt_findName.Location = new System.Drawing.Point(305, 41);
+            this.txt_findName.Name = "txt_findName";
+            this.txt_findName.Size = new System.Drawing.Size(283, 30);
+            this.txt_findName.TabIndex = 1;
             // 
             // label1
             // 
@@ -349,9 +350,9 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button searchProduct;
-        private System.Windows.Forms.ComboBox comboBoxProducer;
-        private System.Windows.Forms.ComboBox comboBoxType;
-        private System.Windows.Forms.TextBox nameUser;
+        private System.Windows.Forms.ComboBox cbo_Producer;
+        private System.Windows.Forms.ComboBox cbo_category;
+        private System.Windows.Forms.TextBox txt_findName;
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Button deleteUser;
         private System.Windows.Forms.Button addUser;

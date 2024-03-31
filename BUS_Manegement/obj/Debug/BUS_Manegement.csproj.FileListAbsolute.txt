@@ -42,3 +42,14 @@ E:\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.csproj.CoreCompileInputs.cache
 E:\qlmt\BUS_Manegement\obj\Debug\BUS_Mane.B033C982.Up2Date
 E:\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.dll
 E:\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.pdb
+C:\Users\simpLe\Downloads\qlmt\BUS_Manegement\bin\Debug\BUS_Manegement.dll
+C:\Users\simpLe\Downloads\qlmt\BUS_Manegement\bin\Debug\BUS_Manegement.pdb
+C:\Users\simpLe\Downloads\qlmt\BUS_Manegement\bin\Debug\DAL_Manegement.dll
+C:\Users\simpLe\Downloads\qlmt\BUS_Manegement\bin\Debug\DTO_Manegement.dll
+C:\Users\simpLe\Downloads\qlmt\BUS_Manegement\bin\Debug\DAL_Manegement.pdb
+C:\Users\simpLe\Downloads\qlmt\BUS_Manegement\bin\Debug\DTO_Manegement.pdb
+C:\Users\simpLe\Downloads\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.csproj.AssemblyReference.cache
+C:\Users\simpLe\Downloads\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.csproj.CoreCompileInputs.cache
+C:\Users\simpLe\Downloads\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.csproj.CopyComplete
+C:\Users\simpLe\Downloads\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.dll
+C:\Users\simpLe\Downloads\qlmt\BUS_Manegement\obj\Debug\BUS_Manegement.pdb

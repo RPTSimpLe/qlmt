@@ -107,7 +107,7 @@ end
 --select * from category
 --select * from producer
 
---exec sp_insert_product N'asus tuf f15',2020,'test',N'4 tháng',N'category1',N'prodcer1'
+--exec sp_insert_product N'lenovo tuf f15',2020,'sđâsdsad',N'4 tháng',N'category1',N'prodcer1'
 --select * from product
 
 -- drop proc sp_update_product
@@ -132,6 +132,38 @@ begin
 --	PRINT 'producerId: ' + CAST(@producerId AS nvarchar)
 end
 
---exec sp_update_product 2,N'asus tuf f15',2020,'test',N'4 tháng',N'category1',N'prodcer1'
+--exec sp_update_product 2,N'asus tuf f20',2020,'test',N'4 tháng',N'category1',N'prodcer1'
 --select * from product
+--select * from options 
 
+create proc sp_select_product
+	@nameProduct nvarchar(50),
+	@nameCategory nvarchar(30),
+	@nameProducer nvarchar(30)
+as
+begin
+
+	SELECT 
+		product.id AS [ID], 
+		product.nameProduct AS [Tên sản phẩm],
+		category.nameCategory AS [Loại], 
+		producer.nameProducer AS [Hãng], 
+		CASE 
+			WHEN Sum(options.quantity) IS NULL THEN 0
+			ELSE Sum(options.quantity)
+		END AS [Tồn kho]
+	FROM 
+		product  
+	JOIN 
+		category ON category.id = product.category_id 
+	JOIN 
+		producer ON producer.id = product.producer_id  
+	LEFT JOIN 
+		options ON options.product_id = product.id
+	where category.nameCategory like @nameCategory and producer.nameProducer like @nameProducer
+	and product.nameProduct like @nameProduct
+	GROUP BY 
+		product.id, product.nameProduct, category.nameCategory, producer.nameProducer;
+--	PRINT 'categoryId: ' + CAST(@categoryId AS nvarchar)
+--	PRINT 'producerId: ' + CAST(@producerId AS nvarchar)
+end
