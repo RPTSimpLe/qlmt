@@ -78,6 +78,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Customer.Designer.cs">
+      <DependentUpon>Form_Customer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_AddOption.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,12 @@
     </Compile>
     <Compile Include="Form_Account.Designer.cs">
       <DependentUpon>Form_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Payment.Designer.cs">
+      <DependentUpon>Form_Payment.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Producer.cs">
       <SubType>Form</SubType>
@@ -167,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Detail_Product.resx">
       <DependentUpon>Form_Detail_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Payment.resx">
+      <DependentUpon>Form_Payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Producer.resx">
       <DependentUpon>Form_Producer.cs</DependentUpon>

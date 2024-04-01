@@ -23,6 +23,13 @@ create table users(
 	address nvarchar(255),
 	email varchar(255),
 		);
+creat table customers(
+	id int identity(1,1) primary key,
+	fullname nvarchar(30),
+	phone nvarchar(10),
+	addres nvarchar(255),
+
+);
 create table product(
 	id int identity(1,1) primary key,
 	nameProduct nvarchar(30),

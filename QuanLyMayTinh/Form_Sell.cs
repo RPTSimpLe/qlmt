@@ -103,5 +103,11 @@ namespace QuanLyMayTinh
                 groupBox.Visible=false;
             }
         }
+
+        private void payments_Click(object sender, EventArgs e)
+        {
+            Form_Payment payment = new Form_Payment();
+            payment.ShowDialog();
+        }
     }
 }

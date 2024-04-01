@@ -479,6 +479,7 @@
             this.payments.Text = "Thanh toán";
             this.payments.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.payments.UseVisualStyleBackColor = true;
+            this.payments.Click += new System.EventHandler(this.payments_Click);
             // 
             // groupBox4
             // 

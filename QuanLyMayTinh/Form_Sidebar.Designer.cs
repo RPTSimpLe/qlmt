@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Sidebar));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnThongKeThu = new System.Windows.Forms.Button();
             this.btnThongKeChi = new System.Windows.Forms.Button();
             this.btnSell = new System.Windows.Forms.Button();
             this.btnRole = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnThongKeThu = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.panelDesktopPane.SuspendLayout();
@@ -67,6 +67,25 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(315, 805);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnThongKeThu
+            // 
+            this.btnThongKeThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnThongKeThu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThongKeThu.FlatAppearance.BorderSize = 0;
+            this.btnThongKeThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongKeThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKeThu.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnThongKeThu.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKeThu.Image")));
+            this.btnThongKeThu.Location = new System.Drawing.Point(0, 585);
+            this.btnThongKeThu.Name = "btnThongKeThu";
+            this.btnThongKeThu.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnThongKeThu.Size = new System.Drawing.Size(315, 71);
+            this.btnThongKeThu.TabIndex = 8;
+            this.btnThongKeThu.Text = "Thống kê thu";
+            this.btnThongKeThu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThongKeThu.UseVisualStyleBackColor = false;
+            this.btnThongKeThu.Click += new System.EventHandler(this.btnThongKeThu_Click);
             // 
             // btnThongKeChi
             // 
@@ -272,25 +291,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnThongKeThu
-            // 
-            this.btnThongKeThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnThongKeThu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnThongKeThu.FlatAppearance.BorderSize = 0;
-            this.btnThongKeThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKeThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeThu.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnThongKeThu.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKeThu.Image")));
-            this.btnThongKeThu.Location = new System.Drawing.Point(0, 585);
-            this.btnThongKeThu.Name = "btnThongKeThu";
-            this.btnThongKeThu.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnThongKeThu.Size = new System.Drawing.Size(315, 71);
-            this.btnThongKeThu.TabIndex = 8;
-            this.btnThongKeThu.Text = "Thống kê thu";
-            this.btnThongKeThu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThongKeThu.UseVisualStyleBackColor = false;
-            this.btnThongKeThu.Click += new System.EventHandler(this.btnThongKeThu_Click);
-            // 
             // Form_Sidebar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -299,8 +299,11 @@
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form_Sidebar";
             this.Text = "Form_Sidebar";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form_Sidebar_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();

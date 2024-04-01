@@ -180,3 +180,5 @@ D:\code\c#\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Role.resources
 D:\code\c#\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Sell.resources
 D:\code\c#\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_ThongKeChi.resources
 D:\code\c#\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_ThongKeThu.resources
+H:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.form_AddOption.resources
+H:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Payment.resources

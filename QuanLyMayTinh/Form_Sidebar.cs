@@ -21,6 +21,7 @@ namespace QuanLyMayTinh
             InitializeComponent();
             btnCloseChildForm.Visible = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -144,6 +145,11 @@ namespace QuanLyMayTinh
         private void btnThongKeThu_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Form_ThongKeThu(), sender);
+        }
+
+        private void Form_Sidebar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
