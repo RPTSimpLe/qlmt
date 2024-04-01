@@ -69,10 +69,6 @@ namespace QuanLyMayTinh
         {
             int i = dataGridView1.CurrentRow.Index;
             ids.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
-            namePro.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            quantity.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-            category.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-            producer.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
         }
 
         private void deleteUser_Click(object sender, EventArgs e)

@@ -34,15 +34,7 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.producer = new System.Windows.Forms.TextBox();
-            this.category = new System.Windows.Forms.TextBox();
             this.btnDetail = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.quantity = new System.Windows.Forms.TextBox();
-            this.namePro = new System.Windows.Forms.TextBox();
             this.ids = new System.Windows.Forms.TextBox();
             this.cancel = new System.Windows.Forms.Button();
             this.deleteUser = new System.Windows.Forms.Button();
@@ -111,15 +103,7 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.producer);
-            this.groupBox5.Controls.Add(this.category);
             this.groupBox5.Controls.Add(this.btnDetail);
-            this.groupBox5.Controls.Add(this.label7);
-            this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Controls.Add(this.label3);
-            this.groupBox5.Controls.Add(this.label2);
-            this.groupBox5.Controls.Add(this.quantity);
-            this.groupBox5.Controls.Add(this.namePro);
             this.groupBox5.Controls.Add(this.ids);
             this.groupBox5.Controls.Add(this.cancel);
             this.groupBox5.Controls.Add(this.deleteUser);
@@ -133,25 +117,11 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Form";
             // 
-            // producer
-            // 
-            this.producer.Location = new System.Drawing.Point(166, 273);
-            this.producer.Name = "producer";
-            this.producer.Size = new System.Drawing.Size(247, 30);
-            this.producer.TabIndex = 42;
-            // 
-            // category
-            // 
-            this.category.Location = new System.Drawing.Point(161, 186);
-            this.category.Name = "category";
-            this.category.Size = new System.Drawing.Size(247, 30);
-            this.category.TabIndex = 41;
-            // 
             // btnDetail
             // 
             this.btnDetail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetail.Image = ((System.Drawing.Image)(resources.GetObject("btnDetail.Image")));
-            this.btnDetail.Location = new System.Drawing.Point(45, 473);
+            this.btnDetail.Location = new System.Drawing.Point(34, 195);
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.Size = new System.Drawing.Size(154, 75);
             this.btnDetail.TabIndex = 40;
@@ -159,56 +129,6 @@
             this.btnDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDetail.UseVisualStyleBackColor = true;
             this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(41, 273);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 22);
-            this.label7.TabIndex = 37;
-            this.label7.Text = "Nhà sản xuất";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(41, 200);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 22);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Danh mục";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 121);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 22);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Số lượng";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 22);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Tên sản phẩm";
-            // 
-            // quantity
-            // 
-            this.quantity.Location = new System.Drawing.Point(161, 113);
-            this.quantity.Name = "quantity";
-            this.quantity.Size = new System.Drawing.Size(247, 30);
-            this.quantity.TabIndex = 29;
-            // 
-            // namePro
-            // 
-            this.namePro.Location = new System.Drawing.Point(165, 47);
-            this.namePro.Name = "namePro";
-            this.namePro.Size = new System.Drawing.Size(242, 30);
-            this.namePro.TabIndex = 28;
             // 
             // ids
             // 
@@ -222,7 +142,7 @@
             // 
             this.cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancel.Image = ((System.Drawing.Image)(resources.GetObject("cancel.Image")));
-            this.cancel.Location = new System.Drawing.Point(262, 473);
+            this.cancel.Location = new System.Drawing.Point(251, 195);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(146, 76);
             this.cancel.TabIndex = 26;
@@ -234,7 +154,7 @@
             // 
             this.deleteUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteUser.Image = ((System.Drawing.Image)(resources.GetObject("deleteUser.Image")));
-            this.deleteUser.Location = new System.Drawing.Point(262, 363);
+            this.deleteUser.Location = new System.Drawing.Point(251, 85);
             this.deleteUser.Name = "deleteUser";
             this.deleteUser.Size = new System.Drawing.Size(151, 75);
             this.deleteUser.TabIndex = 24;
@@ -247,7 +167,7 @@
             // 
             this.addUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addUser.Image = ((System.Drawing.Image)(resources.GetObject("addUser.Image")));
-            this.addUser.Location = new System.Drawing.Point(41, 363);
+            this.addUser.Location = new System.Drawing.Point(30, 85);
             this.addUser.Name = "addUser";
             this.addUser.Size = new System.Drawing.Size(154, 75);
             this.addUser.TabIndex = 23;
@@ -356,15 +276,7 @@
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Button deleteUser;
         private System.Windows.Forms.Button addUser;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox quantity;
-        private System.Windows.Forms.TextBox namePro;
         private System.Windows.Forms.TextBox ids;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox producer;
-        private System.Windows.Forms.TextBox category;
         private System.Windows.Forms.Button btnDetail;
     }
 }
