@@ -28,6 +28,6 @@ namespace DTO_Manegement
         public void setfullname(string fullname) { this.fullname = fullname; }
         public void setphone(string phone) { this.phone = phone; }
         public void setId(int id) { this.id = id; }
-        public void set(string addres) { this.addres = addres; }
+        public void setaddres(string addres) { this.addres = addres; }
     }
 }

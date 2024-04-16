@@ -26,11 +26,6 @@ namespace QuanLyMayTinh
             InitializeComponent();
         }
 
-        private void saveProduct_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form_Product_Load(object sender, EventArgs e)
         {
             this.getAll();

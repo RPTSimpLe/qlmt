@@ -182,3 +182,8 @@ D:\code\c#\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_ThongKeChi.resources
 D:\code\c#\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_ThongKeThu.resources
 H:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.form_AddOption.resources
 H:\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Payment.resources
+D:\code\c#\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Payment.resources
+D:\code\c#\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Customer.resources
+D:\code\c#\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_login.resources
+D:\code\c#\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_Bill.resources
+D:\code\c#\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.Form_DetailBill.resources

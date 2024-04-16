@@ -15,7 +15,6 @@ namespace DAL_Manegement
     public class DAL_Product : DBConnect
     {
         private SqlDataAdapter dataAdapter;
-
         public DataTable findProduct(String name, String type, String hang)
         {
             string sql = "exec sp_select_product @nameProduct = @name, @nameCategory = @type, @nameProducer = @hang";

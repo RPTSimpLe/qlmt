@@ -102,5 +102,30 @@ namespace DAL_Manegement
                 conn.Close();
             }
         }
+        public bool deleteById(int id)
+        {
+            try
+            {
+                conn.Open();
+
+                string s1 = "DELETE FROM customers WHERE id = @Id";
+                SqlCommand comm = new SqlCommand(s1, conn);
+                comm.Parameters.AddWithValue("@Id", id);
+
+                if (comm.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }

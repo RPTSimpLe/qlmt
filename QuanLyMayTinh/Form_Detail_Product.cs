@@ -63,7 +63,7 @@ namespace QuanLyMayTinh
                 int id = Convert.ToInt32(textBoxId.Text);
                 DTO_optionProduct dTO_Option = new DTO_optionProduct(id, ram, storage, quantity, importPrice, sellingPrice, Convert.ToInt64(proId));
 
-                bUS_OptionProduct.updateOption(dTO_Option);
+                bUS_OptionProduct.updateOption(dTO_Option,0);
 
                 MessageBox.Show("Cập nhật thành công");
             }

@@ -71,6 +71,5 @@ namespace DTO_Manegement
         {
             this.product_id = product_id;
         }
-
     }
 }

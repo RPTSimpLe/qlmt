@@ -28,5 +28,10 @@ namespace BUS_Manegement
         {
             return customer.findByFullNameByCustomer(fullName);
         }
+
+        public bool deleteById(int id)
+        {
+            return customer.deleteById(id);
+        }
     }
 }

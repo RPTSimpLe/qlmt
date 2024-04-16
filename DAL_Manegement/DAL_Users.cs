@@ -34,6 +34,25 @@ namespace DAL_Manegement
             return dt;
         }
 
+        public DataTable getAllRoleId()
+        {
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(
+                @"SELECT u.id AS [ID], 
+                 u.fullname AS [Họ và tên], 
+                 u.username AS [Tên đăng nhập], 
+                 u.pass AS [Mật khẩu], 
+                 u.phone AS [Số điện thoại], 
+                 u.gender AS [Giới tính], 
+                 u.birthday AS [Ngày sinh], 
+                 u.address AS [Địa chỉ], 
+                 u.email AS [Email], 
+                 r.id AS [Quyền]
+          FROM users u
+          INNER JOIN role r ON u.role_id = r.id", conn);
+            DataTable dt = new DataTable();
+            dataAdapter.Fill(dt);
+            return dt;
+        }
 
         public bool addUser(DTO_Users user, string roleName)
         {

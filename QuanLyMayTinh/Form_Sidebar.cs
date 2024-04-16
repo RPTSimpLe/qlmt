@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO_Manegement;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,12 +17,19 @@ namespace QuanLyMayTinh
         private Button currentButton;
         private int tempIndex;
         private Form activeForm;
+        private DTO_Users users;
         public Form_Sidebar()
         {
             InitializeComponent();
             btnCloseChildForm.Visible = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-
+        }
+        public Form_Sidebar(DTO_Users users)
+        {
+            InitializeComponent();
+            btnCloseChildForm.Visible = false;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.users = users;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -124,12 +132,20 @@ namespace QuanLyMayTinh
 
         private void btAccounts_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Form_Account(), sender);
+            Console.WriteLine(users.getRole_id());
+            if (this.users.getRole_id() == 1)
+            {
+                OpenChildForm(new Form_Account(), sender);
+            }
+            else { MessageBox.Show("bạn không được sử dụng tính năng này"); }
         }
 
         private void btnRole_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Form_Role(), sender);
+            if (this.users.getRole_id() == 1) {
+                OpenChildForm(new Form_Role(), sender);            
+            }
+            else { MessageBox.Show("bạn không được sử dụng tính năng này"); }
         }
 
         private void btnSell_Click(object sender, EventArgs e)
@@ -150,6 +166,16 @@ namespace QuanLyMayTinh
         private void Form_Sidebar_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Form_Customer(), sender);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Form_Bill(), sender);
         }
     }
 }

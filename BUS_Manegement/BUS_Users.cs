@@ -16,6 +16,10 @@ namespace BUS_Manegement
         {
             return users.getAll();
         }
+        public DataTable getAllRoleId()
+        {
+            return users.getAllRoleId();
+        }
         public bool addUser(DTO_Users user, string roleName)
         {
             return users.addUser(user, roleName);

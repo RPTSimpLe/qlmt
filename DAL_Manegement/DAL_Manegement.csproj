@@ -42,7 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL_bill.cs" />
     <Compile Include="DAL_Customer.cs" />
+    <Compile Include="DAL_DetailBill.cs" />
+    <Compile Include="DAL_expense_statistics.cs" />
+    <Compile Include="DAL_incomeStatistics.cs" />
     <Compile Include="DAL_optionProduct.cs" />
     <Compile Include="DAL_Category.cs" />
     <Compile Include="DAL_Producer.cs" />

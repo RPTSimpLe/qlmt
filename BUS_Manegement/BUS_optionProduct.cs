@@ -17,13 +17,26 @@ namespace BUS_Manegement
         {
             return optionProduct.getAll(id);
         }
+        public DataTable findName(int id)
+        {
+            return optionProduct.findName(id);
+        }
+        public DTO_optionProduct findById(int id)
+        {
+            return optionProduct.findById(id);
+        }
+
+        public DataTable findId(String ram, String storage, long sellingPrice)
+        {
+            return optionProduct.findId(ram, storage, sellingPrice);
+        }
         public bool addOption(DTO_optionProduct p)
         {
             return optionProduct.addOption(p);
         }
-        public bool updateOption(DTO_optionProduct p)
+        public bool updateOption(DTO_optionProduct p, int i)
         {
-            return optionProduct.updateOption(p);
+            return optionProduct.updateOption(p, 1);
         }
         public bool deleteOptionById(int id)
         {

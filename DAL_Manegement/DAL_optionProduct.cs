@@ -12,6 +12,7 @@ namespace DAL_Manegement
 {
     public class DAL_optionProduct : DBConnect
     {
+        private DAL_expense_statistics dAL_Expense_Statistics = new DAL_expense_statistics();
         private SqlDataAdapter dataAdapter;
         public DataTable getAll(int product_id)
         {
@@ -41,6 +42,7 @@ namespace DAL_Manegement
 
                 if (comm.ExecuteNonQuery() > 0)
                 {
+                    addExpenseStatics(optionProduct);
                     return true;
                 }
                 return false;
@@ -54,7 +56,84 @@ namespace DAL_Manegement
                 conn.Close();
             }
         }
-        public bool updateOption(DTO_optionProduct optionProduct)
+        public void addExpenseStatics(DTO_optionProduct optionProduct)
+        {
+            string select = "SELECT product.nameProduct AS [tensp] from product WHERE product.id = @product_id ";
+            SqlCommand comm2 = new SqlCommand(select, conn);
+            comm2.Parameters.AddWithValue("@product_id", optionProduct.getProduct_id());
+            DataTable dt = new DataTable();
+            dataAdapter = new SqlDataAdapter(comm2);
+            dataAdapter.Fill(dt);
+
+            DTO_expense_statistics dTO = new DTO_expense_statistics(0, dt.Rows[0]["tensp"].ToString(),"ram: "+optionProduct.getRam()+" - ổ cứng: "+optionProduct.getStorage(),
+                                                                    Convert.ToInt32(optionProduct.getQuantity()),optionProduct.getImportPrice(), DateTime.Now);
+            dAL_Expense_Statistics.add(dTO);
+        }
+
+        public void updateExpenseStatics(DTO_optionProduct optionProduct)
+        {
+            string select = "SELECT product.nameProduct AS [tensp] from product WHERE product.id = @product_id ";
+            SqlCommand comm2 = new SqlCommand(select, conn);
+            comm2.Parameters.AddWithValue("@product_id", optionProduct.getProduct_id());
+            DataTable dt = new DataTable();
+            dataAdapter = new SqlDataAdapter(comm2);
+            dataAdapter.Fill(dt);
+
+            DTO_expense_statistics dTO = new DTO_expense_statistics(0, dt.Rows[0]["tensp"].ToString(), "ram: " + optionProduct.getRam() + " - ổ cứng: " + optionProduct.getStorage(),
+                                                                    Convert.ToInt32(optionProduct.getQuantity()), optionProduct.getImportPrice(), DateTime.Now);
+            dAL_Expense_Statistics.update(dTO);
+        }
+        public DataTable findId(String ram, String storage, long sellingPrice)
+        {
+            string sql = "select id from options where ram = @ram and storage = @storage and sellingPrice = @sellingPrice";
+
+            SqlCommand comm = new SqlCommand(sql, conn);
+            comm.Parameters.AddWithValue("@ram", ram);
+            comm.Parameters.AddWithValue("@storage", storage );
+            comm.Parameters.AddWithValue("@sellingPrice",  sellingPrice );
+
+            dataAdapter = new SqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+            dataAdapter.Fill(dt);
+            return dt;
+        }
+
+        public DataTable findName(int id)
+        {
+            string sql = "select product.nameProduct as [tensp], options.ram as [ram], options.storage as [storage] from options " +
+                "join product on product.id = options.product_id " +
+                "where options.id = @id";
+
+            SqlCommand comm = new SqlCommand(sql, conn);
+            comm.Parameters.AddWithValue("@id", id);
+
+            dataAdapter = new SqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+            dataAdapter.Fill(dt);
+            return dt;
+        }
+        public DTO_optionProduct findById(int id)
+        {
+            string sql = "select * from options where options.id = @id";
+
+            SqlCommand comm = new SqlCommand(sql, conn);
+            comm.Parameters.AddWithValue("@id", id);
+
+            dataAdapter = new SqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+            dataAdapter.Fill(dt);
+
+            int idOp = Convert.ToInt32(dt.Rows[0]["id"].ToString());
+            String ram = dt.Rows[0]["ram"].ToString();
+            String storage = dt.Rows[0]["storage"].ToString();
+            long quantity = Convert.ToInt64(dt.Rows[0]["quantity"].ToString());
+            long importPrice = Convert.ToInt64(dt.Rows[0]["importPrice"].ToString());
+            long sellingPrice = Convert.ToInt64(dt.Rows[0]["sellingPrice"].ToString());
+            long product_id = Convert.ToInt64(dt.Rows[0]["product_id"].ToString());
+
+            return new DTO_optionProduct(idOp, ram, storage, quantity, importPrice, sellingPrice, product_id);
+        }
+        public bool updateOption(DTO_optionProduct optionProduct, int i=0)
         {
             try
             {
@@ -71,6 +150,10 @@ namespace DAL_Manegement
 
                 if (comm.ExecuteNonQuery() > 0)
                 {
+                    if (i == 0)
+                    {
+                        updateExpenseStatics(optionProduct);
+                    }
                     return true;
                 }
                 return false;

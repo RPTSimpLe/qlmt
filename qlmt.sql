@@ -23,13 +23,15 @@ create table users(
 	address nvarchar(255),
 	email varchar(255),
 		);
-creat table customers(
+create table customers(
 	id int identity(1,1) primary key,
 	fullname nvarchar(30),
 	phone nvarchar(10),
 	addres nvarchar(255),
 
 );
+-- INSERT INTO customers (fullname, phone, addres) VALUES (N'abc', '02164354','5 sdsdfsdf sdvsdfsd')
+-- select * from customers
 create table product(
 	id int identity(1,1) primary key,
 	nameProduct nvarchar(30),
@@ -58,9 +60,44 @@ create table options(
 	product_id int,
 	foreign key (product_id) references product(id),
 )
-
-INSERT INTO options(ram, storage, quantity, importPrice, sellingPrice, product_id) VALUES ('100bg','100tb',11,15,55,2)
-select * from options
+--INSERT INTO options(ram, storage, quantity, importPrice, sellingPrice, product_id) VALUES ('100bg','100tb',11,15,55,2)
+--select * from options
+--select id from options where ram =  '1' and storage = '1' and sellingPrice= '1'
+create table bill(
+	id varchar(50) primary key,
+	customer_id int,
+	created_at date,
+	foreign key (customer_id) references customers(id),
+)
+create table detailBill(
+	id int identity(1,1) primary key,
+	quantity bigint,
+	price bigint,
+	bill_id varchar(50),
+	options_id int,
+	foreign key (options_id) references options(id),
+	foreign key (bill_id) references bill(id)
+)
+--insert into bill (id,customer_id) values ('HD001',2)
+-- insert into detailBill (quantity,price,bill_id,options_id) values (55,8,'HD004',9)
+--select * from bill
+--select * from detailBill
+create table incomeStatistics(
+	id int identity(1,1) primary key,
+	nameProduct nvarchar(100),
+	nameOptions nvarchar(100),
+	sellQuantity int,
+	sellPrice bigint,
+	created_at date,
+)
+create table expense_statistics(
+	id int identity(1,1) primary key,
+	nameProduct nvarchar(100),
+	nameOptions nvarchar(100),
+	importQuantity int,
+	importPrice bigint,
+	created_at date,
+)
 create table role(
 	id int identity(1,1) primary key,
 	roles nvarchar(30)
@@ -174,3 +211,42 @@ begin
 --	PRINT 'categoryId: ' + CAST(@categoryId AS nvarchar)
 --	PRINT 'producerId: ' + CAST(@producerId AS nvarchar)
 end
+-- drop proc sp_select_bill
+create proc sp_select_bill
+	@id varchar(10),
+	@tenKh varchar(20)
+as
+begin
+	select bill.id as [MaHD],sum(detailBill.price) as [tongTien],
+		customers.fullname as [tenkh], bill.created_at as [ngaytao]
+	from bill
+	join detailBill on detailBill.bill_id = bill.id
+	join options on options.id = detailBill.options_id
+	join product on options.product_id = product.id
+	join customers on customers.id = bill.customer_id
+	where bill.id like @id and customers.fullname like @tenkh
+	Group by bill.id,product.nameProduct, customers.fullname ,bill.created_at
+end
+-- exec sp_select_bill '%44%' , '%%'
+--select * from users
+--select * from role
+--INSERT INTO users (fullname, username, pass, phone, gender, birthday, address, email, role_id) VALUES ('ltd', 'employee', 'employee', '6456454684', 'nam', '2022-11-22', 'xc dfsdksf', 'bhdsfb@gmail.com', 2)
+-- DELETE FROM bill WHERE id = 'HD062'
+create proc sp_select_feature_bill
+	@id varchar(10)
+as
+begin
+	select top 1 bill.id as [MaHD],sum(detailBill.price) as [tongTien],
+		customers.fullname as [tenkh],customers.phone as [dienthoai],customers.addres as [diachi], bill.created_at as [ngaytao]
+	from bill
+	join detailBill on detailBill.bill_id = bill.id
+	join options on options.id = detailBill.options_id
+	join product on options.product_id = product.id
+	join customers on customers.id = bill.customer_id
+	where bill.id = @id
+	Group by bill.id,product.nameProduct, customers.fullname ,bill.created_at,customers.phone ,customers.addres 
+	ORDER BY bill.created_at DESC
+end
+--select * from incomeStatistics
+--delete from incomeStatistics where id = 9
+--select * from expense_statistics

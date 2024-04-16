@@ -34,16 +34,21 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.idCus1 = new System.Windows.Forms.TextBox();
             this.product4 = new System.Windows.Forms.GroupBox();
-            this.idPro4 = new System.Windows.Forms.TextBox();
+            this.totalPrice4 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.quantity4 = new System.Windows.Forms.TextBox();
+            this.idCus4 = new System.Windows.Forms.TextBox();
             this.price4 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btnXoa4 = new System.Windows.Forms.Button();
             this.cbo4 = new System.Windows.Forms.ComboBox();
             this.product3 = new System.Windows.Forms.GroupBox();
-            this.idPro3 = new System.Windows.Forms.TextBox();
+            this.totalPrice3 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.idCus3 = new System.Windows.Forms.TextBox();
             this.quantity3 = new System.Windows.Forms.TextBox();
             this.price3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,7 +56,9 @@
             this.btnXoa3 = new System.Windows.Forms.Button();
             this.cbo3 = new System.Windows.Forms.ComboBox();
             this.product2 = new System.Windows.Forms.GroupBox();
-            this.idPro2 = new System.Windows.Forms.TextBox();
+            this.totalPrice2 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.idCus2 = new System.Windows.Forms.TextBox();
             this.quantity2 = new System.Windows.Forms.TextBox();
             this.price2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -59,7 +66,8 @@
             this.btnXoa2 = new System.Windows.Forms.Button();
             this.cbo2 = new System.Windows.Forms.ComboBox();
             this.product1 = new System.Windows.Forms.GroupBox();
-            this.idPro1 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.totalPrice1 = new System.Windows.Forms.TextBox();
             this.quantity1 = new System.Windows.Forms.TextBox();
             this.price1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -78,6 +86,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -140,6 +150,9 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.lblTotal);
+            this.groupBox5.Controls.Add(this.label15);
+            this.groupBox5.Controls.Add(this.idCus1);
             this.groupBox5.Controls.Add(this.product4);
             this.groupBox5.Controls.Add(this.product3);
             this.groupBox5.Controls.Add(this.product2);
@@ -155,10 +168,20 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Form";
             // 
+            // idCus1
+            // 
+            this.idCus1.Location = new System.Drawing.Point(190, 106);
+            this.idCus1.Name = "idCus1";
+            this.idCus1.Size = new System.Drawing.Size(100, 30);
+            this.idCus1.TabIndex = 6;
+            this.idCus1.Visible = false;
+            // 
             // product4
             // 
-            this.product4.Controls.Add(this.idPro4);
+            this.product4.Controls.Add(this.totalPrice4);
+            this.product4.Controls.Add(this.label12);
             this.product4.Controls.Add(this.quantity4);
+            this.product4.Controls.Add(this.idCus4);
             this.product4.Controls.Add(this.price4);
             this.product4.Controls.Add(this.label9);
             this.product4.Controls.Add(this.label10);
@@ -171,12 +194,21 @@
             this.product4.TabStop = false;
             this.product4.Visible = false;
             // 
-            // idPro4
+            // totalPrice4
             // 
-            this.idPro4.Location = new System.Drawing.Point(540, 69);
-            this.idPro4.Name = "idPro4";
-            this.idPro4.Size = new System.Drawing.Size(100, 30);
-            this.idPro4.TabIndex = 7;
+            this.totalPrice4.Location = new System.Drawing.Point(552, 64);
+            this.totalPrice4.Name = "totalPrice4";
+            this.totalPrice4.Size = new System.Drawing.Size(100, 30);
+            this.totalPrice4.TabIndex = 10;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(485, 72);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(61, 22);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Tổng: ";
             // 
             // quantity4
             // 
@@ -185,6 +217,15 @@
             this.quantity4.Size = new System.Drawing.Size(100, 30);
             this.quantity4.TabIndex = 5;
             this.quantity4.Text = "1";
+            this.quantity4.TextChanged += new System.EventHandler(this.quantity_TextChanged);
+            // 
+            // idCus4
+            // 
+            this.idCus4.Location = new System.Drawing.Point(172, 65);
+            this.idCus4.Name = "idCus4";
+            this.idCus4.Size = new System.Drawing.Size(100, 30);
+            this.idCus4.TabIndex = 8;
+            this.idCus4.Visible = false;
             // 
             // price4
             // 
@@ -192,6 +233,7 @@
             this.price4.Name = "price4";
             this.price4.Size = new System.Drawing.Size(100, 30);
             this.price4.TabIndex = 4;
+            this.price4.TextChanged += new System.EventHandler(this.price_TextChanged);
             // 
             // label9
             // 
@@ -232,7 +274,9 @@
             // 
             // product3
             // 
-            this.product3.Controls.Add(this.idPro3);
+            this.product3.Controls.Add(this.totalPrice3);
+            this.product3.Controls.Add(this.label13);
+            this.product3.Controls.Add(this.idCus3);
             this.product3.Controls.Add(this.quantity3);
             this.product3.Controls.Add(this.price3);
             this.product3.Controls.Add(this.label7);
@@ -246,12 +290,29 @@
             this.product3.TabStop = false;
             this.product3.Visible = false;
             // 
-            // idPro3
+            // totalPrice3
             // 
-            this.idPro3.Location = new System.Drawing.Point(540, 72);
-            this.idPro3.Name = "idPro3";
-            this.idPro3.Size = new System.Drawing.Size(100, 30);
-            this.idPro3.TabIndex = 8;
+            this.totalPrice3.Location = new System.Drawing.Point(552, 72);
+            this.totalPrice3.Name = "totalPrice3";
+            this.totalPrice3.Size = new System.Drawing.Size(100, 30);
+            this.totalPrice3.TabIndex = 8;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(485, 73);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 22);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Tổng: ";
+            // 
+            // idCus3
+            // 
+            this.idCus3.Location = new System.Drawing.Point(172, 65);
+            this.idCus3.Name = "idCus3";
+            this.idCus3.Size = new System.Drawing.Size(100, 30);
+            this.idCus3.TabIndex = 7;
+            this.idCus3.Visible = false;
             // 
             // quantity3
             // 
@@ -260,6 +321,7 @@
             this.quantity3.Size = new System.Drawing.Size(100, 30);
             this.quantity3.TabIndex = 5;
             this.quantity3.Text = "1";
+            this.quantity3.TextChanged += new System.EventHandler(this.quantity_TextChanged);
             // 
             // price3
             // 
@@ -267,6 +329,7 @@
             this.price3.Name = "price3";
             this.price3.Size = new System.Drawing.Size(100, 30);
             this.price3.TabIndex = 4;
+            this.price3.TextChanged += new System.EventHandler(this.price_TextChanged);
             // 
             // label7
             // 
@@ -307,7 +370,9 @@
             // 
             // product2
             // 
-            this.product2.Controls.Add(this.idPro2);
+            this.product2.Controls.Add(this.totalPrice2);
+            this.product2.Controls.Add(this.label14);
+            this.product2.Controls.Add(this.idCus2);
             this.product2.Controls.Add(this.quantity2);
             this.product2.Controls.Add(this.price2);
             this.product2.Controls.Add(this.label5);
@@ -321,12 +386,29 @@
             this.product2.TabStop = false;
             this.product2.Visible = false;
             // 
-            // idPro2
+            // totalPrice2
             // 
-            this.idPro2.Location = new System.Drawing.Point(540, 69);
-            this.idPro2.Name = "idPro2";
-            this.idPro2.Size = new System.Drawing.Size(100, 30);
-            this.idPro2.TabIndex = 9;
+            this.totalPrice2.Location = new System.Drawing.Point(552, 69);
+            this.totalPrice2.Name = "totalPrice2";
+            this.totalPrice2.Size = new System.Drawing.Size(100, 30);
+            this.totalPrice2.TabIndex = 9;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(485, 77);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 22);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Tổng: ";
+            // 
+            // idCus2
+            // 
+            this.idCus2.Location = new System.Drawing.Point(172, 65);
+            this.idCus2.Name = "idCus2";
+            this.idCus2.Size = new System.Drawing.Size(100, 30);
+            this.idCus2.TabIndex = 9;
+            this.idCus2.Visible = false;
             // 
             // quantity2
             // 
@@ -335,6 +417,7 @@
             this.quantity2.Size = new System.Drawing.Size(100, 30);
             this.quantity2.TabIndex = 5;
             this.quantity2.Text = "1";
+            this.quantity2.TextChanged += new System.EventHandler(this.quantity_TextChanged);
             // 
             // price2
             // 
@@ -342,6 +425,7 @@
             this.price2.Name = "price2";
             this.price2.Size = new System.Drawing.Size(100, 30);
             this.price2.TabIndex = 4;
+            this.price2.TextChanged += new System.EventHandler(this.price_TextChanged);
             // 
             // label5
             // 
@@ -382,7 +466,8 @@
             // 
             // product1
             // 
-            this.product1.Controls.Add(this.idPro1);
+            this.product1.Controls.Add(this.label11);
+            this.product1.Controls.Add(this.totalPrice1);
             this.product1.Controls.Add(this.quantity1);
             this.product1.Controls.Add(this.price1);
             this.product1.Controls.Add(this.label4);
@@ -396,12 +481,21 @@
             this.product1.TabStop = false;
             this.product1.Visible = false;
             // 
-            // idPro1
+            // label11
             // 
-            this.idPro1.Location = new System.Drawing.Point(540, 69);
-            this.idPro1.Name = "idPro1";
-            this.idPro1.Size = new System.Drawing.Size(100, 30);
-            this.idPro1.TabIndex = 6;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(485, 77);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(61, 22);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Tổng: ";
+            // 
+            // totalPrice1
+            // 
+            this.totalPrice1.Location = new System.Drawing.Point(552, 69);
+            this.totalPrice1.Name = "totalPrice1";
+            this.totalPrice1.Size = new System.Drawing.Size(100, 30);
+            this.totalPrice1.TabIndex = 6;
             // 
             // quantity1
             // 
@@ -410,6 +504,7 @@
             this.quantity1.Size = new System.Drawing.Size(100, 30);
             this.quantity1.TabIndex = 5;
             this.quantity1.Text = "1";
+            this.quantity1.TextChanged += new System.EventHandler(this.quantity_TextChanged);
             // 
             // price1
             // 
@@ -417,6 +512,7 @@
             this.price1.Name = "price1";
             this.price1.Size = new System.Drawing.Size(100, 30);
             this.price1.TabIndex = 4;
+            this.price1.TextChanged += new System.EventHandler(this.price_TextChanged);
             // 
             // label4
             // 
@@ -571,6 +667,24 @@
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(34, 578);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(90, 22);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Tổng tiền:";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(130, 578);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(20, 22);
+            this.lblTotal.TabIndex = 27;
+            this.lblTotal.Text = "0";
+            // 
             // Form_Sell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -585,6 +699,7 @@
             this.groupBox6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.product4.ResumeLayout(false);
             this.product4.PerformLayout();
             this.product3.ResumeLayout(false);
@@ -646,9 +761,19 @@
         private System.Windows.Forms.ComboBox cbo2;
         private System.Windows.Forms.TextBox quantity1;
         private System.Windows.Forms.TextBox price2;
-        private System.Windows.Forms.TextBox idPro4;
-        private System.Windows.Forms.TextBox idPro3;
-        private System.Windows.Forms.TextBox idPro2;
-        private System.Windows.Forms.TextBox idPro1;
+        private System.Windows.Forms.TextBox idCus3;
+        private System.Windows.Forms.TextBox idCus4;
+        private System.Windows.Forms.TextBox idCus2;
+        private System.Windows.Forms.TextBox idCus1;
+        private System.Windows.Forms.TextBox totalPrice1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox totalPrice4;
+        private System.Windows.Forms.TextBox totalPrice3;
+        private System.Windows.Forms.TextBox totalPrice2;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label label15;
     }
 }
