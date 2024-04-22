@@ -56,7 +56,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(44, 135);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 22);
+            this.label1.Size = new System.Drawing.Size(154, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên khách hàng";
             // 
@@ -65,7 +65,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(556, 138);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 22);
+            this.label2.Size = new System.Drawing.Size(126, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Số điện thoại";
             // 
@@ -74,7 +74,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(44, 208);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 22);
+            this.label4.Size = new System.Drawing.Size(71, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "Địa chỉ";
             // 
@@ -111,7 +111,7 @@
             this.groupBox1.Controls.Add(this.txt_Address);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txt_nameCus);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(542, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(955, 812);
@@ -132,7 +132,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(44, 26);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(187, 22);
+            this.label7.Size = new System.Drawing.Size(209, 25);
             this.label7.TabIndex = 11;
             this.label7.Text = "Tìm kiếm khách hàng: ";
             // 
@@ -141,7 +141,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(48, 68);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(827, 30);
+            this.comboBox1.Size = new System.Drawing.Size(827, 33);
             this.comboBox1.TabIndex = 10;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -160,11 +160,14 @@
             // 
             // btnPayment
             // 
-            this.btnPayment.Location = new System.Drawing.Point(797, 468);
+            this.btnPayment.Image = ((System.Drawing.Image)(resources.GetObject("btnPayment.Image")));
+            this.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPayment.Location = new System.Drawing.Point(739, 468);
             this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(131, 61);
+            this.btnPayment.Size = new System.Drawing.Size(162, 69);
             this.btnPayment.TabIndex = 3;
             this.btnPayment.Text = "Thanh toán";
+            this.btnPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPayment.UseVisualStyleBackColor = true;
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
@@ -173,7 +176,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Location = new System.Drawing.Point(131, 487);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(20, 22);
+            this.lblTotal.Size = new System.Drawing.Size(23, 25);
             this.lblTotal.TabIndex = 2;
             this.lblTotal.Text = "0";
             // 
@@ -182,7 +185,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(25, 487);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 22);
+            this.label5.Size = new System.Drawing.Size(94, 25);
             this.label5.TabIndex = 1;
             this.label5.Text = "Tổng tiền";
             // 

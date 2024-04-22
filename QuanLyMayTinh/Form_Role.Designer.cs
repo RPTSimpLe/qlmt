@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Role));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -61,7 +60,7 @@
             // 
             this.groupBox3.Controls.Add(this.dataGridView1);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(3, 18);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(718, 552);
@@ -93,18 +92,19 @@
             this.groupBox2.Controls.Add(this.roles);
             this.groupBox2.Controls.Add(this.ids);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(721, 18);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(386, 552);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Form";
+            this.groupBox2.Text = "Thao tác";
             // 
             // cancel
             // 
             this.cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancel.Image = ((System.Drawing.Image)(resources.GetObject("cancel.Image")));
+            this.cancel.Image = global::QuanLyMayTinh.Properties.Resources.close__1_;
+            this.cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cancel.Location = new System.Drawing.Point(211, 281);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(152, 70);
@@ -117,7 +117,8 @@
             // saveRole
             // 
             this.saveRole.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saveRole.Image = ((System.Drawing.Image)(resources.GetObject("saveRole.Image")));
+            this.saveRole.Image = global::QuanLyMayTinh.Properties.Resources.pencil__2_;
+            this.saveRole.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.saveRole.Location = new System.Drawing.Point(19, 281);
             this.saveRole.Name = "saveRole";
             this.saveRole.Size = new System.Drawing.Size(171, 70);
@@ -130,7 +131,8 @@
             // deleteRole
             // 
             this.deleteRole.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.deleteRole.Image = ((System.Drawing.Image)(resources.GetObject("deleteRole.Image")));
+            this.deleteRole.Image = global::QuanLyMayTinh.Properties.Resources.delete__1_;
+            this.deleteRole.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.deleteRole.Location = new System.Drawing.Point(211, 173);
             this.deleteRole.Name = "deleteRole";
             this.deleteRole.Size = new System.Drawing.Size(152, 75);
@@ -143,7 +145,8 @@
             // addRole
             // 
             this.addRole.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addRole.Image = ((System.Drawing.Image)(resources.GetObject("addRole.Image")));
+            this.addRole.Image = global::QuanLyMayTinh.Properties.Resources.plus__1_;
+            this.addRole.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.addRole.Location = new System.Drawing.Point(19, 173);
             this.addRole.Name = "addRole";
             this.addRole.Size = new System.Drawing.Size(171, 75);
@@ -158,7 +161,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(26, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 22);
+            this.label1.Size = new System.Drawing.Size(82, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Quyền :";
             // 

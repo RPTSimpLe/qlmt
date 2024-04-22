@@ -161,11 +161,13 @@
             // btnUpdate
             // 
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.Image = global::QuanLyMayTinh.Properties.Resources.pencil__2_;
             this.btnUpdate.Location = new System.Drawing.Point(356, 705);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(117, 58);
+            this.btnUpdate.Size = new System.Drawing.Size(143, 58);
             this.btnUpdate.TabIndex = 58;
             this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 

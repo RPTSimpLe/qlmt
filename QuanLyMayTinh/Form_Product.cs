@@ -29,7 +29,6 @@ namespace QuanLyMayTinh
         private void Form_Product_Load(object sender, EventArgs e)
         {
             this.getAll();
-
             this.resetCbo();
         }
         public void resetCbo()

@@ -115,6 +115,7 @@
             this.picture.Location = new System.Drawing.Point(18, 66);
             this.picture.Name = "picture";
             this.picture.Size = new System.Drawing.Size(221, 211);
+            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture.TabIndex = 20;
             this.picture.TabStop = false;
             // 
@@ -184,8 +185,9 @@
             // btnsAdd
             // 
             this.btnsAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnsAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnsAdd.Image")));
-            this.btnsAdd.Location = new System.Drawing.Point(408, 626);
+            this.btnsAdd.Image = global::QuanLyMayTinh.Properties.Resources.plus__1_;
+            this.btnsAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnsAdd.Location = new System.Drawing.Point(427, 632);
             this.btnsAdd.Name = "btnsAdd";
             this.btnsAdd.Size = new System.Drawing.Size(147, 75);
             this.btnsAdd.TabIndex = 9;

@@ -35,97 +35,115 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_chi = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 26);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1458, 611);
+            this.dataGridView1.Size = new System.Drawing.Size(1476, 489);
             this.dataGridView1.TabIndex = 1;
             // 
             // lbl_doanhThu
             // 
             this.lbl_doanhThu.AutoSize = true;
-            this.lbl_doanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_doanhThu.Location = new System.Drawing.Point(112, 698);
+            this.lbl_doanhThu.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_doanhThu.Location = new System.Drawing.Point(225, 665);
             this.lbl_doanhThu.Name = "lbl_doanhThu";
-            this.lbl_doanhThu.Size = new System.Drawing.Size(18, 20);
+            this.lbl_doanhThu.Size = new System.Drawing.Size(30, 34);
             this.lbl_doanhThu.TabIndex = 12;
             this.lbl_doanhThu.Text = "0";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 698);
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 664);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 20);
+            this.label6.Size = new System.Drawing.Size(141, 34);
             this.label6.TabIndex = 11;
             this.label6.Text = "Doanh thu";
             // 
             // lbl_thu
             // 
             this.lbl_thu.AutoSize = true;
-            this.lbl_thu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_thu.Location = new System.Drawing.Point(112, 666);
+            this.lbl_thu.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_thu.Location = new System.Drawing.Point(225, 618);
             this.lbl_thu.Name = "lbl_thu";
-            this.lbl_thu.Size = new System.Drawing.Size(18, 20);
+            this.lbl_thu.Size = new System.Drawing.Size(30, 34);
             this.lbl_thu.TabIndex = 10;
             this.lbl_thu.Text = "0";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 666);
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 618);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 20);
+            this.label4.Size = new System.Drawing.Size(124, 34);
             this.label4.TabIndex = 9;
             this.label4.Text = "Tổng thu";
             // 
             // lbl_chi
             // 
             this.lbl_chi.AutoSize = true;
-            this.lbl_chi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_chi.Location = new System.Drawing.Point(112, 635);
+            this.lbl_chi.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_chi.Location = new System.Drawing.Point(225, 572);
             this.lbl_chi.Name = "lbl_chi";
-            this.lbl_chi.Size = new System.Drawing.Size(18, 20);
+            this.lbl_chi.Size = new System.Drawing.Size(30, 34);
             this.lbl_chi.TabIndex = 8;
             this.lbl_chi.Text = "0";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 635);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(15, 572);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 20);
+            this.label3.Size = new System.Drawing.Size(121, 34);
             this.label3.TabIndex = 7;
             this.label3.Text = "Tổng chi";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.lbl_doanhThu);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.lbl_chi);
+            this.groupBox1.Controls.Add(this.lbl_thu);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1482, 728);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thống kê";
             // 
             // Form_ThongKeThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 728);
-            this.Controls.Add(this.lbl_doanhThu);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.lbl_thu);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.lbl_chi);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.groupBox1);
             this.Name = "Form_ThongKeThu";
-            this.Text = "Form_ThongKeThu";
+            this.Text = "Thống kê thu";
             this.Load += new System.EventHandler(this.Form_ThongKeThu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -137,5 +155,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbl_chi;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

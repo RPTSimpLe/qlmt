@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Producer));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -97,6 +96,7 @@
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(3, 26);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1125, 634);
@@ -131,13 +131,13 @@
             this.groupBox6.Controls.Add(this.label3);
             this.groupBox6.Controls.Add(this.ids);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(1128, 26);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(425, 634);
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Form";
+            this.groupBox6.Text = "Thao tác";
             // 
             // names
             // 
@@ -149,7 +149,7 @@
             // export_excel
             // 
             this.export_excel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.export_excel.Image = ((System.Drawing.Image)(resources.GetObject("export_excel.Image")));
+            this.export_excel.Image = global::QuanLyMayTinh.Properties.Resources.excel;
             this.export_excel.Location = new System.Drawing.Point(139, 569);
             this.export_excel.Name = "export_excel";
             this.export_excel.Size = new System.Drawing.Size(200, 66);
@@ -162,10 +162,11 @@
             // cancel
             // 
             this.cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancel.Image = ((System.Drawing.Image)(resources.GetObject("cancel.Image")));
+            this.cancel.Image = global::QuanLyMayTinh.Properties.Resources.close__1_;
+            this.cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cancel.Location = new System.Drawing.Point(250, 469);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(153, 62);
+            this.cancel.Size = new System.Drawing.Size(153, 70);
             this.cancel.TabIndex = 8;
             this.cancel.Text = "Hủy";
             this.cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -175,10 +176,11 @@
             // saveProducer
             // 
             this.saveProducer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saveProducer.Image = ((System.Drawing.Image)(resources.GetObject("saveProducer.Image")));
+            this.saveProducer.Image = global::QuanLyMayTinh.Properties.Resources.pencil__2_;
+            this.saveProducer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.saveProducer.Location = new System.Drawing.Point(35, 459);
             this.saveProducer.Name = "saveProducer";
-            this.saveProducer.Size = new System.Drawing.Size(174, 72);
+            this.saveProducer.Size = new System.Drawing.Size(174, 80);
             this.saveProducer.TabIndex = 7;
             this.saveProducer.Text = "Cập nhập";
             this.saveProducer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -188,10 +190,11 @@
             // deleteProducer
             // 
             this.deleteProducer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.deleteProducer.Image = ((System.Drawing.Image)(resources.GetObject("deleteProducer.Image")));
+            this.deleteProducer.Image = global::QuanLyMayTinh.Properties.Resources.delete__1_;
+            this.deleteProducer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.deleteProducer.Location = new System.Drawing.Point(250, 351);
             this.deleteProducer.Name = "deleteProducer";
-            this.deleteProducer.Size = new System.Drawing.Size(153, 66);
+            this.deleteProducer.Size = new System.Drawing.Size(153, 80);
             this.deleteProducer.TabIndex = 6;
             this.deleteProducer.Text = "Xóa";
             this.deleteProducer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -201,10 +204,11 @@
             // addProducer
             // 
             this.addProducer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addProducer.Image = ((System.Drawing.Image)(resources.GetObject("addProducer.Image")));
+            this.addProducer.Image = global::QuanLyMayTinh.Properties.Resources.plus__1_;
+            this.addProducer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.addProducer.Location = new System.Drawing.Point(35, 351);
             this.addProducer.Name = "addProducer";
-            this.addProducer.Size = new System.Drawing.Size(174, 66);
+            this.addProducer.Size = new System.Drawing.Size(174, 80);
             this.addProducer.TabIndex = 4;
             this.addProducer.Text = "Thêm";
             this.addProducer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -216,7 +220,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(31, 228);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 22);
+            this.label4.Size = new System.Drawing.Size(164, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "Tên nhà sản xuất";
             // 
@@ -232,7 +236,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(28, 99);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 22);
+            this.label3.Size = new System.Drawing.Size(157, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "Mã nhà sản xuất";
             // 
@@ -252,7 +256,7 @@
             this.groupBox3.Controls.Add(this.name_producer);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(3, 18);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1556, 109);
@@ -263,7 +267,8 @@
             // searchProducer
             // 
             this.searchProducer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchProducer.Image = ((System.Drawing.Image)(resources.GetObject("searchProducer.Image")));
+            this.searchProducer.Image = global::QuanLyMayTinh.Properties.Resources.search__1_;
+            this.searchProducer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.searchProducer.Location = new System.Drawing.Point(1174, 29);
             this.searchProducer.Name = "searchProducer";
             this.searchProducer.Size = new System.Drawing.Size(196, 68);
@@ -275,7 +280,7 @@
             // 
             // code_producer
             // 
-            this.code_producer.Location = new System.Drawing.Point(805, 34);
+            this.code_producer.Location = new System.Drawing.Point(819, 31);
             this.code_producer.Name = "code_producer";
             this.code_producer.Size = new System.Drawing.Size(233, 30);
             this.code_producer.TabIndex = 3;
@@ -286,13 +291,13 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(634, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 22);
+            this.label2.Size = new System.Drawing.Size(166, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tìm kiếm theo mã";
             // 
             // name_producer
             // 
-            this.name_producer.Location = new System.Drawing.Point(263, 34);
+            this.name_producer.Location = new System.Drawing.Point(294, 29);
             this.name_producer.Name = "name_producer";
             this.name_producer.Size = new System.Drawing.Size(230, 30);
             this.name_producer.TabIndex = 1;
@@ -303,7 +308,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(104, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 22);
+            this.label1.Size = new System.Drawing.Size(166, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tìm kiếm theo tên";
             // 

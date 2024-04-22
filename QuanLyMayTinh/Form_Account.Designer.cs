@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Account));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -164,7 +163,7 @@
             this.groupBox5.Size = new System.Drawing.Size(508, 859);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Form";
+            this.groupBox5.Text = "Thao tác";
             // 
             // label10
             // 
@@ -193,7 +192,8 @@
             // cancel
             // 
             this.cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancel.Image = ((System.Drawing.Image)(resources.GetObject("cancel.Image")));
+            this.cancel.Image = global::QuanLyMayTinh.Properties.Resources.close__1_;
+            this.cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cancel.Location = new System.Drawing.Point(293, 649);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(170, 76);
@@ -206,7 +206,8 @@
             // saveUser
             // 
             this.saveUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saveUser.Image = ((System.Drawing.Image)(resources.GetObject("saveUser.Image")));
+            this.saveUser.Image = global::QuanLyMayTinh.Properties.Resources.pencil__2_;
+            this.saveUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.saveUser.Location = new System.Drawing.Point(58, 649);
             this.saveUser.Name = "saveUser";
             this.saveUser.Size = new System.Drawing.Size(168, 76);
@@ -219,7 +220,8 @@
             // deleteUser
             // 
             this.deleteUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.deleteUser.Image = ((System.Drawing.Image)(resources.GetObject("deleteUser.Image")));
+            this.deleteUser.Image = global::QuanLyMayTinh.Properties.Resources.delete__1_;
+            this.deleteUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.deleteUser.Location = new System.Drawing.Point(293, 539);
             this.deleteUser.Name = "deleteUser";
             this.deleteUser.Size = new System.Drawing.Size(170, 75);
@@ -232,7 +234,8 @@
             // addUser
             // 
             this.addUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addUser.Image = ((System.Drawing.Image)(resources.GetObject("addUser.Image")));
+            this.addUser.Image = global::QuanLyMayTinh.Properties.Resources.plus__1_;
+            this.addUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.addUser.Location = new System.Drawing.Point(58, 539);
             this.addUser.Name = "addUser";
             this.addUser.Size = new System.Drawing.Size(168, 75);
@@ -404,10 +407,11 @@
             // export_excel
             // 
             this.export_excel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.export_excel.Image = ((System.Drawing.Image)(resources.GetObject("export_excel.Image")));
-            this.export_excel.Location = new System.Drawing.Point(1519, 18);
+            this.export_excel.Image = global::QuanLyMayTinh.Properties.Resources.excel;
+            this.export_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.export_excel.Location = new System.Drawing.Point(1509, 18);
             this.export_excel.Name = "export_excel";
-            this.export_excel.Size = new System.Drawing.Size(195, 72);
+            this.export_excel.Size = new System.Drawing.Size(157, 72);
             this.export_excel.TabIndex = 23;
             this.export_excel.Text = "Xuất Excel";
             this.export_excel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -417,10 +421,11 @@
             // searchUser
             // 
             this.searchUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchUser.Image = ((System.Drawing.Image)(resources.GetObject("searchUser.Image")));
+            this.searchUser.Image = global::QuanLyMayTinh.Properties.Resources.search__1_;
+            this.searchUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.searchUser.Location = new System.Drawing.Point(948, 18);
             this.searchUser.Name = "searchUser";
-            this.searchUser.Size = new System.Drawing.Size(201, 72);
+            this.searchUser.Size = new System.Drawing.Size(161, 72);
             this.searchUser.TabIndex = 2;
             this.searchUser.Text = "Tìm kiếm";
             this.searchUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

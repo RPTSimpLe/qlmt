@@ -44,8 +44,8 @@ namespace QuanLyMayTinh
                 {
                     DisableButton();
                     currentButton = (Button)btnSender;
-                    currentButton.ForeColor = Color.White;
-                    currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    currentButton.ForeColor = Color.Black;
+                    currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     btnCloseChildForm.Visible = true;
                 }
             }
@@ -56,9 +56,9 @@ namespace QuanLyMayTinh
             {
                 if (previousBtn.GetType() == typeof(Button))
                 {
-                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
-                    previousBtn.ForeColor = Color.Gainsboro;
-                    previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    previousBtn.BackColor = Color.FromArgb(176, 196, 222);
+                    previousBtn.ForeColor = Color.Black;
+                    previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
             }
         }
@@ -82,8 +82,8 @@ namespace QuanLyMayTinh
         {
             DisableButton();
             lblTitle.Text = "Trang Chủ";
-            panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
-            panelLogo.BackColor = Color.FromArgb(39, 39, 58);
+            panelTitleBar.BackColor = Color.FromArgb(70, 130, 180);
+            panelLogo.BackColor = Color.FromArgb(176, 196, 222);
             currentButton = null;
             btnCloseChildForm.Visible = false;
         }
@@ -155,12 +155,12 @@ namespace QuanLyMayTinh
 
         private void btnThongKeChi_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Form_ThongKeChi(), sender);
+            OpenChildForm(new Form_Customer(), sender);
         }
 
         private void btnThongKeThu_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Form_ThongKeThu(), sender);
+            OpenChildForm(new Form_Bill(), sender);
         }
 
         private void Form_Sidebar_Load(object sender, EventArgs e)
@@ -170,12 +170,15 @@ namespace QuanLyMayTinh
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Form_Customer(), sender);
+          
+            OpenChildForm(new Form_ThongKeChi(), sender);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Form_Bill(), sender);
+     
+            OpenChildForm(new Form_ThongKeThu(), sender);
+
         }
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Product));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -57,6 +56,7 @@
             // 
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1558, 880);
@@ -69,6 +69,7 @@
             this.groupBox3.Controls.Add(this.groupBox5);
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Location = new System.Drawing.Point(3, 18);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1552, 859);
@@ -79,7 +80,7 @@
             // 
             this.groupBox6.Controls.Add(this.dataGridView1);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(3, 117);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(1113, 739);
@@ -109,18 +110,19 @@
             this.groupBox5.Controls.Add(this.deleteUser);
             this.groupBox5.Controls.Add(this.addUser);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(1116, 117);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(433, 739);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Form";
+            this.groupBox5.Text = "Thao tác";
             // 
             // btnDetail
             // 
             this.btnDetail.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDetail.Image = ((System.Drawing.Image)(resources.GetObject("btnDetail.Image")));
+            this.btnDetail.Image = global::QuanLyMayTinh.Properties.Resources.pencil__2_;
+            this.btnDetail.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDetail.Location = new System.Drawing.Point(34, 195);
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.Size = new System.Drawing.Size(154, 75);
@@ -141,7 +143,8 @@
             // cancel
             // 
             this.cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancel.Image = ((System.Drawing.Image)(resources.GetObject("cancel.Image")));
+            this.cancel.Image = global::QuanLyMayTinh.Properties.Resources.close__1_;
+            this.cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cancel.Location = new System.Drawing.Point(251, 195);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(146, 76);
@@ -153,7 +156,8 @@
             // deleteUser
             // 
             this.deleteUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.deleteUser.Image = ((System.Drawing.Image)(resources.GetObject("deleteUser.Image")));
+            this.deleteUser.Image = global::QuanLyMayTinh.Properties.Resources.delete__1_;
+            this.deleteUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.deleteUser.Location = new System.Drawing.Point(251, 85);
             this.deleteUser.Name = "deleteUser";
             this.deleteUser.Size = new System.Drawing.Size(151, 75);
@@ -166,7 +170,8 @@
             // addUser
             // 
             this.addUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addUser.Image = ((System.Drawing.Image)(resources.GetObject("addUser.Image")));
+            this.addUser.Image = global::QuanLyMayTinh.Properties.Resources.plus__1_;
+            this.addUser.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.addUser.Location = new System.Drawing.Point(30, 85);
             this.addUser.Name = "addUser";
             this.addUser.Size = new System.Drawing.Size(154, 75);
@@ -184,7 +189,7 @@
             this.groupBox4.Controls.Add(this.txt_findName);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(3, 18);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(1546, 99);
@@ -195,7 +200,8 @@
             // searchProduct
             // 
             this.searchProduct.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchProduct.Image = ((System.Drawing.Image)(resources.GetObject("searchProduct.Image")));
+            this.searchProduct.Image = global::QuanLyMayTinh.Properties.Resources.search__1_;
+            this.searchProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.searchProduct.Location = new System.Drawing.Point(1319, 19);
             this.searchProduct.Name = "searchProduct";
             this.searchProduct.Size = new System.Drawing.Size(196, 72);
@@ -210,7 +216,7 @@
             this.cbo_Producer.FormattingEnabled = true;
             this.cbo_Producer.Location = new System.Drawing.Point(1014, 44);
             this.cbo_Producer.Name = "cbo_Producer";
-            this.cbo_Producer.Size = new System.Drawing.Size(179, 30);
+            this.cbo_Producer.Size = new System.Drawing.Size(179, 33);
             this.cbo_Producer.TabIndex = 3;
             this.cbo_Producer.Text = "Lọc theo hãng";
             // 
@@ -219,7 +225,7 @@
             this.cbo_category.FormattingEnabled = true;
             this.cbo_category.Location = new System.Drawing.Point(731, 41);
             this.cbo_category.Name = "cbo_category";
-            this.cbo_category.Size = new System.Drawing.Size(176, 30);
+            this.cbo_category.Size = new System.Drawing.Size(176, 33);
             this.cbo_category.TabIndex = 2;
             this.cbo_category.Text = "Lọc theo loại";
             // 
@@ -235,7 +241,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(104, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 22);
+            this.label1.Size = new System.Drawing.Size(166, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tìm kiếm theo tên";
             // 

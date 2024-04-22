@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_createdAt = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
@@ -42,8 +44,6 @@
             this.txt_Address = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_nameCus = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txt_createdAt = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -65,20 +65,38 @@
             this.groupBox1.Controls.Add(this.txt_Address);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txt_nameCus);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1728, 810);
+            this.groupBox1.Size = new System.Drawing.Size(1752, 810);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hóa đơn";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(582, 43);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(102, 25);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Ngày bán:";
+            // 
+            // txt_createdAt
+            // 
+            this.txt_createdAt.Enabled = false;
+            this.txt_createdAt.Location = new System.Drawing.Point(783, 40);
+            this.txt_createdAt.Name = "txt_createdAt";
+            this.txt_createdAt.Size = new System.Drawing.Size(219, 30);
+            this.txt_createdAt.TabIndex = 13;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Location = new System.Drawing.Point(164, 147);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(20, 22);
+            this.lblTotal.Size = new System.Drawing.Size(23, 25);
             this.lblTotal.TabIndex = 2;
             this.lblTotal.Text = "0";
             // 
@@ -87,17 +105,20 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(58, 147);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 22);
+            this.label5.Size = new System.Drawing.Size(94, 25);
             this.label5.TabIndex = 1;
             this.label5.Text = "Tổng tiền";
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(1591, 81);
+            this.btnPrint.Image = global::QuanLyMayTinh.Properties.Resources.printer;
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrint.Location = new System.Drawing.Point(1562, 75);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(131, 61);
+            this.btnPrint.Size = new System.Drawing.Size(165, 72);
             this.btnPrint.TabIndex = 3;
             this.btnPrint.Text = "In hóa đơn";
+            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
@@ -106,7 +127,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(53, 43);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 22);
+            this.label3.Size = new System.Drawing.Size(122, 25);
             this.label3.TabIndex = 10;
             this.label3.Text = "Mã hóa đơn:";
             // 
@@ -124,7 +145,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox2.Location = new System.Drawing.Point(3, 172);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1722, 635);
+            this.groupBox2.Size = new System.Drawing.Size(1746, 635);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             // 
@@ -138,7 +159,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1716, 501);
+            this.dataGridView1.Size = new System.Drawing.Size(1740, 501);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -146,7 +167,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(53, 105);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 22);
+            this.label1.Size = new System.Drawing.Size(154, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên khách hàng";
             // 
@@ -163,7 +184,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(1178, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 22);
+            this.label2.Size = new System.Drawing.Size(126, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Số điện thoại";
             // 
@@ -180,7 +201,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(582, 105);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 22);
+            this.label4.Size = new System.Drawing.Size(71, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "Địa chỉ";
             // 
@@ -192,23 +213,6 @@
             this.txt_nameCus.Size = new System.Drawing.Size(219, 30);
             this.txt_nameCus.TabIndex = 4;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(582, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 22);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Ngày bán:";
-            // 
-            // txt_createdAt
-            // 
-            this.txt_createdAt.Enabled = false;
-            this.txt_createdAt.Location = new System.Drawing.Point(783, 40);
-            this.txt_createdAt.Name = "txt_createdAt";
-            this.txt_createdAt.Size = new System.Drawing.Size(219, 30);
-            this.txt_createdAt.TabIndex = 13;
-            // 
             // Form_DetailBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -217,6 +221,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form_DetailBill";
             this.Text = "Form_DetailBill";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form_DetailBill_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

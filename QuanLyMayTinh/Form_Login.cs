@@ -49,5 +49,7 @@ namespace QuanLyMayTinh
                 if(check==0) { MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu"); }
             }
         }
+
+       
     }
 }
