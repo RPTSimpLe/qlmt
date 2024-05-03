@@ -11,7 +11,7 @@ namespace BUS_Manegement
 {
     public class BUS_bill
     {
-        private static DAL_bill bill = new DAL_bill();
+        private DAL_bill bill = new DAL_bill();
         public DataTable findBill(string id, string nameCus)
         {
             return bill.findBill(id, nameCus);

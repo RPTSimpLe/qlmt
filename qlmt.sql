@@ -45,10 +45,9 @@ create table product(
 );
 create table images(
 	id int identity(1,1) primary key,
+	url varchar(500),
 	product_id int,
 	foreign key (product_id) references product(id),
-	users_id int,
-	foreign key (users_id) references users(id),
 );
 create table options(
 	id int identity(1,1) primary key,

@@ -18,9 +18,13 @@ namespace QuanLyMayTinh
         BUS_product bUS_Product = new BUS_product();
         BUS_optionProduct bUS_OptionProduct = new BUS_optionProduct();
         DTO_bill dTO_Bill;
+        List<long> lstotalPrice = new List<long>();
         public Form_Sell()
         {
             InitializeComponent();
+            for(int i = 0; i < 4; i++) {
+                this.lstotalPrice.Add(0);
+            }
         }
 
         private void Form_Sell_Load(object sender, EventArgs e)
@@ -40,8 +44,9 @@ namespace QuanLyMayTinh
                 System.Windows.Forms.Button button = groupBox5.Controls.Find("btnXoa" + j, true).FirstOrDefault() as System.Windows.Forms.Button ;
                 System.Windows.Forms.TextBox textBoxQuantity = groupBox5.Controls.Find("quantity" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
                 System.Windows.Forms.TextBox textBoxPrice = groupBox5.Controls.Find("price" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
+                System.Windows.Forms.TextBox textBoxTotalPrice = groupBox5.Controls.Find("totalPrice" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
 
-                if(groupBox.Visible == false)
+                if (groupBox.Visible == false)
                 {
                     cbo.Items.Clear();
                     int product_id = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value.ToString());
@@ -55,6 +60,7 @@ namespace QuanLyMayTinh
                     button.Tag = j;
                     textBoxQuantity.Tag = j;
                     textBoxPrice.Tag = j;
+                    textBoxTotalPrice.Tag = j;
 
                     groupBox.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
                     groupBox.Visible = true;
@@ -75,7 +81,6 @@ namespace QuanLyMayTinh
 
             textBoxProId.Text = bUS_OptionProduct.findId(parts[1].Trim(), parts[3].Trim(), Convert.ToInt64(parts[7].Trim())).Rows[0]["id"].ToString();
             textBoxSellingPrice.Text = parts[7];
-            lblTotal.Text = (Convert.ToInt64(lblTotal.Text.ToString())+ Convert.ToInt64(textBoxSellingPrice.Text.ToString())).ToString();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -90,13 +95,11 @@ namespace QuanLyMayTinh
             System.Windows.Forms.TextBox textBoxQuantity = groupBox5.Controls.Find("quantity" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
             System.Windows.Forms.TextBox TextBoxTotalPrice = groupBox5.Controls.Find("totalPrice" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
 
-            lblTotal.Text = (Convert.ToInt64(lblTotal.Text.ToString()) - Convert.ToInt64(textBoxSellingPrice.Text.ToString())).ToString();
-
             cbo.Items.Clear();
             textBoxProId.Text = "";
             textBoxSellingPrice.Text = "";
             textBoxQuantity.Text = "1";
-            TextBoxTotalPrice.Text = "";
+            TextBoxTotalPrice.Text = "0";
             groupBox.Visible = false;
         }
 
@@ -111,14 +114,23 @@ namespace QuanLyMayTinh
                 System.Windows.Forms.TextBox textBoxQuantity = groupBox5.Controls.Find("quantity" + i, true).FirstOrDefault() as System.Windows.Forms.TextBox;
                 System.Windows.Forms.TextBox TextBoxTotalPrice = groupBox5.Controls.Find("totalPrice" + i, true).FirstOrDefault() as System.Windows.Forms.TextBox;
 
-                cbo.Items.Clear();
-                textBoxProId.Text = "";
-                textBoxSellingPrice.Text = "";
-                textBoxQuantity.Text = "1";
-                TextBoxTotalPrice.Text = "";
-                groupBox.Visible=false;
+                if (groupBox.Visible)
+                {
+                    TextBoxTotalPrice.Text = "0";
+                    cbo.Items.Clear();
+                    textBoxProId.Text = "";
+                    textBoxSellingPrice.Text = "";
+                    textBoxQuantity.Text = "1";
+
+                    this.lstotalPrice[(i - 1)] = 0;
+                    groupBox.Visible = false;
+                }
             }
-            lblTotal.Text = "0";
+        }
+
+        private void listtotalprice(int i,string totalprice)
+        {
+            lstotalPrice[(i-1)] = Convert.ToInt64(totalprice);
         }
 
         private void payments_Click(object sender, EventArgs e)
@@ -166,6 +178,18 @@ namespace QuanLyMayTinh
             {
                 TextBoxTotalPrice.Text = Convert.ToInt64(textBoxPrice.Text) * Convert.ToInt64(textBoxQuantity.Text) + "";
             }
+        }
+
+        private void totalPrice_TextChanged(object sender, EventArgs e)
+        {
+            System.Windows.Forms.TextBox TextBoxTotalPrice = sender as System.Windows.Forms.TextBox;
+            int j = (int)TextBoxTotalPrice.Tag;
+
+            lblTotal.Text = (Convert.ToInt64(lblTotal.Text.ToString()) - lstotalPrice[(j-1)]).ToString();
+
+            listtotalprice(j, TextBoxTotalPrice.Text);
+
+            lblTotal.Text = (Convert.ToInt64(lblTotal.Text.ToString()) + lstotalPrice[(j - 1)]).ToString();
         }
     }
 }

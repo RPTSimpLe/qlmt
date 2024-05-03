@@ -97,6 +97,12 @@ namespace QuanLyMayTinh
                     dTO_Customer.setaddres(txt_Address.Text);
 
                     customer.addAccountCustomer(dTO_Customer);
+                    int cusId = customer.getId();
+                    
+                    foreach (var bill in this.dTO_Bills)
+                    {
+                        bill.setCustomer_id(cusId);
+                    }
             }
         }
         private void btnPayment_Click(object sender, EventArgs e)
@@ -160,49 +166,49 @@ namespace QuanLyMayTinh
             g.DrawString(createdAT, font, brush, 100, yPos);
             yPos += 50;
 
-            int cellWidth = 100;
+             int cellWidth = 100;
             int cellHeight = (int)font.GetHeight(g) + 10;
 
-            g.DrawRectangle(pen, 100, yPos, cellWidth, cellHeight);
-            g.DrawString("STT", font, brush, 100, yPos);
+            g.DrawRectangle(pen, 70, yPos, 50, cellHeight);
+            g.DrawString("STT", font, brush, 70, yPos);
 
-            g.DrawRectangle(pen, 200, yPos, cellWidth * 2, cellHeight);
-            g.DrawString("Sản phẩm", font, brush, 200, yPos);
+            g.DrawRectangle(pen, 120, yPos, cellWidth * 2, cellHeight);
+            g.DrawString("Sản phẩm", font, brush, 120, yPos);
 
-            g.DrawRectangle(pen, 400, yPos, cellWidth * 2, cellHeight);
-            g.DrawString("Tùy chọn", font, brush, 400, yPos);
+            g.DrawRectangle(pen, 320, yPos, cellWidth * 2, cellHeight);
+            g.DrawString("Tùy chọn", font, brush, 320, yPos);
 
-            g.DrawRectangle(pen, 500, yPos, cellWidth, cellHeight);
-            g.DrawString("Số lượng", font, brush, 500, yPos);
+            g.DrawRectangle(pen, 520, yPos, cellWidth, cellHeight);
+            g.DrawString("Số lượng", font, brush, 520, yPos);
 
-            g.DrawRectangle(pen, 600, yPos, cellWidth, cellHeight);
-            g.DrawString("Đơn giá", font, brush, 600, yPos);
+            g.DrawRectangle(pen, 620, yPos, cellWidth, cellHeight);
+            g.DrawString("Đơn giá", font, brush, 620, yPos);
 
-            g.DrawRectangle(pen, 700, yPos, cellWidth, cellHeight);
-            g.DrawString("Tổng", font, brush, 700, yPos);
+            g.DrawRectangle(pen, 720, yPos, cellWidth, cellHeight);
+            g.DrawString("Tổng", font, brush, 720, yPos);
 
             yPos += cellHeight;
 
             int i = 1;
             foreach (DTO_detailBill dTO_Detail in lsdTO_Detail)
             {
-                g.DrawRectangle(pen, 100, yPos, cellWidth, cellHeight);
-                g.DrawString(i.ToString(), font, brush, 100, yPos);
+                g.DrawRectangle(pen, 70, yPos, 50, cellHeight);
+                g.DrawString(i.ToString(), font, brush, 70, yPos);
 
-                g.DrawRectangle(pen, 200, yPos, cellWidth * 2, cellHeight);
-                g.DrawString(dTO_Detail.getNamePro(), font, brush, 200, yPos);
+                g.DrawRectangle(pen, 120, yPos, cellWidth * 2, cellHeight);
+                g.DrawString(dTO_Detail.getNamePro(), font, brush, 120, yPos);
 
-                g.DrawRectangle(pen, 400, yPos, cellWidth, cellHeight);
-                g.DrawString("ram: " + dTO_Detail.getRam() + " - ổ cứng: " + dTO_Detail.getStorage(), font, brush, 400, yPos);
+                g.DrawRectangle(pen, 320, yPos, cellWidth, cellHeight);
+                g.DrawString("ram: " + dTO_Detail.getRam() + " - ổ cứng: " + dTO_Detail.getStorage(), font, brush, 320, yPos);
 
-                g.DrawRectangle(pen, 500, yPos, cellWidth, cellHeight);
-                g.DrawString(dTO_Detail.getQuantity().ToString(), font, brush, 500, yPos);
+                g.DrawRectangle(pen, 520, yPos, cellWidth, cellHeight);
+                g.DrawString(dTO_Detail.getQuantity().ToString(), font, brush, 520, yPos);
 
-                g.DrawRectangle(pen, 600, yPos, cellWidth, cellHeight);
-                g.DrawString(dTO_Detail.getPrice().ToString(), font, brush, 600, yPos);
+                g.DrawRectangle(pen, 620, yPos, cellWidth, cellHeight);
+                g.DrawString(dTO_Detail.getPrice().ToString(), font, brush, 620, yPos);
 
-                g.DrawRectangle(pen, 700, yPos, cellWidth, cellHeight);
-                g.DrawString(dTO_Detail.getTongTien().ToString(), font, brush, 700, yPos);
+                g.DrawRectangle(pen, 720, yPos, cellWidth, cellHeight);
+                g.DrawString(dTO_Detail.getTongTien().ToString(), font, brush, 720, yPos);
 
 
                 yPos += cellHeight;

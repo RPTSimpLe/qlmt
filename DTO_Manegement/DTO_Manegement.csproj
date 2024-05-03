@@ -46,6 +46,7 @@
     <Compile Include="DTO_Customer.cs" />
     <Compile Include="DTO_detailBill.cs" />
     <Compile Include="DTO_expense_statistics.cs" />
+    <Compile Include="DTO_Image.cs" />
     <Compile Include="DTO_incomeStatistics.cs" />
     <Compile Include="DTO_optionProduct.cs" />
     <Compile Include="DTO_Producer.cs" />

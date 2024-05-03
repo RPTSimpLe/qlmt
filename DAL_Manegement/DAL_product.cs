@@ -15,6 +15,16 @@ namespace DAL_Manegement
     public class DAL_Product : DBConnect
     {
         private SqlDataAdapter dataAdapter;
+        
+        public long GetProductId()
+        {
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(
+                "select top 1 id as [ID] from product order by id desc", conn
+                );
+            DataTable dt = new DataTable();
+            dataAdapter.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0]["ID"].ToString());
+        }
         public DataTable findProduct(String name, String type, String hang)
         {
             string sql = "exec sp_select_product @nameProduct = @name, @nameCategory = @type, @nameProducer = @hang";

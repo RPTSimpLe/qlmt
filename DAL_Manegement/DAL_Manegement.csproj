@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +47,7 @@
     <Compile Include="DAL_Customer.cs" />
     <Compile Include="DAL_DetailBill.cs" />
     <Compile Include="DAL_expense_statistics.cs" />
+    <Compile Include="DAL_Image.cs" />
     <Compile Include="DAL_incomeStatistics.cs" />
     <Compile Include="DAL_optionProduct.cs" />
     <Compile Include="DAL_Category.cs" />

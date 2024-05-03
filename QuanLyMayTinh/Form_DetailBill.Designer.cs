@@ -88,7 +88,7 @@
             this.txt_createdAt.Enabled = false;
             this.txt_createdAt.Location = new System.Drawing.Point(783, 40);
             this.txt_createdAt.Name = "txt_createdAt";
-            this.txt_createdAt.Size = new System.Drawing.Size(219, 30);
+            this.txt_createdAt.Size = new System.Drawing.Size(347, 30);
             this.txt_createdAt.TabIndex = 13;
             // 
             // lblTotal
@@ -193,7 +193,7 @@
             this.txt_Address.Enabled = false;
             this.txt_Address.Location = new System.Drawing.Point(783, 102);
             this.txt_Address.Name = "txt_Address";
-            this.txt_Address.Size = new System.Drawing.Size(225, 30);
+            this.txt_Address.Size = new System.Drawing.Size(347, 30);
             this.txt_Address.TabIndex = 7;
             // 
             // label4

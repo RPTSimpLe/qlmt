@@ -70,9 +70,9 @@ namespace DAL_Manegement
         public DataTable getAll()
         {
             SqlDataAdapter dataAdapter = new SqlDataAdapter(
-                "select incomeStatistics.nameProduct, incomeStatistics.nameOptions, incomeStatistics.sellQuantity, incomeStatistics.sellPrice, " +
-                "(incomeStatistics.sellQuantity*incomeStatistics.sellPrice) as tong , " +
-                "incomeStatistics.created_at " +
+                "select incomeStatistics.nameProduct as [Tên sản phẩm], incomeStatistics.nameOptions as [Linh kiện], incomeStatistics.sellQuantity  as [Số lượng], incomeStatistics.sellPrice as [Giá], " +
+                "(incomeStatistics.sellQuantity*incomeStatistics.sellPrice) as Tổng , " +
+                "incomeStatistics.created_at as [Ngày bán]" +
                 "from incomeStatistics", conn
                 );
             DataTable dt = new DataTable();

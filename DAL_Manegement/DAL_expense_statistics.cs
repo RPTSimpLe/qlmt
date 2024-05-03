@@ -71,8 +71,8 @@ namespace DAL_Manegement
         public DataTable getAll()
         {
             SqlDataAdapter dataAdapter = new SqlDataAdapter(
-                "select expense_statistics.nameProduct, expense_statistics.nameOptions, expense_statistics.importQuantity, expense_statistics.importPrice, " +
-                "(expense_statistics.importQuantity*expense_statistics.importPrice) as tong , expense_statistics.created_at " +
+                "select expense_statistics.nameProduct as [Tên sản phẩm], expense_statistics.nameOptions as [Linh kiện], expense_statistics.importQuantity as [Số lượng nhập], expense_statistics.importPrice [Giá nhập], " +
+                "(expense_statistics.importQuantity*expense_statistics.importPrice) as [Tổng] , expense_statistics.created_at as [Ngày nhập]" +
                 "from expense_statistics", conn );
             DataTable dt = new DataTable();
             dataAdapter.Fill(dt);

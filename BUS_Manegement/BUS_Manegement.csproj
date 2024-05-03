@@ -47,6 +47,7 @@
     <Compile Include="BUS_Customer.cs" />
     <Compile Include="Bus_detailBill.cs" />
     <Compile Include="BUS_expense_statistics.cs" />
+    <Compile Include="BUS_Image.cs" />
     <Compile Include="BUS_incomeStatistics.cs" />
     <Compile Include="BUS_optionProduct.cs" />
     <Compile Include="BUS_Producer.cs" />

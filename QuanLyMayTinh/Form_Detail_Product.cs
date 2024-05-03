@@ -16,6 +16,7 @@ namespace QuanLyMayTinh
     {
         private int proId = 0;
         private BUS_product bUS_Product = new BUS_product();
+        private BUS_Image bUS_Image = new BUS_Image();
         private BUS_optionProduct bUS_OptionProduct = new BUS_optionProduct();
         public Form_Detail_Product(int proId)
         {
@@ -73,7 +74,7 @@ namespace QuanLyMayTinh
 
         private void Form_Detail_Product_Load(object sender, EventArgs e)
         {
-
+            pictureBox1.Image = System.Drawing.Image.FromFile(bUS_Image.getByUrl(proId));
             this.loadProduct();
             this.loadOption();
         }

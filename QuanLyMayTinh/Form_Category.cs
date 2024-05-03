@@ -121,13 +121,7 @@ namespace QuanLyMayTinh
         {
             string searchName = nameCate.Text;
             string searchCode = codeCate.Text;
-
-            if (string.IsNullOrEmpty(searchName) && string.IsNullOrEmpty(searchCode))
-            {
-                MessageBox.Show("Vui lòng nhập tên hoặc mã danh mục cần tìm kiếm.");
-                return;
-            }
-
+         
             DataTable searchResults;
 
             if (!string.IsNullOrEmpty(searchName))

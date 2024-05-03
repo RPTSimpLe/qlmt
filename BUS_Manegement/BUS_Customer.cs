@@ -3,6 +3,7 @@ using DTO_Manegement;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,10 @@ namespace BUS_Manegement
         public DataTable getAllData()
         {
             return customer.getAll();
+        }
+        public int getId()
+        {
+            return customer.getId();
         }
         public bool addAccountCustomer(DTO_Customer customers)
         {

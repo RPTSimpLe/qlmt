@@ -37,6 +37,10 @@ namespace BUS_Manegement
         {
             return DAL_Product.findProduct(name,type,hang);
         }
+        public long GetProductId()
+        {
+            return DAL_Product.GetProductId();
+        }
         public DataTable FindProductById(int id)
         {
             return DAL_Product.findProductById(id);

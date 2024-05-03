@@ -153,12 +153,6 @@ namespace QuanLyMayTinh
             string searchName = name_producer.Text;
             string searchCode = code_producer.Text;
 
-            if (string.IsNullOrEmpty(searchName) && string.IsNullOrEmpty(searchCode))
-            {
-                MessageBox.Show("Vui lòng nhập tên hoặc mã nhà sản xuất cần tìm kiếm.");
-                return;
-            }
-
             DataTable searchResults;
 
             if (!string.IsNullOrEmpty(searchName))

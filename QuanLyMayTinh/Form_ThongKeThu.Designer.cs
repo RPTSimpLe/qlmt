@@ -36,6 +36,7 @@
             this.lbl_chi = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.printBTN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -115,6 +116,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.printBTN);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.lbl_doanhThu);
             this.groupBox1.Controls.Add(this.label3);
@@ -130,6 +132,16 @@
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thống kê";
+            // 
+            // printBTN
+            // 
+            this.printBTN.Location = new System.Drawing.Point(1299, 640);
+            this.printBTN.Name = "printBTN";
+            this.printBTN.Size = new System.Drawing.Size(149, 58);
+            this.printBTN.TabIndex = 13;
+            this.printBTN.Text = "In";
+            this.printBTN.UseVisualStyleBackColor = true;
+            this.printBTN.Click += new System.EventHandler(this.printBTN_Click);
             // 
             // Form_ThongKeThu
             // 
@@ -156,5 +168,6 @@
         private System.Windows.Forms.Label lbl_chi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button printBTN;
     }
 }

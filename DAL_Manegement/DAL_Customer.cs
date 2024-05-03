@@ -20,6 +20,15 @@ namespace DAL_Manegement
             dataAdapter.Fill(dt);
             return dt;
         }
+        public int getId()
+        {
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(
+                "select top 1 id as [ID] from customers order by id desc", conn
+                );
+            DataTable dt = new DataTable();
+            dataAdapter.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0]["ID"].ToString());
+        }
         public bool addCustomer(DTO_Customer customer)
         {
             try

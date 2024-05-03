@@ -218,3 +218,4 @@ H:\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.XtraLayout.v23.2.xml
 H:\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.XtraPivotGrid.v23.2.xml
 H:\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.XtraBars.v23.2.dll
 H:\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.XtraBars.v23.2.xml
+D:\code\c#\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.exe.licenses

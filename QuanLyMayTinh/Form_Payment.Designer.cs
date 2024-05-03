@@ -80,16 +80,16 @@
             // 
             // txt_nameCus
             // 
-            this.txt_nameCus.Location = new System.Drawing.Point(190, 132);
+            this.txt_nameCus.Location = new System.Drawing.Point(216, 132);
             this.txt_nameCus.Name = "txt_nameCus";
-            this.txt_nameCus.Size = new System.Drawing.Size(219, 30);
+            this.txt_nameCus.Size = new System.Drawing.Size(207, 30);
             this.txt_nameCus.TabIndex = 4;
             // 
             // txt_Address
             // 
-            this.txt_Address.Location = new System.Drawing.Point(190, 208);
+            this.txt_Address.Location = new System.Drawing.Point(216, 208);
             this.txt_Address.Name = "txt_Address";
-            this.txt_Address.Size = new System.Drawing.Size(219, 30);
+            this.txt_Address.Size = new System.Drawing.Size(659, 30);
             this.txt_Address.TabIndex = 7;
             // 
             // txt_phone
