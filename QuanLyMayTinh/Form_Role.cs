@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -40,40 +41,56 @@ namespace QuanLyMayTinh
 
         private void deleteRole_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(ids.Text);
-
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa quyền này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
+            if (ids.Text != "")
             {
-                if (role.deleteRoles(id))
+                int id = Convert.ToInt32(ids.Text);
+
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa quyền này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xóa quyền thành công.");
-                    dataGridView1.DataSource = role.getAllData();
-                }
-                else
-                {
-                    MessageBox.Show("Xóa quyền không thành công.");
+                    if (role.deleteRoles(id))
+                    {
+                        roles.Text = "";
+                        MessageBox.Show("Xóa quyền thành công.");
+                        dataGridView1.DataSource = role.getAllData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa quyền không thành công.");
+                    }
                 }
             }
+            else { MessageBox.Show("Vui lòng chọn quyền!"); }
         }
 
         private void saveRole_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(ids.Text);
-            string name = roles.Text;
-
-            DTO_Role dTO_Role = new DTO_Role(id, name);
-
-            if (role.updateRoles(dTO_Role))
+            if (ids.Text != "")
             {
-                MessageBox.Show("Cập nhật quyền thành công.");
-                dataGridView1.DataSource = role.getAllData();
+                int id = Convert.ToInt32(ids.Text);
+                string name = roles.Text;
+
+                DTO_Role dTO_Role = new DTO_Role(id, name);
+                if (string.IsNullOrWhiteSpace(name))
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin !");
+                }
+                else
+                {
+                    if (role.updateRoles(dTO_Role))
+                    {
+                        roles.Text = "";
+                        MessageBox.Show("Cập nhật quyền thành công.");
+                        dataGridView1.DataSource = role.getAllData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật quyền không thành công.");
+                    }
+                }
             }
-            else
-            {
-                MessageBox.Show("Cập nhật quyền không thành công.");
-            }
+            else { MessageBox.Show("Vui lòng chọn quyền!"); }
         }
 
         private void cancel_Click(object sender, EventArgs e)

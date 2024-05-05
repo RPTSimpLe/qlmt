@@ -31,13 +31,9 @@ namespace BUS_Manegement
         {
             return category.checkDuplicateCategory(code, name);
         }
-        public DataTable FindByNameCategory(string name)
+        public DataTable FindCategory(string name, string code)
         {
-            return category.findByNameCategory(name);
-        }
-        public DataTable FindByCodeCategory(string code)
-        {
-            return category.findByCodeCategory(code);
+            return category.FindCategory(name,code);
         }
     }
 }

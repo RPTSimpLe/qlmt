@@ -57,8 +57,15 @@ namespace QuanLyMayTinh
 
         private void btnDetail_Click(object sender, EventArgs e)
         {
-            Form_Detail_Product form_Detail = new Form_Detail_Product(Convert.ToInt32(ids.Text));
-            form_Detail.ShowDialog();
+            if (ids.Text!="")
+            {
+                Form_Detail_Product form_Detail = new Form_Detail_Product(Convert.ToInt32(ids.Text));
+                form_Detail.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm!");
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -69,10 +76,22 @@ namespace QuanLyMayTinh
 
         private void deleteUser_Click(object sender, EventArgs e)
         {
-            product.deleteProduct(Convert.ToInt32(ids.Text));
-            bUS_Image.delete(Convert.ToInt32(ids.Text));
-            this.getAll();
-            MessageBox.Show("Xóa thành công");
+            if (ids.Text != "")
+            {
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa ?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    bUS_Image.delete(Convert.ToInt32(ids.Text));
+                    product.deleteProduct(Convert.ToInt32(ids.Text));
+                    this.getAll();
+                    MessageBox.Show("Xóa thành công");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm cần xóa!");
+            }
         }
 
         private void searchProduct_Click(object sender, EventArgs e)

@@ -121,7 +121,7 @@
             this.saveRole.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.saveRole.Location = new System.Drawing.Point(19, 281);
             this.saveRole.Name = "saveRole";
-            this.saveRole.Size = new System.Drawing.Size(171, 70);
+            this.saveRole.Size = new System.Drawing.Size(158, 70);
             this.saveRole.TabIndex = 5;
             this.saveRole.Text = "Cập nhập";
             this.saveRole.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -149,7 +149,7 @@
             this.addRole.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.addRole.Location = new System.Drawing.Point(19, 173);
             this.addRole.Name = "addRole";
-            this.addRole.Size = new System.Drawing.Size(171, 75);
+            this.addRole.Size = new System.Drawing.Size(158, 75);
             this.addRole.TabIndex = 3;
             this.addRole.Text = "Thêm";
             this.addRole.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

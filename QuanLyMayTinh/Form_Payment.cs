@@ -105,29 +105,47 @@ namespace QuanLyMayTinh
                     }
             }
         }
+        private bool IsValidPhone(string phone)
+        {
+            if (phone.Length == 10 || phone.Length == 11)
+            {
+                return true;
+            }
+            return false;
+        }
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            if (txt_Address.Text.Trim() == "" && txt_nameCus.Text.Trim() == "" && txt_phone.Text.Trim() == "")
+            try
             {
-                MessageBox.Show("Vui long nhap day du thong tin khach hang");
-            }
-            else
-            {
-                addCustomer();
-                bUS_Bill.addBill(this.dTO_Bills);
-                foreach (var bill in this.dTO_Bills)
+                if (txt_Address.Text.Trim() == "" && txt_nameCus.Text.Trim() == "" && txt_phone.Text.Trim() == "")
                 {
-                    updateOptionProduct(bill);
+                    MessageBox.Show("Vui long nhap day du thong tin khach hang");
                 }
-                PrintDocument pd = new PrintDocument();
-                pd.PrintPage += new PrintPageEventHandler(this.PrintDocument_PrintPage);
+                else
+                {
+                    if (!IsValidPhone(txt_phone.Text))
+                    {
+                        throw new Exception("Số điện thoại phải dài 10 hoặc 11 số!");
+                    }
+                    addCustomer();
+                    bUS_Bill.addBill(this.dTO_Bills);
+                    foreach (var bill in this.dTO_Bills)
+                    {
+                        updateOptionProduct(bill);
+                    }
+                    PrintDocument pd = new PrintDocument();
+                    pd.PrintPage += new PrintPageEventHandler(this.PrintDocument_PrintPage);
 
-                PrintPreviewDialog ppd = new PrintPreviewDialog();
-                ppd.Document = pd;
-                ppd.ClientSize = new Size(1000, 900);
-                ppd.ShowDialog();
+                    PrintPreviewDialog ppd = new PrintPreviewDialog();
+                    ppd.Document = pd;
+                    ppd.ClientSize = new Size(1000, 900);
+                    ppd.ShowDialog();
 
-                this.Close();
+                    this.Close();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

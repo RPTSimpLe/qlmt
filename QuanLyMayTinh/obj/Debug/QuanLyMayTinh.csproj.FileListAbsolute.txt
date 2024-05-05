@@ -219,17 +219,6 @@ H:\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.XtraPivotGrid.v23.2.xml
 H:\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.XtraBars.v23.2.dll
 H:\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.XtraBars.v23.2.xml
 D:\code\c#\qlmt\QuanLyMayTinh\obj\Debug\QuanLyMayTinh.exe.licenses
-D:\code\c#\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.Data.Desktop.v23.2.dll
-D:\code\c#\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.Data.v23.2.dll
-D:\code\c#\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.Drawing.v23.2.dll
-D:\code\c#\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.PivotGrid.v23.2.Core.dll
-D:\code\c#\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.Printing.v23.2.Core.dll
-D:\code\c#\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.Sparkline.v23.2.Core.dll
-D:\code\c#\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.Utils.v23.2.dll
-D:\code\c#\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.XtraBars.v23.2.dll
-D:\code\c#\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.XtraEditors.v23.2.dll
-D:\code\c#\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.XtraLayout.v23.2.dll
-D:\code\c#\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.XtraPivotGrid.v23.2.dll
 D:\code\c#\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.Pdf.v23.2.Core.dll
 D:\code\c#\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.Pdf.v23.2.Drawing.dll
 D:\code\c#\qlmt\QuanLyMayTinh\bin\Debug\DevExpress.Data.Desktop.v23.2.xml

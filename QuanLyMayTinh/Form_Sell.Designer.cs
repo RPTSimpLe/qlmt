@@ -346,7 +346,7 @@
             // 
             // totalPrice3
             // 
-            this.totalPrice3.Location = new System.Drawing.Point(546, 72);
+            this.totalPrice3.Location = new System.Drawing.Point(546, 68);
             this.totalPrice3.Name = "totalPrice3";
             this.totalPrice3.Size = new System.Drawing.Size(140, 30);
             this.totalPrice3.TabIndex = 8;

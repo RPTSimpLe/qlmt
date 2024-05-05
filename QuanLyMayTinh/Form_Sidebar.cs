@@ -132,20 +132,19 @@ namespace QuanLyMayTinh
 
         private void btAccounts_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(users.getRole_id());
-            if (this.users.getRole_id() == 1)
-            {
+            //if (this.users.getRole_id() == 1)
+            //{
                 OpenChildForm(new Form_Account(), sender);
-            }
-            else { MessageBox.Show("bạn không được sử dụng tính năng này"); }
+            //}
+            //else { MessageBox.Show("bạn không được sử dụng tính năng này"); }
         }
 
         private void btnRole_Click(object sender, EventArgs e)
         {
-            if (this.users.getRole_id() == 1) {
+            //if (this.users.getRole_id() == 1) {
                 OpenChildForm(new Form_Role(), sender);            
-            }
-            else { MessageBox.Show("bạn không được sử dụng tính năng này"); }
+            //}
+            //else { MessageBox.Show("bạn không được sử dụng tính năng này"); }
         }
 
         private void btnSell_Click(object sender, EventArgs e)

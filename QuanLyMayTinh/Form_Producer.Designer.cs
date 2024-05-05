@@ -164,9 +164,9 @@
             this.cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancel.Image = global::QuanLyMayTinh.Properties.Resources.close__1_;
             this.cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cancel.Location = new System.Drawing.Point(250, 469);
+            this.cancel.Location = new System.Drawing.Point(250, 459);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(153, 70);
+            this.cancel.Size = new System.Drawing.Size(153, 80);
             this.cancel.TabIndex = 8;
             this.cancel.Text = "Hủy";
             this.cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -284,7 +284,6 @@
             this.code_producer.Name = "code_producer";
             this.code_producer.Size = new System.Drawing.Size(233, 30);
             this.code_producer.TabIndex = 3;
-            this.code_producer.Click += new System.EventHandler(this.code_producer_Click);
             // 
             // label2
             // 
@@ -301,7 +300,6 @@
             this.name_producer.Name = "name_producer";
             this.name_producer.Size = new System.Drawing.Size(230, 30);
             this.name_producer.TabIndex = 1;
-            this.name_producer.Click += new System.EventHandler(this.name_producer_Click);
             // 
             // label1
             // 

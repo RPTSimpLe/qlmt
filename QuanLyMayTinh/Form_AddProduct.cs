@@ -31,26 +31,35 @@ namespace QuanLyMayTinh
 
         private void btnsAdd_Click(object sender, EventArgs e)
         {
-            int year = Convert.ToInt32(years.Text.ToString());
             String namePro = nameProduct.Text.ToString();
             String warranty = warrantly.Text.ToString();
             String des = descrption.Text.ToString();
-            String nameCate = cbo_category.SelectedItem.ToString().Trim();
-            String nameProducer = cbo_Producer.SelectedItem.ToString().Trim();
             string path = image.Text;
             string outputPath = @"D:\code\c#\qlmt\QuanLyMayTinh\Images\";
 
-            File.Copy(path, Path.Combine( outputPath, Path.GetFileName(image.Text)),true);
+            if (path != "" && namePro != "" && warranty != "" && des != "" && cbo_category.SelectedIndex > -1 && cbo_Producer.SelectedIndex > -1 && years.Text.ToString() != "")
+            {
+                try
+                {
+                    String nameCate = cbo_category.SelectedItem.ToString().Trim();
+                    String nameProducer = cbo_Producer.SelectedItem.ToString().Trim();
+                    int year = Convert.ToInt32(years.Text.ToString());
+                    DTO_product dTO_Product = new DTO_product(0, namePro, year, des, warranty, nameCate, nameProducer);
+                    product.AddProduct(dTO_Product);
+                    long proId = product.GetProductId();
+                    File.Copy(path, Path.Combine(outputPath, Path.GetFileName(image.Text)), true);
 
-            DTO_product dTO_Product = new DTO_product(0, namePro, year, des, warranty, nameCate, nameProducer);
-            product.AddProduct(dTO_Product);
-            long proId = product.GetProductId();
+                    DTO_Image dTO_Image = new DTO_Image(proId, Path.Combine(outputPath, Path.GetFileName(image.Text)));
+                    bUS_Image.add(dTO_Image);
+                    MessageBox.Show("Thêm thành công");
+                    this.Close();
+                }
+                catch {
+                    MessageBox.Show("Năm phải nhập số!");
+                }
+            }
+            else { MessageBox.Show("Vui lòng điền đầy đủ thông tin!"); }
 
-            DTO_Image dTO_Image = new DTO_Image(proId, Path.Combine(outputPath, Path.GetFileName(image.Text)));
-            bUS_Image.add(dTO_Image);
-
-            MessageBox.Show("Thêm thành công");
-            this.Close();
         }
 
         private void Form_AddProduct_Load(object sender, EventArgs e)

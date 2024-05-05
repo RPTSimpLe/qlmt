@@ -23,6 +23,9 @@ create table users(
 	address nvarchar(255),
 	email varchar(255),
 		);
+ALTER TABLE users
+ADD role_id int,
+FOREIGN KEY (role_id) REFERENCES role(id);
 create table customers(
 	id int identity(1,1) primary key,
 	fullname nvarchar(30),
@@ -101,9 +104,6 @@ create table role(
 	id int identity(1,1) primary key,
 	roles nvarchar(30)
 );
-		ALTER TABLE users
-ADD role_id int,
-FOREIGN KEY (role_id) REFERENCES role(id);
 
 INSERT INTO role (roles) VALUES ('ADMIN'), ('USER');
 -- drop function findCategoryId
@@ -229,7 +229,8 @@ end
 -- exec sp_select_bill '%44%' , '%%'
 --select * from users
 --select * from role
---INSERT INTO users (fullname, username, pass, phone, gender, birthday, address, email, role_id) VALUES ('ltd', 'employee', 'employee', '6456454684', 'nam', '2022-11-22', 'xc dfsdksf', 'bhdsfb@gmail.com', 2)
+INSERT INTO users (fullname, username, pass, phone, gender, birthday, address, email, role_id) VALUES ('ltd', 'admin', 'employee', 'admin', 'nam', '2022-11-22', 'xc dfsdksf', 'bhdsfb@gmail.com', 1)
+INSERT INTO users (fullname, username, pass, phone, gender, birthday, address, email, role_id) VALUES ('ltd', 'user', 'employee', 'user', 'nam', '2022-11-22', 'xc dfsdksf', 'bhdsfb@gmail.com', 2)
 -- DELETE FROM bill WHERE id = 'HD062'
 create proc sp_select_feature_bill
 	@id varchar(10)
@@ -246,6 +247,37 @@ begin
 	Group by bill.id,product.nameProduct, customers.fullname ,bill.created_at,customers.phone ,customers.addres 
 	ORDER BY bill.created_at DESC
 end
+
+CREATE PROC sp_select_productById
+    @idPro INT
+AS
+BEGIN
+    DECLARE @tonKho BIGINT
+
+    IF (SELECT SUM(options.quantity) FROM options WHERE product_id = @idPro) IS NULL
+        SET @tonKho = 0
+    ELSE
+        SET @tonKho = (SELECT SUM(options.quantity) FROM options WHERE product_id = @idPro)
+
+    SELECT 
+        product.id AS [ID], 
+        product.nameProduct AS [Tên sản phẩm],
+        product.warranty AS [Bảo hành],
+        product.descriptions AS [Mô tả],
+        product.years AS [Năm sx],
+        category.nameCategory AS [Loại], 
+        producer.nameProducer AS [Hãng],
+        @tonKho AS [Tồn kho]
+    FROM 
+        product
+    JOIN 
+        category ON category.id = product.category_id
+    JOIN 
+        producer ON producer.id = product.producer_id
+    WHERE 
+        product.id = @idPro
+END
+--exec sp_select_productById 24;
 --select * from incomeStatistics
 --delete from incomeStatistics where id = 9
 --select * from expense_statistics

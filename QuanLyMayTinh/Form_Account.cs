@@ -15,6 +15,10 @@ using OfficeOpenXml;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Data.SqlClient;
 using DAL_Manegement;
+using Microsoft.Office.Interop.Excel;
+using System.Security.Cryptography;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Text.RegularExpressions;
 
 namespace QuanLyMayTinh
 {
@@ -29,55 +33,77 @@ namespace QuanLyMayTinh
 
         private void addUser_Click(object sender, EventArgs e)
         {
-            string name = names.Text;
-            string username = usernames.Text;
-            string pass = passw.Text;
-            string phone = phones.Text;
-            string gender = "";
-            if (radioNam.Checked)
+            try
             {
-                gender = "Nam";
+                string name = names.Text;
+                string username = usernames.Text;
+                string pass = passw.Text;
+                string phone = phones.Text;
+                string gender = "";
+                string adres = address.Text;
+                string email = emails.Text;
+                if (name != "" && username != "" && username != "" && pass != "" && phone != "" && adres != "" && email != "" && comboRole.SelectedIndex > -1)
+                {
+                    if (radioNam.Checked)
+                    {
+                        gender = "Nam";
+                    }
+                    else if (radioNu.Checked)
+                    {
+                        gender = "Nu";
+                    }
+                    string roleName = comboRole.SelectedItem.ToString();
+                    int roleId = dal.GetRoleIdByRoleName(roleName);
+
+                    if (!IsValidEmail(email)) { throw new Exception("Email không đúng định dạng!"); }
+                    DateTime birthday = births.Value;
+                    DTO_Users dTO_Users = new DTO_Users(0, name, username, pass, gender, phone, birthday, email, adres, roleId);
+                    if (bus.addUser(dTO_Users, roleName))
+                    {
+                        MessageBox.Show("Thêm người dùng thành công!");
+                        dataGridView1.DataSource = bus.getAllData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm người dùng thất bại!");
+                    }
+                }
+                else { MessageBox.Show("Vui lòng điền đầy đủ thông tin!"); }
             }
-            else if (radioNu.Checked)
+            catch(Exception ex)
             {
-                gender = "Nu";
+                MessageBox.Show(ex.Message);
             }
-            string adres = address.Text;
-            string email = emails.Text;
-            string roleName = comboRole.SelectedItem.ToString();
-            int roleId = dal.GetRoleIdByRoleName(roleName);
-         
-            DateTime birthday = births.Value;
-            DTO_Users dTO_Users = new DTO_Users(0, name, username, pass, gender, phone, birthday, email, adres, roleId);
-            if (bus.addUser(dTO_Users, roleName))
-            {
-                MessageBox.Show("Thêm người dùng thành công!");
-                dataGridView1.DataSource = bus.getAllData();
-            }
-            else
-            {
-                MessageBox.Show("Thêm người dùng thất bại!");
-            }
+        }
+
+        public bool IsValidEmail(string email)
+        {
+            string pattern = @"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@\.gmail\.com$";
+            return Regex.IsMatch(email, pattern);
         }
 
         private void deleteUser_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(ids.Text);
-
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa tài khoản này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
+            if (ids.Text != "")
             {
-                if (bus.deleteUser(id))
+                int id = Convert.ToInt32(ids.Text);
+
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa tài khoản này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xóa tài khoản thành công.");
-                    dataGridView1.DataSource = bus.getAllData();
-                }
-                else
-                {
-                    MessageBox.Show("Xóa tài khoản không thành công.");
+                    if (bus.deleteUser(id))
+                    {
+                        MessageBox.Show("Xóa tài khoản thành công.");
+                        dataGridView1.DataSource = bus.getAllData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa tài khoản không thành công.");
+                    }
                 }
             }
+            else { MessageBox.Show("Vui lòng chọn tài khoản!"); }
         }
 
         private void cancel_Click(object sender, EventArgs e)
@@ -97,36 +123,51 @@ namespace QuanLyMayTinh
 
         private void saveUser_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(ids.Text);
-            string name = names.Text;
-            string username = usernames.Text;
-            string pass = passw.Text;
-            string phone = phones.Text;
-            string gender = "";
-            if (radioNam.Checked)
+            try
             {
-                gender = "Nam";
-            }
-            else if (radioNu.Checked)
-            {
-                gender = "Nu";
-            }
-            string adres = address.Text;
-            string email = emails.Text;
-            string roleName = comboRole.SelectedItem.ToString();
-            int roleId = dal.GetRoleIdByRoleName(roleName);
-            DateTime birthday = births.Value;
+                if (ids.Text != "")
+                {
+                    string name = names.Text;
+                    string username = usernames.Text;
+                    string pass = passw.Text;
+                    string phone = phones.Text;
+                    string gender = "";
+                    string adres = address.Text;
+                    string email = emails.Text;
+                    if (name != "" && username != "" && username != "" && pass != "" && phone != "" && adres != "" && email != "" && comboRole.SelectedIndex > -1)
+                    {
+                        int id = Convert.ToInt32(ids.Text);
+                        if (radioNam.Checked)
+                        {
+                            gender = "Nam";
+                        }
+                        else if (radioNu.Checked)
+                        {
+                            gender = "Nu";
+                        }
+                        string roleName = comboRole.SelectedItem.ToString();
+                        int roleId = dal.GetRoleIdByRoleName(roleName);
+                        DateTime birthday = births.Value;
+                        if (!IsValidEmail(email)) { throw new Exception("Email không đúng định dạng!"); }
 
-            DTO_Users dTO_Users = new DTO_Users(id, name, username, pass, gender, phone, birthday, email, adres, roleId);
+                        DTO_Users dTO_Users = new DTO_Users(id, name, username, pass, gender, phone, birthday, email, adres, roleId);
 
-            if (bus.updateUser(dTO_Users))
+                        if (bus.updateUser(dTO_Users))
+                        {
+                            MessageBox.Show("Cập nhật tài khoản thành công.");
+                            dataGridView1.DataSource = bus.getAllData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cập nhật tài khoản không thành công.");
+                        }
+                    }
+                    else { MessageBox.Show("Vui lòng điền đầy đủ thông tin!"); }
+                }
+                else { MessageBox.Show("Vui lòng chọn tài khoản!"); }
+            }catch(Exception ex)
             {
-                MessageBox.Show("Cập nhật tài khoản thành công.");
-                dataGridView1.DataSource = bus.getAllData();
-            }
-            else
-            {
-                MessageBox.Show("Cập nhật tài khoản không thành công.");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -175,23 +216,9 @@ namespace QuanLyMayTinh
         {
             string searchName = nameUser.Text;
 
-            if (string.IsNullOrEmpty(searchName))
-            {
-                MessageBox.Show("Vui lòng nhập tên tài khoản cần tìm kiếm.");
-                return;
-            }
+            System.Data.DataTable searchResults = bus.FindByNameAccount(searchName);
 
-            DataTable searchResults = bus.FindByNameAccount(searchName);
-
-            if (searchResults != null && searchResults.Rows.Count > 0)
-            {
-                dataGridView1.DataSource = searchResults;
-            }
-            else
-            {
-                MessageBox.Show("Không có kết quả nào được tìm thấy.");
-
-            }
+            dataGridView1.DataSource = searchResults;
         }
 
         private void Form_Account_Load(object sender, EventArgs e)

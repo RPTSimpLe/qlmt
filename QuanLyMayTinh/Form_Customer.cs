@@ -1,5 +1,6 @@
 ﻿using BUS_Manegement;
 using DTO_Manegement;
+using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -42,33 +44,86 @@ namespace QuanLyMayTinh
 
         private void add_Click(object sender, EventArgs e)
         {
-            String name = names.Text;
-            String phone = phones.Text;
-            String addres = address.Text;
-            DTO_Customer customer = new DTO_Customer(0,name,phone,addres);
+            try
+            {
+                String name = names.Text;
+                String phone = phones.Text;
+                String addres = address.Text;
+                if (!String.IsNullOrEmpty(name) && !String.IsNullOrEmpty(phone) && !String.IsNullOrEmpty(addres))
+                {
+                    DTO_Customer customer = new DTO_Customer(0, name, phone, addres);
 
-            Customer.addAccountCustomer(customer);
-            dataGridView1.DataSource = Customer.findCustomerByFullName(nameCus.Text);
+                    if (!IsValidPhone(phone)) {
+                        throw new Exception("Số điện thoại phải dài 10 hoặc 11 số!");
+                    }
+
+                    Customer.addAccountCustomer(customer);
+                    dataGridView1.DataSource = Customer.findCustomerByFullName(nameCus.Text);
+                    MessageBox.Show("Thêm thành công!");
+                }
+                else { MessageBox.Show("Vui lòng điền đầy đủ thông tin!"); }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private bool IsValidPhone(string phone)
+        {
+            if (phone.Length == 10 || phone.Length == 11) {
+                return true;
+            }
+            return false;
         }
 
         private void save_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(ids.Text);
-            String name = names.Text;
-            String phone = phones.Text;
-            String addres = address.Text;
-            DTO_Customer customer = new DTO_Customer(id, name, phone, addres);
+            try
+            {
+                if (ids.Text != "")
+                {
+                    String name = names.Text;
+                    String phone = phones.Text;
+                    String addres = address.Text;
+                    if (!String.IsNullOrEmpty(name) && !String.IsNullOrEmpty(phone) && !String.IsNullOrEmpty(addres))
+                    {
 
-            Customer.updateAccountCustomer(customer);
-            dataGridView1.DataSource = Customer.findCustomerByFullName(nameCus.Text);
+                        if (!IsValidPhone(phone))
+                        {
+                            throw new Exception("Số điện thoại phải dài 10 hoặc 11 số!");
+                        }
+                        int id = Convert.ToInt32(ids.Text);
+                        DTO_Customer customer = new DTO_Customer(id, name, phone, addres);
+
+                        Customer.updateAccountCustomer(customer);
+                        dataGridView1.DataSource = Customer.findCustomerByFullName(nameCus.Text);
+                        MessageBox.Show("Cập nhật thành công");
+                    }
+                }
+                else { MessageBox.Show("Vui lòng chọn khách hàng"); }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void delete_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(ids.Text);
+            if (ids.Text != "")
+            {
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa danh mục này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                int id = Convert.ToInt32(ids.Text);
 
-            Customer.deleteById(id);
-            dataGridView1.DataSource = Customer.findCustomerByFullName(nameCus.Text);
+                if (result == DialogResult.Yes)
+                {
+                    Customer.deleteById(id);
+                    dataGridView1.DataSource = Customer.findCustomerByFullName(nameCus.Text);
+                    MessageBox.Show("Xóa thành công.");
+                }
+
+            }
+            else { MessageBox.Show("Vui lòng chọn khách hàng"); }
         }
 
         private void btnPayment_Click(object sender, EventArgs e)

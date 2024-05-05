@@ -1,4 +1,5 @@
 ﻿using BUS_Manegement;
+using DevExpress.XtraExport.Implementation;
 using DTO_Manegement;
 using System;
 using System.Collections.Generic;
@@ -55,22 +56,30 @@ namespace QuanLyMayTinh
             TextBox textBoxSellingPrice = groupBox.Controls.Find("sellingPrice_" + ma, true).FirstOrDefault() as TextBox;
             TextBox textBoxId = groupBox.Controls.Find("id_" + ma, true).FirstOrDefault() as TextBox;
 
-            if (textBoxRam != null && textBoxStorage != null && textBoxQuantity != null && textBoxImportPrice != null && textBoxSellingPrice != null && textBoxId != null)
+            try
             {
-                string ram = textBoxRam.Text;
-                string storage = textBoxStorage.Text;
-                long quantity = Convert.ToInt64(textBoxQuantity.Text);
-                long importPrice = Convert.ToInt64(textBoxImportPrice.Text);
-                long sellingPrice = Convert.ToInt64(textBoxSellingPrice.Text);
-                int id = Convert.ToInt32(textBoxId.Text);
-                DTO_optionProduct dTO_Option = new DTO_optionProduct(id, ram, storage, quantity, importPrice, sellingPrice, Convert.ToInt64(proId));
+                if (textBoxRam.Text != "" && textBoxStorage.Text != "" && textBoxQuantity.Text != "" && textBoxImportPrice.Text != "" && textBoxSellingPrice.Text != "" && textBoxId.Text != "")
+                {
+                    string ram = textBoxRam.Text;
+                    string storage = textBoxStorage.Text;
+                    long quantity = Convert.ToInt64(textBoxQuantity.Text);
+                    long importPrice = Convert.ToInt64(textBoxImportPrice.Text);
+                    long sellingPrice = Convert.ToInt64(textBoxSellingPrice.Text);
+                    int id = Convert.ToInt32(textBoxId.Text);
+                    DTO_optionProduct dTO_Option = new DTO_optionProduct(id, ram, storage, quantity, importPrice, sellingPrice, Convert.ToInt64(proId));
 
-                bUS_OptionProduct.updateOption(dTO_Option,0);
+                    bUS_OptionProduct.updateOption(dTO_Option, 0);
 
-                MessageBox.Show("Cập nhật thành công");
+                    MessageBox.Show("Cập nhật thành công");
+                }
+                else { MessageBox.Show("Vui lòng điền đầy đủ thông tin!"); }
+                this.loadProduct();
+                this.loadOption();
             }
-            this.loadProduct();
-            this.loadOption();
+            catch
+            {
+                MessageBox.Show("Số lượng, giá nhập, giá bán phải là số!");
+            }
         }
 
         private void Form_Detail_Product_Load(object sender, EventArgs e)
@@ -240,13 +249,13 @@ namespace QuanLyMayTinh
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.loadProduct();
             this.loadOption();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(ids.Text.ToString());
-            int year = Convert.ToInt32(years.Text.ToString());
             String namePro = nameProduct.Text.ToString();
             String warranty = warrantly.Text.ToString();
             String des = descrption.Text.ToString();
@@ -255,22 +264,33 @@ namespace QuanLyMayTinh
             string path = image.Text;
             String outputPath = @"D:\code\c#\qlmt\QuanLyMayTinh\Images\";
 
-            DTO_product dTO_Product = new DTO_product(id,namePro,year,des,warranty,nameCate,nameProducer);
-            
-            File.Copy(path, Path.Combine(outputPath, Path.GetFileName(image.Text)), true);
 
-            DTO_Image dTO_Image = new DTO_Image(proId, Path.Combine(outputPath, Path.GetFileName(image.Text)));
-            bUS_Image.update(dTO_Image);
+            if ( namePro != "" && warranty != "" && des != "" && nameCate != "" && nameProducer != "" && years.Text.ToString() != "")
+            {
+                int year = Convert.ToInt32(years.Text.ToString());
+                if (path != "")
+                {
+                    File.Copy(path, Path.Combine(outputPath, Path.GetFileName(image.Text)), true);
 
-            bUS_Product.updateProduct(dTO_Product);
+                    DTO_Image dTO_Image = new DTO_Image(proId, Path.Combine(outputPath, Path.GetFileName(image.Text)));
+                    bUS_Image.update(dTO_Image);
+                }
+                DTO_product dTO_Product = new DTO_product(id,namePro,year,des,warranty,nameCate,nameProducer);
+                bUS_Product.updateProduct(dTO_Product);
 
-            MessageBox.Show("Cập nhật thành công");
+                MessageBox.Show("Cập nhật thành công");
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
+            }
+
         }
 
         private void btnImagesProduct_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Image Files (*.jpg;*.jpeg;*.png) | *.";
+            ofd.Filter = ofd.Filter = "Image Files (*.jpg;*.jpeg;*.png) | *.jpg;*.jpeg;*.png";
             ofd.FilterIndex = 1;
             ofd.RestoreDirectory = true;
             if (ofd.ShowDialog() == DialogResult.OK)

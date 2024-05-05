@@ -32,13 +32,9 @@ namespace BUS_Manegement
         {
             return producer.checkDuplicateProducer(code, name);
         }
-        public DataTable FindByNameProducer(string name)
+        public DataTable FindProducer(string name, string code)
         {
-            return producer.findByNameProducer(name);
-        }
-        public DataTable FindByCodeProducer(string code)
-        {
-            return producer.findByCodeProducer(code);
+            return producer.FindProducer(name,code);
         }
     }
 }

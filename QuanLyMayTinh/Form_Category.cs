@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using System.IO;
 using OfficeOpenXml;
 using Excel = Microsoft.Office.Interop.Excel;
+using Microsoft.Office.Interop.Excel;
+using System.Security.Cryptography;
 
 namespace QuanLyMayTinh
 {
@@ -69,21 +71,29 @@ namespace QuanLyMayTinh
 
         private void saveCate_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(ids.Text);
-            string code = codes.Text;
-            string name = names.Text;
-
-            DTO_Category dTO_Category = new DTO_Category(id, name, code);
-
-            if (bus.updateCategories(dTO_Category))
+            if (ids.Text != "")
             {
-                MessageBox.Show("Cập nhật danh mục thành công.");
-                dataGridView1.DataSource = bus.getAllData();
+                string code = codes.Text;
+                string name = names.Text;
+                if (code != "" && name != "")
+                {
+                    int id = Convert.ToInt32(ids.Text);
+
+                    DTO_Category dTO_Category = new DTO_Category(id, name, code);
+
+                    if (bus.updateCategories(dTO_Category))
+                    {
+                        MessageBox.Show("Cập nhật danh mục thành công.");
+                        dataGridView1.DataSource = bus.getAllData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật danh mục không thành công.");
+                    }
+                }
+                else { MessageBox.Show("Vui lòng điền đầy đủ thông tin!"); }
             }
-            else
-            {
-                MessageBox.Show("Cập nhật danh mục không thành công.");
-            }
+            else { MessageBox.Show("Vui lòng chọn danh mục!"); }
         }
 
         private void cancel_Click(object sender, EventArgs e)
@@ -99,49 +109,36 @@ namespace QuanLyMayTinh
 
         private void deleteCate_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(ids.Text);
-
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa danh mục này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
+            if (ids.Text !="")
             {
-                if (bus.deleteCategories(id))
+                int id = Convert.ToInt32(ids.Text);
+
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa danh mục này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xóa danh mục thành công.");
-                    dataGridView1.DataSource = bus.getAllData();
-                }
-                else
-                {
-                    MessageBox.Show("Xóa danh mục không thành công.");
+                    if (bus.deleteCategories(id))
+                    {
+                        MessageBox.Show("Xóa danh mục thành công.");
+                        dataGridView1.DataSource = bus.getAllData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa danh mục không thành công.");
+                    }
                 }
             }
+            else { MessageBox.Show("Vui lòng chọn danh mục!"); }
         }
 
         private void searchCate_Click(object sender, EventArgs e)
         {
             string searchName = nameCate.Text;
             string searchCode = codeCate.Text;
-         
-            DataTable searchResults;
 
-            if (!string.IsNullOrEmpty(searchName))
-            {
-                searchResults = bus.FindByNameCategory(searchName);
-            }
-            else
-            {
-                searchResults = bus.FindByCodeCategory(searchCode);
-            }
-
-            if (searchResults != null && searchResults.Rows.Count > 0)
-            {
-
-                dataGridView1.DataSource = searchResults;
-            }
-            else
-            {
-                MessageBox.Show("Không có kết quả nào được tìm thấy.");
-            }
+            System.Data.DataTable searchResults;
+            searchResults = bus.FindCategory(searchName,searchCode);
+            dataGridView1.DataSource = searchResults;
         }
         private void ExportExcel(string path)
         {

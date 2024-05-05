@@ -59,42 +59,50 @@ namespace QuanLyMayTinh
 
         private void deleteProducer_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(ids.Text);
-
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhà sản xuất này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
+            if (ids.Text != "")
             {
-                if (bus.deleteProducer(id))
+                int id = Convert.ToInt32(ids.Text);
+
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhà sản xuất này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xóa nhà sản xuất thành công.");
-                    dataGridView1.DataSource = bus.getAllData();
-                }
-                else
-                {
-                    MessageBox.Show("Xóa nhà sản xuất không thành công.");
+                    if (bus.deleteProducer(id))
+                    {
+                        MessageBox.Show("Xóa nhà sản xuất thành công.");
+                        dataGridView1.DataSource = bus.getAllData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa nhà sản xuất không thành công.");
+                    }
                 }
             }
+            else { MessageBox.Show("Vui lòng chọn nhà sản xuất!"); }
         }
        
 
         private void saveProducer_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(ids.Text);
-            string code = codes.Text;
-            string name = names.Text;
-
-            DTO_Producer dTO_Producer = new DTO_Producer(id, code, name);
-
-            if (bus.updateProducer(dTO_Producer))
+            if (ids.Text != "")
             {
-                MessageBox.Show("Cập nhật nhà sản xuất thành công.");
-                dataGridView1.DataSource = bus.getAllData();
+                string code = codes.Text;
+                string name = names.Text;
+                if (code != "" && name != "")
+                {
+
+                    int id = Convert.ToInt32(ids.Text);
+                    DTO_Producer dTO_Producer = new DTO_Producer(id, code, name);
+
+                    if (bus.updateProducer(dTO_Producer))
+                    {
+                        MessageBox.Show("Cập nhật nhà sản xuất thành công.");
+                        dataGridView1.DataSource = bus.getAllData();
+                    }
+                }
+                else { MessageBox.Show("Vui lòng điền đầy đủ thông tin!"); }
             }
-            else
-            {
-                MessageBox.Show("Cập nhật nhà sản xuất không thành công.");
-            }
+            else { MessageBox.Show("Vui lòng chọn nhà sản xuất!"); }
         }
 
         private void cancel_Click(object sender, EventArgs e)
@@ -155,24 +163,8 @@ namespace QuanLyMayTinh
 
             DataTable searchResults;
 
-            if (!string.IsNullOrEmpty(searchName))
-            {
-                searchResults = bus.FindByNameProducer(searchName);
-            }
-            else
-            {
-                searchResults = bus.FindByCodeProducer(searchCode);
-            }
-
-            if (searchResults != null && searchResults.Rows.Count > 0)
-            {
-
-                dataGridView1.DataSource = searchResults;
-            }
-            else
-            {
-                MessageBox.Show("Không có kết quả nào được tìm thấy.");
-            }
+            searchResults = bus.FindProducer(searchName,searchCode);
+            dataGridView1.DataSource = searchResults;
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -183,14 +175,5 @@ namespace QuanLyMayTinh
             names.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
         }
 
-        private void name_producer_Click(object sender, EventArgs e)
-        {
-            code_producer.Text = string.Empty;
-        }
-
-        private void code_producer_Click(object sender, EventArgs e)
-        {
-            name_producer.Text = string.Empty;
-        }
     }
 }

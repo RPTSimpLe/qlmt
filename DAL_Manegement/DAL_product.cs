@@ -41,13 +41,7 @@ namespace DAL_Manegement
         }
         public DataTable findProductById(int id)
         {
-            string sql = "SELECT product.id AS [ID], product.nameProduct AS [Tên sản phẩm],product.warranty AS [Bảo hành]," +
-                "product.descriptions AS [Mô tả],product.years AS [Năm sx],category.nameCategory as [Loại], producer.nameProducer as [Hãng], " +
-                "(select Sum(options.quantity) from options where product.id = 2) as [Tồn kho] " +
-                "from product " +
-                "join category on category.id = product.category_id " +
-                "join producer on producer.id = product.producer_id " +
-                "WHERE product.id LIKE @id";
+            string sql = "exec sp_select_productById @id";
 
             SqlCommand comm = new SqlCommand(sql, conn);
             comm.Parameters.AddWithValue("@id", id);

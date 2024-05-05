@@ -35,7 +35,6 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnDetail = new System.Windows.Forms.Button();
             this.ids = new System.Windows.Forms.TextBox();
-            this.cancel = new System.Windows.Forms.Button();
             this.deleteUser = new System.Windows.Forms.Button();
             this.addUser = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -106,7 +105,6 @@
             // 
             this.groupBox5.Controls.Add(this.btnDetail);
             this.groupBox5.Controls.Add(this.ids);
-            this.groupBox5.Controls.Add(this.cancel);
             this.groupBox5.Controls.Add(this.deleteUser);
             this.groupBox5.Controls.Add(this.addUser);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Right;
@@ -123,7 +121,7 @@
             this.btnDetail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetail.Image = global::QuanLyMayTinh.Properties.Resources.pencil__2_;
             this.btnDetail.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDetail.Location = new System.Drawing.Point(34, 195);
+            this.btnDetail.Location = new System.Drawing.Point(30, 195);
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.Size = new System.Drawing.Size(154, 75);
             this.btnDetail.TabIndex = 40;
@@ -139,19 +137,6 @@
             this.ids.Size = new System.Drawing.Size(223, 30);
             this.ids.TabIndex = 27;
             this.ids.Visible = false;
-            // 
-            // cancel
-            // 
-            this.cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancel.Image = global::QuanLyMayTinh.Properties.Resources.close__1_;
-            this.cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cancel.Location = new System.Drawing.Point(251, 195);
-            this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(146, 76);
-            this.cancel.TabIndex = 26;
-            this.cancel.Text = "Hủy";
-            this.cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cancel.UseVisualStyleBackColor = true;
             // 
             // deleteUser
             // 
@@ -214,7 +199,7 @@
             // cbo_Producer
             // 
             this.cbo_Producer.FormattingEnabled = true;
-            this.cbo_Producer.Location = new System.Drawing.Point(1014, 44);
+            this.cbo_Producer.Location = new System.Drawing.Point(1013, 38);
             this.cbo_Producer.Name = "cbo_Producer";
             this.cbo_Producer.Size = new System.Drawing.Size(179, 33);
             this.cbo_Producer.TabIndex = 3;
@@ -223,7 +208,7 @@
             // cbo_category
             // 
             this.cbo_category.FormattingEnabled = true;
-            this.cbo_category.Location = new System.Drawing.Point(731, 41);
+            this.cbo_category.Location = new System.Drawing.Point(728, 38);
             this.cbo_category.Name = "cbo_category";
             this.cbo_category.Size = new System.Drawing.Size(176, 33);
             this.cbo_category.TabIndex = 2;
@@ -279,7 +264,6 @@
         private System.Windows.Forms.ComboBox cbo_Producer;
         private System.Windows.Forms.ComboBox cbo_category;
         private System.Windows.Forms.TextBox txt_findName;
-        private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Button deleteUser;
         private System.Windows.Forms.Button addUser;
         private System.Windows.Forms.TextBox ids;

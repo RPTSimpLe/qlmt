@@ -83,6 +83,10 @@ namespace DAL_Manegement
             try
             {
                 conn.Open();
+                string s = "delete from options where product_id = @productId";
+                SqlCommand comm1 = new SqlCommand(s, conn);
+                comm1.Parameters.AddWithValue("@productId", productId);
+                comm1.ExecuteNonQuery();
 
                 string s1 = "delete from images WHERE product_id = @productId";
                 SqlCommand comm = new SqlCommand(s1, conn);

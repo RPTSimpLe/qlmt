@@ -154,29 +154,43 @@ namespace QuanLyMayTinh
 
         private void quantity_TextChanged(object sender, EventArgs e)
         {
-            System.Windows.Forms.TextBox textBoxQuantity = sender as System.Windows.Forms.TextBox;
-            int j = (int)textBoxQuantity.Tag;
-
-            System.Windows.Forms.TextBox TextBoxPrice = groupBox5.Controls.Find("price" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
-            System.Windows.Forms.TextBox TextBoxTotalPrice = groupBox5.Controls.Find("totalPrice" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
-
-            if (textBoxQuantity.Text != "" && TextBoxPrice.Text != "")
+            try
             {
-                TextBoxTotalPrice.Text = Convert.ToInt64(TextBoxPrice.Text) * Convert.ToInt64(textBoxQuantity.Text)+"";
+                System.Windows.Forms.TextBox textBoxQuantity = sender as System.Windows.Forms.TextBox;
+                int j = (int)textBoxQuantity.Tag;
+
+                System.Windows.Forms.TextBox TextBoxPrice = groupBox5.Controls.Find("price" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
+                System.Windows.Forms.TextBox TextBoxTotalPrice = groupBox5.Controls.Find("totalPrice" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
+
+                if (textBoxQuantity.Text != "" && TextBoxPrice.Text != "")
+                {
+                    TextBoxTotalPrice.Text = Convert.ToInt64(TextBoxPrice.Text) * Convert.ToInt64(textBoxQuantity.Text)+"";
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Số lượng phải là số!");
             }
         }
 
         private void price_TextChanged(object sender, EventArgs e)
         {
-            System.Windows.Forms.TextBox textBoxPrice = sender as System.Windows.Forms.TextBox;
-            int j = (int)textBoxPrice.Tag;
-
-            System.Windows.Forms.TextBox textBoxQuantity = groupBox5.Controls.Find("quantity" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
-            System.Windows.Forms.TextBox TextBoxTotalPrice = groupBox5.Controls.Find("totalPrice" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
-
-            if (textBoxQuantity.Text != "" && textBoxPrice.Text != "")
+            try
             {
-                TextBoxTotalPrice.Text = Convert.ToInt64(textBoxPrice.Text) * Convert.ToInt64(textBoxQuantity.Text) + "";
+                System.Windows.Forms.TextBox textBoxPrice = sender as System.Windows.Forms.TextBox;
+                int j = (int)textBoxPrice.Tag;
+
+                System.Windows.Forms.TextBox textBoxQuantity = groupBox5.Controls.Find("quantity" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
+                System.Windows.Forms.TextBox TextBoxTotalPrice = groupBox5.Controls.Find("totalPrice" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
+
+                if (textBoxQuantity.Text != "" && textBoxPrice.Text != "")
+                {
+                    TextBoxTotalPrice.Text = Convert.ToInt64(textBoxPrice.Text) * Convert.ToInt64(textBoxQuantity.Text) + "";
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Giá phải là số!");
             }
         }
 

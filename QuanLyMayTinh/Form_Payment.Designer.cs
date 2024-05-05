@@ -89,14 +89,14 @@
             // 
             this.txt_Address.Location = new System.Drawing.Point(216, 208);
             this.txt_Address.Name = "txt_Address";
-            this.txt_Address.Size = new System.Drawing.Size(659, 30);
+            this.txt_Address.Size = new System.Drawing.Size(688, 30);
             this.txt_Address.TabIndex = 7;
             // 
             // txt_phone
             // 
             this.txt_phone.Location = new System.Drawing.Point(708, 132);
             this.txt_phone.Name = "txt_phone";
-            this.txt_phone.Size = new System.Drawing.Size(167, 30);
+            this.txt_phone.Size = new System.Drawing.Size(196, 30);
             this.txt_phone.TabIndex = 8;
             // 
             // groupBox1
@@ -121,7 +121,7 @@
             // 
             // txt_searchCus
             // 
-            this.txt_searchCus.Location = new System.Drawing.Point(237, 23);
+            this.txt_searchCus.Location = new System.Drawing.Point(266, 23);
             this.txt_searchCus.Name = "txt_searchCus";
             this.txt_searchCus.Size = new System.Drawing.Size(638, 30);
             this.txt_searchCus.TabIndex = 12;
@@ -141,7 +141,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(48, 68);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(827, 33);
+            this.comboBox1.Size = new System.Drawing.Size(856, 33);
             this.comboBox1.TabIndex = 10;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 

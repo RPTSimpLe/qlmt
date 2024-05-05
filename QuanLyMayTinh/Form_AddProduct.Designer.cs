@@ -95,7 +95,7 @@
             // btnImagesProduct
             // 
             this.btnImagesProduct.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImagesProduct.Location = new System.Drawing.Point(743, 420);
+            this.btnImagesProduct.Location = new System.Drawing.Point(390, 420);
             this.btnImagesProduct.Name = "btnImagesProduct";
             this.btnImagesProduct.Size = new System.Drawing.Size(101, 31);
             this.btnImagesProduct.TabIndex = 22;
@@ -109,6 +109,7 @@
             this.image.Name = "image";
             this.image.Size = new System.Drawing.Size(315, 30);
             this.image.TabIndex = 21;
+            this.image.Visible = false;
             // 
             // picture
             // 

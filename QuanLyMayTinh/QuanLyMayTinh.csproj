@@ -192,6 +192,7 @@
     <Compile Include="Form_ThongKeThu.Designer.cs">
       <DependentUpon>Form_ThongKeThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeColor.cs" />

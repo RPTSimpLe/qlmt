@@ -129,41 +129,16 @@ namespace DAL_Manegement
                 conn.Close();
             }
         }
-        public DataTable findByNameProducer(string name)
+        public DataTable FindProducer(string name, string code)
         {
             try
             {
                 conn.Open();
 
-                string sql = "SELECT id AS [ID], code AS [Mã NSX], nameProducer AS [Tên NSX] FROM producer WHERE nameProducer LIKE @name";
+                string sql = "SELECT id AS [ID], code AS [Mã NSX], nameProducer AS [Tên NSX] FROM producer WHERE nameProducer LIKE @name and code LIKE @code";
 
                 SqlCommand comm = new SqlCommand(sql, conn);
                 comm.Parameters.AddWithValue("@name", "%" + name + "%");
-
-                SqlDataAdapter adapter = new SqlDataAdapter(comm);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-
-                return dt;
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-        public DataTable findByCodeProducer(string code)
-        {
-            try
-            {
-                conn.Open();
-
-                string sql = "SELECT id AS [ID], code AS [Mã NSX], nameProducer AS [Tên NSX] FROM producer WHERE code LIKE @code";
-
-                SqlCommand comm = new SqlCommand(sql, conn);
                 comm.Parameters.AddWithValue("@code", "%" + code + "%");
 
                 SqlDataAdapter adapter = new SqlDataAdapter(comm);
