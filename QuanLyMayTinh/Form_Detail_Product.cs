@@ -173,17 +173,17 @@ namespace QuanLyMayTinh
 
                 TextBox textBox2 = new TextBox();
                 textBox2.Location = new System.Drawing.Point(400, 60);
-                textBox2.Name = "importPrice_" + (i + 1);
+                textBox2.Name = "sellingPrice_" + (i + 1);
                 textBox2.Size = new System.Drawing.Size(88, 30);
                 textBox2.TabIndex = 49;
-                textBox2.Text = dataTable.Rows[i]["importPrice"].ToString();
+                textBox2.Text = dataTable.Rows[i]["sellingPrice"].ToString();
 
                 TextBox textBox = new TextBox();
                 textBox.Location = new System.Drawing.Point(520, 60);
-                textBox.Name = "sellingPrice_" + (i + 1);
+                textBox.Name = "importPrice_" + (i + 1);
                 textBox.Size = new System.Drawing.Size(88, 30);
                 textBox.TabIndex = 48;
-                textBox.Text = dataTable.Rows[i]["sellingPrice"].ToString();
+                textBox.Text = dataTable.Rows[i]["importPrice"].ToString();
 
                 Button button = new Button();
                 button.Cursor = System.Windows.Forms.Cursors.Hand;
