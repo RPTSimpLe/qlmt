@@ -52,7 +52,7 @@ namespace DAL_Manegement
             }
         }
 
-        public bool update(DTO_Image img)
+        public int update(DTO_Image img)
         {
             try
             {
@@ -65,13 +65,38 @@ namespace DAL_Manegement
 
                 if (comm.ExecuteNonQuery() > 0)
                 {
-                    return true;
+                    return 1;
                 }
-                return false;
+                return 0;
             }
             catch (Exception ex)
             {
-                return false;
+                return 0;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public int delete(int productId)
+        {
+            try
+            {
+                conn.Open();
+
+                string s1 = "delete from images WHERE product_id = @productId";
+                SqlCommand comm = new SqlCommand(s1, conn);
+                comm.Parameters.AddWithValue("@productId", productId);
+
+                if (comm.ExecuteNonQuery() > 0)
+                {
+                    return 1;
+                }
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
             finally
             {

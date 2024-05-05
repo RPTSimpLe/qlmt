@@ -23,9 +23,13 @@ namespace BUS_Manegement
             return DAL_Image.add(img);
         }
 
-        public bool update(DTO_Image img)
+        public int update(DTO_Image img)
         {
             return DAL_Image.update(img);
+        }
+        public int delete(int productId)
+        {
+            return DAL_Image.delete(productId);
         }
     }
 }

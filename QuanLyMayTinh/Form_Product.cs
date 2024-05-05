@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace QuanLyMayTinh
     public partial class Form_Product : Form
     {
         public static BUS_product product = new BUS_product();
+        private BUS_Image bUS_Image = new BUS_Image();
         public static BUS_Producer bus_producer = new BUS_Producer();
         public static BUS_Category bus_category = new BUS_Category();
 
@@ -68,6 +70,7 @@ namespace QuanLyMayTinh
         private void deleteUser_Click(object sender, EventArgs e)
         {
             product.deleteProduct(Convert.ToInt32(ids.Text));
+            bUS_Image.delete(Convert.ToInt32(ids.Text));
             this.getAll();
             MessageBox.Show("Xóa thành công");
         }

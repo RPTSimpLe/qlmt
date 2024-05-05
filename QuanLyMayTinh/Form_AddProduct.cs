@@ -73,7 +73,7 @@ namespace QuanLyMayTinh
         private void btnImagesProduct_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = ofd.Filter = "JPG files (*.jpg) | *.jpg|All files (*.*)|*.*";
+            ofd.Filter = ofd.Filter = "Image Files (*.jpg;*.jpeg;*.png) | *.jpg;*.jpeg;*.png";
             ofd.FilterIndex = 1;
             ofd.RestoreDirectory = true;
             if (ofd.ShowDialog() == DialogResult.OK)

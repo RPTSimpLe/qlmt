@@ -45,6 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.totalQuantity = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.image = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnImagesProduct = new System.Windows.Forms.Button();
@@ -192,6 +193,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.image);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.btnImagesProduct);
@@ -219,6 +221,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sản phẩm";
             // 
+            // image
+            // 
+            this.image.Location = new System.Drawing.Point(560, 588);
+            this.image.Name = "image";
+            this.image.Size = new System.Drawing.Size(215, 30);
+            this.image.TabIndex = 64;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(20, 29);
@@ -240,12 +249,13 @@
             // btnImagesProduct
             // 
             this.btnImagesProduct.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImagesProduct.Location = new System.Drawing.Point(560, 583);
+            this.btnImagesProduct.Location = new System.Drawing.Point(781, 588);
             this.btnImagesProduct.Name = "btnImagesProduct";
             this.btnImagesProduct.Size = new System.Drawing.Size(101, 31);
             this.btnImagesProduct.TabIndex = 61;
             this.btnImagesProduct.Text = "Chọn tệp";
             this.btnImagesProduct.UseVisualStyleBackColor = true;
+            this.btnImagesProduct.Click += new System.EventHandler(this.btnImagesProduct_Click);
             // 
             // groupBox2
             // 
@@ -322,5 +332,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox image;
     }
 }

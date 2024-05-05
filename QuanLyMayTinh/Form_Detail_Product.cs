@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,7 +75,6 @@ namespace QuanLyMayTinh
 
         private void Form_Detail_Product_Load(object sender, EventArgs e)
         {
-            pictureBox1.Image = System.Drawing.Image.FromFile(bUS_Image.getByUrl(proId));
             this.loadProduct();
             this.loadOption();
         }
@@ -90,6 +90,7 @@ namespace QuanLyMayTinh
             category.Text = dt.Rows[0]["Loại"].ToString();
             producer.Text = dt.Rows[0]["Hãng"].ToString();
             totalQuantity.Text = dt.Rows[0]["Tồn kho"].ToString();
+            pictureBox1.Image = System.Drawing.Image.FromFile(bUS_Image.getByUrl(proId));
         }
 
         public void loadOption()
@@ -251,12 +252,33 @@ namespace QuanLyMayTinh
             String des = descrption.Text.ToString();
             String nameCate = category.Text.ToString();
             String nameProducer = producer.Text.ToString();
+            string path = image.Text;
+            String outputPath = @"D:\code\c#\qlmt\QuanLyMayTinh\Images\";
 
             DTO_product dTO_Product = new DTO_product(id,namePro,year,des,warranty,nameCate,nameProducer);
+            
+            File.Copy(path, Path.Combine(outputPath, Path.GetFileName(image.Text)), true);
+
+            DTO_Image dTO_Image = new DTO_Image(proId, Path.Combine(outputPath, Path.GetFileName(image.Text)));
+            bUS_Image.update(dTO_Image);
 
             bUS_Product.updateProduct(dTO_Product);
 
             MessageBox.Show("Cập nhật thành công");
         }
+
+        private void btnImagesProduct_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files (*.jpg;*.jpeg;*.png) | *.";
+            ofd.FilterIndex = 1;
+            ofd.RestoreDirectory = true;
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = new Bitmap(ofd.FileName);
+                image.Text = ofd.FileName;
+            }
+        }
+
     }
 }
