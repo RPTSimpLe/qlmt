@@ -74,6 +74,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.AliceBlue;
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -163,7 +164,7 @@
             this.groupBox5.Size = new System.Drawing.Size(508, 859);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Thao tác";
+            this.groupBox5.Text = "Chức năng";
             // 
             // label10
             // 
@@ -409,7 +410,7 @@
             this.export_excel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.export_excel.Image = global::QuanLyMayTinh.Properties.Resources.excel;
             this.export_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.export_excel.Location = new System.Drawing.Point(1509, 18);
+            this.export_excel.Location = new System.Drawing.Point(1262, 18);
             this.export_excel.Name = "export_excel";
             this.export_excel.Size = new System.Drawing.Size(157, 72);
             this.export_excel.TabIndex = 23;
@@ -456,7 +457,7 @@
             this.ClientSize = new System.Drawing.Size(1839, 1028);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form_Account";
-            this.Text = "Danh sách tài khoản";
+            this.Text = "      Danh sách tài khoản";
             this.Load += new System.EventHandler(this.Form_Account_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

@@ -50,12 +50,12 @@ namespace QuanLyMayTinh
                     }
                     else if (radioNu.Checked)
                     {
-                        gender = "Nu";
+                        gender = "Nữ";
                     }
                     string roleName = comboRole.SelectedItem.ToString();
                     int roleId = dal.GetRoleIdByRoleName(roleName);
 
-                    if (!IsValidEmail(email)) { throw new Exception("Email không đúng định dạng!"); }
+                    if (IsValidEmail(email)) { throw new Exception("Email không đúng định dạng!"); }
                     DateTime birthday = births.Value;
                     DTO_Users dTO_Users = new DTO_Users(0, name, username, pass, gender, phone, birthday, email, adres, roleId);
                     if (bus.addUser(dTO_Users, roleName))
@@ -143,12 +143,12 @@ namespace QuanLyMayTinh
                         }
                         else if (radioNu.Checked)
                         {
-                            gender = "Nu";
+                            gender = "Nữ";
                         }
                         string roleName = comboRole.SelectedItem.ToString();
                         int roleId = dal.GetRoleIdByRoleName(roleName);
                         DateTime birthday = births.Value;
-                        if (!IsValidEmail(email)) { throw new Exception("Email không đúng định dạng!"); }
+                        if (IsValidEmail(email)) { throw new Exception("Email không đúng định dạng!"); }
 
                         DTO_Users dTO_Users = new DTO_Users(id, name, username, pass, gender, phone, birthday, email, adres, roleId);
 
@@ -251,7 +251,7 @@ namespace QuanLyMayTinh
             {
                 radioNam.Checked = true;
             }
-            else if (gender == "Nu")
+            else if (gender == "Nữ")
             {
                 radioNu.Checked = true;
             }

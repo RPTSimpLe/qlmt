@@ -136,7 +136,7 @@
             this.groupBox4.Controls.Add(this.nameUser);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(3, 26);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(1912, 99);
@@ -161,7 +161,7 @@
             this.comboBoxProducer.FormattingEnabled = true;
             this.comboBoxProducer.Location = new System.Drawing.Point(1014, 44);
             this.comboBoxProducer.Name = "comboBoxProducer";
-            this.comboBoxProducer.Size = new System.Drawing.Size(179, 33);
+            this.comboBoxProducer.Size = new System.Drawing.Size(179, 30);
             this.comboBoxProducer.TabIndex = 3;
             this.comboBoxProducer.Text = "Lọc theo hãng";
             // 
@@ -170,7 +170,7 @@
             this.comboBoxType.FormattingEnabled = true;
             this.comboBoxType.Location = new System.Drawing.Point(731, 41);
             this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(176, 33);
+            this.comboBoxType.Size = new System.Drawing.Size(176, 30);
             this.comboBoxType.TabIndex = 2;
             this.comboBoxType.Text = "Lọc theo loại";
             // 
@@ -186,7 +186,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(104, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 25);
+            this.label1.Size = new System.Drawing.Size(151, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tìm kiếm theo tên";
             // 
@@ -201,20 +201,20 @@
             this.groupBox5.Controls.Add(this.deleteProduct);
             this.groupBox5.Controls.Add(this.payments);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(1088, 125);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(827, 712);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Form";
+            this.groupBox5.Text = "Chức năng";
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Location = new System.Drawing.Point(130, 578);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(23, 25);
+            this.lblTotal.Size = new System.Drawing.Size(20, 22);
             this.lblTotal.TabIndex = 27;
             this.lblTotal.Text = "0";
             // 
@@ -223,7 +223,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(34, 578);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 25);
+            this.label15.Size = new System.Drawing.Size(90, 22);
             this.label15.TabIndex = 5;
             this.label15.Text = "Tổng tiền:";
             // 
@@ -247,7 +247,7 @@
             // 
             // totalPrice4
             // 
-            this.totalPrice4.Location = new System.Drawing.Point(546, 69);
+            this.totalPrice4.Location = new System.Drawing.Point(538, 64);
             this.totalPrice4.Name = "totalPrice4";
             this.totalPrice4.Size = new System.Drawing.Size(145, 30);
             this.totalPrice4.TabIndex = 10;
@@ -258,15 +258,15 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(464, 74);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 25);
+            this.label12.Size = new System.Drawing.Size(61, 22);
             this.label12.TabIndex = 8;
             this.label12.Text = "Tổng: ";
             // 
             // quantity4
             // 
-            this.quantity4.Location = new System.Drawing.Point(357, 69);
+            this.quantity4.Location = new System.Drawing.Point(357, 65);
             this.quantity4.Name = "quantity4";
-            this.quantity4.Size = new System.Drawing.Size(81, 30);
+            this.quantity4.Size = new System.Drawing.Size(49, 30);
             this.quantity4.TabIndex = 5;
             this.quantity4.Text = "1";
             this.quantity4.TextChanged += new System.EventHandler(this.quantity_TextChanged);
@@ -281,7 +281,7 @@
             // 
             // price4
             // 
-            this.price4.Location = new System.Drawing.Point(67, 69);
+            this.price4.Location = new System.Drawing.Point(67, 65);
             this.price4.Name = "price4";
             this.price4.Size = new System.Drawing.Size(147, 30);
             this.price4.TabIndex = 4;
@@ -290,18 +290,18 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(258, 77);
+            this.label9.Location = new System.Drawing.Point(258, 73);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(101, 25);
+            this.label9.Size = new System.Drawing.Size(93, 22);
             this.label9.TabIndex = 3;
             this.label9.Text = "Số lượng: ";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 77);
+            this.label10.Location = new System.Drawing.Point(6, 72);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 25);
+            this.label10.Size = new System.Drawing.Size(45, 22);
             this.label10.TabIndex = 2;
             this.label10.Text = "Giá:";
             // 
@@ -322,7 +322,7 @@
             this.cbo4.FormattingEnabled = true;
             this.cbo4.Location = new System.Drawing.Point(6, 29);
             this.cbo4.Name = "cbo4";
-            this.cbo4.Size = new System.Drawing.Size(664, 33);
+            this.cbo4.Size = new System.Drawing.Size(664, 30);
             this.cbo4.TabIndex = 0;
             this.cbo4.SelectedIndexChanged += new System.EventHandler(this.cbo1_SelectedIndexChanged);
             // 
@@ -346,7 +346,7 @@
             // 
             // totalPrice3
             // 
-            this.totalPrice3.Location = new System.Drawing.Point(546, 68);
+            this.totalPrice3.Location = new System.Drawing.Point(538, 66);
             this.totalPrice3.Name = "totalPrice3";
             this.totalPrice3.Size = new System.Drawing.Size(140, 30);
             this.totalPrice3.TabIndex = 8;
@@ -357,13 +357,13 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(464, 73);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(69, 25);
+            this.label13.Size = new System.Drawing.Size(61, 22);
             this.label13.TabIndex = 9;
             this.label13.Text = "Tổng: ";
             // 
             // idCus3
             // 
-            this.idCus3.Location = new System.Drawing.Point(224, 73);
+            this.idCus3.Location = new System.Drawing.Point(220, 65);
             this.idCus3.Name = "idCus3";
             this.idCus3.Size = new System.Drawing.Size(28, 30);
             this.idCus3.TabIndex = 7;
@@ -371,16 +371,16 @@
             // 
             // quantity3
             // 
-            this.quantity3.Location = new System.Drawing.Point(357, 69);
+            this.quantity3.Location = new System.Drawing.Point(357, 65);
             this.quantity3.Name = "quantity3";
-            this.quantity3.Size = new System.Drawing.Size(81, 30);
+            this.quantity3.Size = new System.Drawing.Size(49, 30);
             this.quantity3.TabIndex = 5;
             this.quantity3.Text = "1";
             this.quantity3.TextChanged += new System.EventHandler(this.quantity_TextChanged);
             // 
             // price3
             // 
-            this.price3.Location = new System.Drawing.Point(67, 69);
+            this.price3.Location = new System.Drawing.Point(67, 65);
             this.price3.Name = "price3";
             this.price3.Size = new System.Drawing.Size(147, 30);
             this.price3.TabIndex = 4;
@@ -389,18 +389,18 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(258, 77);
+            this.label7.Location = new System.Drawing.Point(258, 71);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 25);
+            this.label7.Size = new System.Drawing.Size(93, 22);
             this.label7.TabIndex = 3;
             this.label7.Text = "Số lượng: ";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 77);
+            this.label8.Location = new System.Drawing.Point(6, 73);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 25);
+            this.label8.Size = new System.Drawing.Size(45, 22);
             this.label8.TabIndex = 2;
             this.label8.Text = "Giá:";
             // 
@@ -421,7 +421,7 @@
             this.cbo3.FormattingEnabled = true;
             this.cbo3.Location = new System.Drawing.Point(6, 29);
             this.cbo3.Name = "cbo3";
-            this.cbo3.Size = new System.Drawing.Size(664, 33);
+            this.cbo3.Size = new System.Drawing.Size(664, 30);
             this.cbo3.TabIndex = 0;
             this.cbo3.SelectedIndexChanged += new System.EventHandler(this.cbo1_SelectedIndexChanged);
             // 
@@ -445,7 +445,7 @@
             // 
             // totalPrice2
             // 
-            this.totalPrice2.Location = new System.Drawing.Point(539, 69);
+            this.totalPrice2.Location = new System.Drawing.Point(531, 66);
             this.totalPrice2.Name = "totalPrice2";
             this.totalPrice2.Size = new System.Drawing.Size(147, 30);
             this.totalPrice2.TabIndex = 9;
@@ -456,13 +456,13 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(464, 72);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(69, 25);
+            this.label14.Size = new System.Drawing.Size(61, 22);
             this.label14.TabIndex = 10;
             this.label14.Text = "Tổng: ";
             // 
             // idCus2
             // 
-            this.idCus2.Location = new System.Drawing.Point(226, 69);
+            this.idCus2.Location = new System.Drawing.Point(224, 64);
             this.idCus2.Name = "idCus2";
             this.idCus2.Size = new System.Drawing.Size(26, 30);
             this.idCus2.TabIndex = 9;
@@ -470,16 +470,16 @@
             // 
             // quantity2
             // 
-            this.quantity2.Location = new System.Drawing.Point(357, 69);
+            this.quantity2.Location = new System.Drawing.Point(357, 64);
             this.quantity2.Name = "quantity2";
-            this.quantity2.Size = new System.Drawing.Size(81, 30);
+            this.quantity2.Size = new System.Drawing.Size(49, 30);
             this.quantity2.TabIndex = 5;
             this.quantity2.Text = "1";
             this.quantity2.TextChanged += new System.EventHandler(this.quantity_TextChanged);
             // 
             // price2
             // 
-            this.price2.Location = new System.Drawing.Point(67, 69);
+            this.price2.Location = new System.Drawing.Point(67, 64);
             this.price2.Name = "price2";
             this.price2.Size = new System.Drawing.Size(147, 30);
             this.price2.TabIndex = 4;
@@ -488,18 +488,18 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(258, 77);
+            this.label5.Location = new System.Drawing.Point(258, 72);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 25);
+            this.label5.Size = new System.Drawing.Size(93, 22);
             this.label5.TabIndex = 3;
             this.label5.Text = "Số lượng: ";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 77);
+            this.label6.Location = new System.Drawing.Point(6, 72);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 25);
+            this.label6.Size = new System.Drawing.Size(45, 22);
             this.label6.TabIndex = 2;
             this.label6.Text = "Giá:";
             // 
@@ -520,7 +520,7 @@
             this.cbo2.FormattingEnabled = true;
             this.cbo2.Location = new System.Drawing.Point(6, 29);
             this.cbo2.Name = "cbo2";
-            this.cbo2.Size = new System.Drawing.Size(664, 33);
+            this.cbo2.Size = new System.Drawing.Size(664, 30);
             this.cbo2.TabIndex = 0;
             this.cbo2.SelectedIndexChanged += new System.EventHandler(this.cbo1_SelectedIndexChanged);
             // 
@@ -547,13 +547,13 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(461, 72);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 25);
+            this.label11.Size = new System.Drawing.Size(61, 22);
             this.label11.TabIndex = 7;
             this.label11.Text = "Tổng: ";
             // 
             // totalPrice1
             // 
-            this.totalPrice1.Location = new System.Drawing.Point(536, 69);
+            this.totalPrice1.Location = new System.Drawing.Point(528, 65);
             this.totalPrice1.Name = "totalPrice1";
             this.totalPrice1.Size = new System.Drawing.Size(150, 30);
             this.totalPrice1.TabIndex = 6;
@@ -561,7 +561,7 @@
             // 
             // idCus1
             // 
-            this.idCus1.Location = new System.Drawing.Point(220, 72);
+            this.idCus1.Location = new System.Drawing.Point(220, 65);
             this.idCus1.Name = "idCus1";
             this.idCus1.Size = new System.Drawing.Size(32, 30);
             this.idCus1.TabIndex = 6;
@@ -569,16 +569,16 @@
             // 
             // quantity1
             // 
-            this.quantity1.Location = new System.Drawing.Point(357, 69);
+            this.quantity1.Location = new System.Drawing.Point(357, 64);
             this.quantity1.Name = "quantity1";
-            this.quantity1.Size = new System.Drawing.Size(81, 30);
+            this.quantity1.Size = new System.Drawing.Size(49, 30);
             this.quantity1.TabIndex = 5;
             this.quantity1.Text = "1";
             this.quantity1.TextChanged += new System.EventHandler(this.quantity_TextChanged);
             // 
             // price1
             // 
-            this.price1.Location = new System.Drawing.Point(67, 69);
+            this.price1.Location = new System.Drawing.Point(67, 64);
             this.price1.Name = "price1";
             this.price1.Size = new System.Drawing.Size(147, 30);
             this.price1.TabIndex = 4;
@@ -587,18 +587,18 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(258, 77);
+            this.label4.Location = new System.Drawing.Point(258, 72);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 25);
+            this.label4.Size = new System.Drawing.Size(93, 22);
             this.label4.TabIndex = 3;
             this.label4.Text = "Số lượng: ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 77);
+            this.label3.Location = new System.Drawing.Point(6, 69);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 25);
+            this.label3.Size = new System.Drawing.Size(45, 22);
             this.label3.TabIndex = 2;
             this.label3.Text = "Giá:";
             // 
@@ -619,7 +619,7 @@
             this.cbo1.FormattingEnabled = true;
             this.cbo1.Location = new System.Drawing.Point(6, 29);
             this.cbo1.Name = "cbo1";
-            this.cbo1.Size = new System.Drawing.Size(664, 33);
+            this.cbo1.Size = new System.Drawing.Size(664, 30);
             this.cbo1.TabIndex = 0;
             this.cbo1.SelectedIndexChanged += new System.EventHandler(this.cbo1_SelectedIndexChanged);
             // 
@@ -655,7 +655,7 @@
             // 
             this.groupBox6.Controls.Add(this.dataGridView1);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(3, 125);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(1085, 712);
@@ -679,6 +679,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.AliceBlue;
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -707,7 +708,7 @@
             this.ClientSize = new System.Drawing.Size(1924, 869);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form_Sell";
-            this.Text = "Bán hàng";
+            this.Text = "               Bán hàng";
             this.Load += new System.EventHandler(this.Form_Sell_Load);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();

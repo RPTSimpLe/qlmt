@@ -36,7 +36,7 @@ namespace QuanLyMayTinh
                     long sellingPrice = Convert.ToInt64(txt_SellPrice.Text.ToString());
                     long importPrice = Convert.ToInt64(txt_ImportPrice.Text.ToString());
 
-                    DTO_optionProduct dTO_OptionProduct = new DTO_optionProduct(0, ram, storage, quantity, sellingPrice, importPrice, proId);
+                    DTO_optionProduct dTO_OptionProduct = new DTO_optionProduct(0, ram, storage, quantity, importPrice, sellingPrice, proId);
                     optionProduct.addOption(dTO_OptionProduct);
                     this.Close();
                 }

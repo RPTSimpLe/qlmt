@@ -175,5 +175,16 @@ namespace QuanLyMayTinh
             names.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
         }
 
+        private void name_producer_TextChanged(object sender, EventArgs e)
+        {
+            code_producer.Text = "";
+            dataGridView1.DataSource = bus.getAllData();
+        }
+
+        private void code_producer_TextChanged(object sender, EventArgs e)
+        {
+            name_producer.Text = "";
+            dataGridView1.DataSource = bus.getAllData();
+        }
     }
 }

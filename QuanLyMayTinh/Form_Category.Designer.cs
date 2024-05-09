@@ -60,6 +60,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.AliceBlue;
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -125,7 +126,7 @@
             this.groupBox5.Size = new System.Drawing.Size(434, 647);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Form";
+            this.groupBox5.Text = "Chức năng";
             // 
             // excelExport
             // 
@@ -280,6 +281,7 @@
             this.codeCate.Name = "codeCate";
             this.codeCate.Size = new System.Drawing.Size(256, 30);
             this.codeCate.TabIndex = 3;
+            this.codeCate.TextChanged += new System.EventHandler(this.codeCate_TextChanged);
             // 
             // nameCate
             // 
@@ -287,6 +289,7 @@
             this.nameCate.Name = "nameCate";
             this.nameCate.Size = new System.Drawing.Size(256, 30);
             this.nameCate.TabIndex = 2;
+            this.nameCate.TextChanged += new System.EventHandler(this.nameCate_TextChanged);
             // 
             // label3
             // 
@@ -315,7 +318,7 @@
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "Form_Category";
-            this.Text = "Danh sách danh mục";
+            this.Text = "      Danh sách danh mục";
             this.Load += new System.EventHandler(this.Form_Category_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

@@ -61,6 +61,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.AliceBlue;
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -137,7 +138,7 @@
             this.groupBox5.Size = new System.Drawing.Size(508, 886);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Form";
+            this.groupBox5.Text = "Chức năng";
             // 
             // cancel
             // 
@@ -151,6 +152,7 @@
             this.cancel.Text = "Hủy";
             this.cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cancel.UseVisualStyleBackColor = true;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
             // saveUser
             // 
@@ -316,7 +318,7 @@
             this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form_Customer";
-            this.Text = "Khách hàng";
+            this.Text = "          Khách hàng";
             this.Load += new System.EventHandler(this.Form_Customer_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

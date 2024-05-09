@@ -54,18 +54,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 135);
+            this.label1.Location = new System.Drawing.Point(44, 152);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 25);
+            this.label1.Size = new System.Drawing.Size(131, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên khách hàng";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(556, 138);
+            this.label2.Location = new System.Drawing.Point(559, 152);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 25);
+            this.label2.Size = new System.Drawing.Size(114, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "Số điện thoại";
             // 
@@ -74,13 +74,13 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(44, 208);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 25);
+            this.label4.Size = new System.Drawing.Size(68, 22);
             this.label4.TabIndex = 3;
             this.label4.Text = "Địa chỉ";
             // 
             // txt_nameCus
             // 
-            this.txt_nameCus.Location = new System.Drawing.Point(216, 132);
+            this.txt_nameCus.Location = new System.Drawing.Point(216, 149);
             this.txt_nameCus.Name = "txt_nameCus";
             this.txt_nameCus.Size = new System.Drawing.Size(207, 30);
             this.txt_nameCus.TabIndex = 4;
@@ -94,13 +94,14 @@
             // 
             // txt_phone
             // 
-            this.txt_phone.Location = new System.Drawing.Point(708, 132);
+            this.txt_phone.Location = new System.Drawing.Point(708, 149);
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(196, 30);
             this.txt_phone.TabIndex = 8;
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.AliceBlue;
             this.groupBox1.Controls.Add(this.txt_searchCus);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.comboBox1);
@@ -111,8 +112,8 @@
             this.groupBox1.Controls.Add(this.txt_Address);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txt_nameCus);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(542, 12);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(545, 55);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(955, 812);
             this.groupBox1.TabIndex = 9;
@@ -121,27 +122,27 @@
             // 
             // txt_searchCus
             // 
-            this.txt_searchCus.Location = new System.Drawing.Point(266, 23);
+            this.txt_searchCus.Location = new System.Drawing.Point(266, 39);
             this.txt_searchCus.Name = "txt_searchCus";
-            this.txt_searchCus.Size = new System.Drawing.Size(638, 30);
+            this.txt_searchCus.Size = new System.Drawing.Size(652, 30);
             this.txt_searchCus.TabIndex = 12;
             this.txt_searchCus.TextChanged += new System.EventHandler(this.txt_searchCus_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(44, 26);
+            this.label7.Location = new System.Drawing.Point(44, 42);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(209, 25);
+            this.label7.Size = new System.Drawing.Size(187, 22);
             this.label7.TabIndex = 11;
             this.label7.Text = "Tìm kiếm khách hàng: ";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(48, 68);
+            this.comboBox1.Location = new System.Drawing.Point(62, 89);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(856, 33);
+            this.comboBox1.Size = new System.Drawing.Size(856, 30);
             this.comboBox1.TabIndex = 10;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -176,7 +177,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Location = new System.Drawing.Point(131, 487);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(23, 25);
+            this.lblTotal.Size = new System.Drawing.Size(20, 22);
             this.lblTotal.TabIndex = 2;
             this.lblTotal.Text = "0";
             // 
@@ -185,7 +186,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(25, 487);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 25);
+            this.label5.Size = new System.Drawing.Size(84, 22);
             this.label5.TabIndex = 1;
             this.label5.Text = "Tổng tiền";
             // 
@@ -205,6 +206,7 @@
             // groupBox3
             // 
             this.groupBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox3.BackgroundImage")));
+            this.groupBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox3.Controls.Add(this.groupBox1);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);

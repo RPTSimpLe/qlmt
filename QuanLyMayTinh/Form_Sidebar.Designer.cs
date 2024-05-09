@@ -74,7 +74,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(315, 870);
+            this.panelMenu.Size = new System.Drawing.Size(315, 834);
             this.panelMenu.TabIndex = 0;
             // 
             // button2
@@ -84,7 +84,7 @@
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -105,7 +105,7 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -125,7 +125,7 @@
             this.btnThongKeThu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnThongKeThu.FlatAppearance.BorderSize = 0;
             this.btnThongKeThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKeThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKeThu.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKeThu.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btnThongKeThu.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKeThu.Image")));
             this.btnThongKeThu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -145,7 +145,7 @@
             this.btnThongKeChi.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnThongKeChi.FlatAppearance.BorderSize = 0;
             this.btnThongKeChi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKeChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKeChi.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKeChi.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btnThongKeChi.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKeChi.Image")));
             this.btnThongKeChi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -165,7 +165,7 @@
             this.btnSell.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSell.FlatAppearance.BorderSize = 0;
             this.btnSell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSell.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSell.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btnSell.Image = ((System.Drawing.Image)(resources.GetObject("btnSell.Image")));
             this.btnSell.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -186,7 +186,7 @@
             this.btnRole.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRole.FlatAppearance.BorderSize = 0;
             this.btnRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRole.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRole.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btnRole.Image = ((System.Drawing.Image)(resources.GetObject("btnRole.Image")));
             this.btnRole.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -207,7 +207,7 @@
             this.btAccounts.Dock = System.Windows.Forms.DockStyle.Top;
             this.btAccounts.FlatAppearance.BorderSize = 0;
             this.btAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAccounts.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAccounts.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAccounts.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btAccounts.Image = ((System.Drawing.Image)(resources.GetObject("btAccounts.Image")));
             this.btAccounts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -228,7 +228,7 @@
             this.btProducers.Dock = System.Windows.Forms.DockStyle.Top;
             this.btProducers.FlatAppearance.BorderSize = 0;
             this.btProducers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btProducers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btProducers.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btProducers.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btProducers.Image = ((System.Drawing.Image)(resources.GetObject("btProducers.Image")));
             this.btProducers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -249,7 +249,7 @@
             this.btCategorys.Dock = System.Windows.Forms.DockStyle.Top;
             this.btCategorys.FlatAppearance.BorderSize = 0;
             this.btCategorys.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btCategorys.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCategorys.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCategorys.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btCategorys.Image = ((System.Drawing.Image)(resources.GetObject("btCategorys.Image")));
             this.btCategorys.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -270,7 +270,7 @@
             this.btProducts.Dock = System.Windows.Forms.DockStyle.Top;
             this.btProducts.FlatAppearance.BorderSize = 0;
             this.btProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btProducts.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btProducts.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btProducts.Image = ((System.Drawing.Image)(resources.GetObject("btProducts.Image")));
             this.btProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -324,9 +324,10 @@
             this.panelTitleBar.Controls.Add(this.btnCloseChildForm);
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelTitleBar.Location = new System.Drawing.Point(315, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1386, 75);
+            this.panelTitleBar.Size = new System.Drawing.Size(1081, 75);
             this.panelTitleBar.TabIndex = 1;
             // 
             // btnCloseChildForm
@@ -348,13 +349,13 @@
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.AutoSize = true;
             this.lblTitle.BackColor = System.Drawing.Color.SteelBlue;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTitle.Location = new System.Drawing.Point(558, 20);
+            this.lblTitle.Location = new System.Drawing.Point(315, 15);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(249, 42);
+            this.lblTitle.Size = new System.Drawing.Size(493, 42);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "TRANG CHỦ";
+            this.lblTitle.Text = "Phần mềm quản lý bán laptop";
             // 
             // panelDesktopPane
             // 
@@ -363,7 +364,7 @@
             this.panelDesktopPane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktopPane.Location = new System.Drawing.Point(315, 75);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(1386, 795);
+            this.panelDesktopPane.Size = new System.Drawing.Size(1081, 759);
             this.panelDesktopPane.TabIndex = 2;
             // 
             // pictureBox1
@@ -372,7 +373,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1386, 795);
+            this.pictureBox1.Size = new System.Drawing.Size(1081, 759);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -381,13 +382,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1701, 870);
+            this.ClientSize = new System.Drawing.Size(1396, 834);
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form_Sidebar";
-            this.Text = "Form_Sidebar";
+            this.Text = "Phần mềm quản lý bán laptop";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form_Sidebar_Load);
             this.panelMenu.ResumeLayout(false);

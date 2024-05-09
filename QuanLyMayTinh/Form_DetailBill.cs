@@ -46,23 +46,23 @@ namespace QuanLyMayTinh
             int count = 0;
             int lineHeight = 30;
 
-            string header = "Hóa đơn số: " + this.billDT.Rows[0]["MaHD"].ToString();
+            string header = "Hóa đơn số: " + this.billDT.Rows[0]["Mã hóa đơn"].ToString();
             yPos = lineHeight + count * font.GetHeight(g);
             g.DrawString(header, font, brush, 100, yPos);
 
-            string nameCus = "Tên khách hàng: " + this.billDT.Rows[0]["tenkh"].ToString();
+            string nameCus = "Tên khách hàng: " + this.billDT.Rows[0]["Tên khách hàng"].ToString();
             yPos += lineHeight + count * font.GetHeight(g);
             g.DrawString(nameCus, font, brush, 100, yPos);
 
-            string phone = "Điện thoại: " + this.billDT.Rows[0]["dienthoai"].ToString();
+            string phone = "Điện thoại: " + this.billDT.Rows[0]["Điện thoại"].ToString();
             yPos += lineHeight + count * font.GetHeight(g);
             g.DrawString(phone, font, brush, 100, yPos);
 
-            string address = "Địa chỉ: " + this.billDT.Rows[0]["diachi"].ToString();
+            string address = "Địa chỉ: " + this.billDT.Rows[0]["Địa chỉ"].ToString();
             yPos += lineHeight + count * font.GetHeight(g);
             g.DrawString(address, font, brush, 100, yPos);
 
-            string createdAT = "Ngày bán: " + this.billDT.Rows[0]["ngaytao"].ToString();
+            string createdAT = "Ngày bán: " + this.billDT.Rows[0]["Ngày tạo"].ToString();
             yPos += lineHeight + count * font.GetHeight(g);
             g.DrawString(createdAT, font, brush, 100, yPos);
             yPos += 50;
@@ -70,46 +70,46 @@ namespace QuanLyMayTinh
             int cellWidth = 100;
             int cellHeight = (int)font.GetHeight(g) + 10;
 
-            g.DrawRectangle(pen, 70, yPos, 50, cellHeight);
-            g.DrawString("STT", font, brush, 70, yPos);
+            g.DrawRectangle(pen, 10, yPos, 30, cellHeight);
+            g.DrawString("", font, brush, 15, yPos);
 
-            g.DrawRectangle(pen, 120, yPos, cellWidth * 2, cellHeight);
-            g.DrawString("Sản phẩm", font, brush, 120, yPos);
+            g.DrawRectangle(pen, 40, yPos, 150, cellHeight);
+            g.DrawString("Sản phẩm", font, brush, 50, yPos);
 
-            g.DrawRectangle(pen, 320, yPos, cellWidth * 2, cellHeight);
-            g.DrawString("Tùy chọn", font, brush, 320, yPos);
+            g.DrawRectangle(pen, 190, yPos, cellWidth * 3, cellHeight);
+            g.DrawString("Tùy chọn", font, brush, 200, yPos);
 
-            g.DrawRectangle(pen, 520, yPos, cellWidth, cellHeight);
-            g.DrawString("Số lượng", font, brush, 520, yPos);
+            g.DrawRectangle(pen, 490, yPos, 50, cellHeight);
+            g.DrawString("SL", font, brush, 500, yPos);
 
-            g.DrawRectangle(pen, 620, yPos, cellWidth, cellHeight);
-            g.DrawString("Đơn giá", font, brush, 620, yPos);
+            g.DrawRectangle(pen, 540, yPos, 150, cellHeight);
+            g.DrawString("Đơn giá", font, brush, 550, yPos);
 
-            g.DrawRectangle(pen, 720, yPos, cellWidth, cellHeight);
-            g.DrawString("Tổng", font, brush, 720, yPos);
+            g.DrawRectangle(pen, 690, yPos, 150, cellHeight);
+            g.DrawString("Tổng", font, brush, 700, yPos);
 
             yPos += cellHeight;
 
             int i = 1;
             foreach (DTO_detailBill dTO_Detail in this.lsdTO_Detail)
             {
-                g.DrawRectangle(pen, 70, yPos, 50, cellHeight);
-                g.DrawString(i.ToString(), font, brush, 70, yPos);
+                g.DrawRectangle(pen, 10, yPos, 30, cellHeight);
+                g.DrawString(i.ToString(), font, brush, 15, yPos);
 
-                g.DrawRectangle(pen, 120, yPos, cellWidth * 2, cellHeight);
-                g.DrawString(dTO_Detail.getNamePro(), font, brush, 120, yPos);
+                g.DrawRectangle(pen, 40, yPos, 150, cellHeight);
+                g.DrawString(dTO_Detail.getNamePro(), font, brush, 50, yPos);
 
-                g.DrawRectangle(pen, 320, yPos, cellWidth * 2, cellHeight);
-                g.DrawString("ram: "+dTO_Detail.getRam()+" - ổ cứng: "+ dTO_Detail.getStorage(), font, brush, 320, yPos);
+                g.DrawRectangle(pen, 190, yPos, cellWidth * 3, cellHeight);
+                g.DrawString("ram: "+dTO_Detail.getRam()+" - ổ cứng: "+ dTO_Detail.getStorage(), font, brush, 200, yPos);
 
-                g.DrawRectangle(pen, 520, yPos, cellWidth, cellHeight);
-                g.DrawString(dTO_Detail.getQuantity().ToString(), font, brush, 520, yPos);
+                g.DrawRectangle(pen, 490, yPos, 50, cellHeight);
+                g.DrawString(dTO_Detail.getQuantity().ToString(), font, brush, 500, yPos);
 
-                g.DrawRectangle(pen, 620, yPos, cellWidth, cellHeight);
-                g.DrawString(dTO_Detail.getPrice().ToString(), font, brush, 620, yPos);
+                g.DrawRectangle(pen, 540, yPos, 150, cellHeight);
+                g.DrawString(dTO_Detail.getPrice().ToString(), font, brush, 550, yPos);
 
-                g.DrawRectangle(pen, 720, yPos, cellWidth, cellHeight);
-                g.DrawString(dTO_Detail.getTongTien().ToString(), font, brush, 720, yPos);
+                g.DrawRectangle(pen, 690, yPos, 150, cellHeight);
+                g.DrawString(dTO_Detail.getTongTien().ToString(), font, brush, 700, yPos);
 
 
                 yPos += cellHeight;
@@ -119,11 +119,11 @@ namespace QuanLyMayTinh
 
         private void Form_DetailBill_Load(object sender, EventArgs e)
         {
-            txt_Address.Text = this.billDT.Rows[0]["diachi"].ToString();
-            txt_idBill.Text = this.billDT.Rows[0]["MaHD"].ToString();
-            txt_nameCus.Text = this.billDT.Rows[0]["tenkh"].ToString();
-            txt_phone.Text = this.billDT.Rows[0]["dienthoai"].ToString();
-            txt_createdAt.Text = this.billDT.Rows[0]["ngaytao"].ToString();
+            txt_Address.Text = this.billDT.Rows[0]["Địa chỉ"].ToString();
+            txt_idBill.Text = this.billDT.Rows[0]["Mã hóa đơn"].ToString();
+            txt_nameCus.Text = this.billDT.Rows[0]["Tên khách hàng"].ToString();
+            txt_phone.Text = this.billDT.Rows[0]["Điện thoại"].ToString();
+            txt_createdAt.Text = this.billDT.Rows[0]["Ngày tạo"].ToString();
 
             int i = 1;
             dataGridView1.ColumnCount = 6;

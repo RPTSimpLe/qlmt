@@ -26,6 +26,7 @@ namespace QuanLyMayTinh
         {
 
             InitializeComponent();
+     
         }
 
         private void Form_Product_Load(object sender, EventArgs e)
@@ -113,8 +114,14 @@ namespace QuanLyMayTinh
 
         private void addUser_Click(object sender, EventArgs e)
         {
-            Form_AddProduct form_AddProduct = new Form_AddProduct();
+           Form_AddProduct form_AddProduct = new Form_AddProduct();
             form_AddProduct.ShowDialog();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txt_findName.Text = "";
+            getAll();
         }
     }
 }

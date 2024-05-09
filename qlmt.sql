@@ -1,4 +1,4 @@
-﻿﻿create database qlmt;
+﻿create database qlmt;
 use qlmt;
 create table category(
 	id int identity(1,1) primary key,
@@ -23,9 +23,19 @@ create table users(
 	address nvarchar(255),
 	email varchar(255),
 		);
+
+create table role(
+	id int identity(1,1) primary key,
+	roles nvarchar(30)
+);
 ALTER TABLE users
 ADD role_id int,
 FOREIGN KEY (role_id) REFERENCES role(id);
+INSERT INTO role (roles) VALUES ('ADMIN'), ('USER');
+
+INSERT INTO users (fullname, username, pass, phone, gender, birthday, address, email, role_id) VALUES ('ltd', 'admin', 'admin', '0123456789', 'nam', '2022-11-22', 'xc dfsdksf', 'bhdsfb@gmail.com', 1)
+INSERT INTO users (fullname, username, pass, phone, gender, birthday, address, email, role_id) VALUES ('ltd', 'user', 'user', '0123456711', 'nam', '2022-11-22', 'xc dfsdksf', 'bhdsfb@gmail.com', 2)
+
 create table customers(
 	id int identity(1,1) primary key,
 	fullname nvarchar(30),
@@ -100,12 +110,7 @@ create table expense_statistics(
 	importPrice bigint,
 	created_at date,
 )
-create table role(
-	id int identity(1,1) primary key,
-	roles nvarchar(30)
-);
 
-INSERT INTO role (roles) VALUES ('ADMIN'), ('USER');
 -- drop function findCategoryId
 create function findCategoryId(@nameCategory nvarchar(30))
 returns int
@@ -216,37 +221,40 @@ create proc sp_select_bill
 	@tenKh varchar(20)
 as
 begin
-	select bill.id as [MaHD],sum(detailBill.price) as [tongTien],
-		customers.fullname as [tenkh], bill.created_at as [ngaytao]
+	select bill.id as [Mã hóa đơn],sum(detailBill.price*detailBill.quantity) as [Tổng tiền],
+		customers.fullname as [Tên khách hàng], bill.created_at as [Ngày tạo]
 	from bill
 	join detailBill on detailBill.bill_id = bill.id
 	join options on options.id = detailBill.options_id
 	join product on options.product_id = product.id
 	join customers on customers.id = bill.customer_id
-	where bill.id like @id and customers.fullname like @tenkh
-	Group by bill.id,product.nameProduct, customers.fullname ,bill.created_at
+	where bill.id like @id and customers.fullname like @tenKh
+	Group by bill.id, customers.fullname ,bill.created_at
 end
 -- exec sp_select_bill '%44%' , '%%'
 --select * from users
 --select * from role
-INSERT INTO users (fullname, username, pass, phone, gender, birthday, address, email, role_id) VALUES ('ltd', 'admin', 'employee', 'admin', 'nam', '2022-11-22', 'xc dfsdksf', 'bhdsfb@gmail.com', 1)
-INSERT INTO users (fullname, username, pass, phone, gender, birthday, address, email, role_id) VALUES ('ltd', 'user', 'employee', 'user', 'nam', '2022-11-22', 'xc dfsdksf', 'bhdsfb@gmail.com', 2)
+
 -- DELETE FROM bill WHERE id = 'HD062'
+select * from customers
+-- drop proc sp_select_feature_bill
 create proc sp_select_feature_bill
 	@id varchar(10)
 as
 begin
-	select top 1 bill.id as [MaHD],sum(detailBill.price) as [tongTien],
-		customers.fullname as [tenkh],customers.phone as [dienthoai],customers.addres as [diachi], bill.created_at as [ngaytao]
+	DECLARE @tongTien BIGINT
+    SET @tongTien = (SELECT SUM(detailBill.price*detailBill.quantity) FROM detailBill WHERE detailBill.bill_id = @id)
+
+	select top 1 bill.id as [Mã hóa đơn],@tongTien as [Tổng tiền],
+		customers.fullname as [Tên khách hàng],customers.phone as [Điện thoại],customers.addres as [Địa chỉ], bill.created_at as [Ngày tạo]
 	from bill
 	join detailBill on detailBill.bill_id = bill.id
 	join options on options.id = detailBill.options_id
 	join product on options.product_id = product.id
 	join customers on customers.id = bill.customer_id
 	where bill.id = @id
-	Group by bill.id,product.nameProduct, customers.fullname ,bill.created_at,customers.phone ,customers.addres 
-	ORDER BY bill.created_at DESC
 end
+
 
 CREATE PROC sp_select_productById
     @idPro INT

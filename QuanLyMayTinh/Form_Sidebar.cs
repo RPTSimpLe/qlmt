@@ -45,7 +45,7 @@ namespace QuanLyMayTinh
                     DisableButton();
                     currentButton = (Button)btnSender;
                     currentButton.ForeColor = Color.Black;
-                    currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    currentButton.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     btnCloseChildForm.Visible = true;
                 }
             }
@@ -58,7 +58,7 @@ namespace QuanLyMayTinh
                 {
                     previousBtn.BackColor = Color.FromArgb(176, 196, 222);
                     previousBtn.ForeColor = Color.Black;
-                    previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    previousBtn.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
             }
         }
@@ -81,7 +81,7 @@ namespace QuanLyMayTinh
         private void Reset()
         {
             DisableButton();
-            lblTitle.Text = "Trang Chủ";
+            lblTitle.Text = "Phần mềm quản lý bán laptop";
             panelTitleBar.BackColor = Color.FromArgb(70, 130, 180);
             panelLogo.BackColor = Color.FromArgb(176, 196, 222);
             currentButton = null;
@@ -132,19 +132,19 @@ namespace QuanLyMayTinh
 
         private void btAccounts_Click(object sender, EventArgs e)
         {
-            //if (this.users.getRole_id() == 1)
-            //{
+            if (this.users.getRole_id() == 1)
+            {
                 OpenChildForm(new Form_Account(), sender);
-            //}
-            //else { MessageBox.Show("bạn không được sử dụng tính năng này"); }
+            }
+            else { MessageBox.Show("bạn không được sử dụng tính năng này"); }
         }
 
         private void btnRole_Click(object sender, EventArgs e)
         {
-            //if (this.users.getRole_id() == 1) {
+            if (this.users.getRole_id() == 1) {
                 OpenChildForm(new Form_Role(), sender);            
-            //}
-            //else { MessageBox.Show("bạn không được sử dụng tính năng này"); }
+            }
+            else { MessageBox.Show("bạn không được sử dụng tính năng này"); }
         }
 
         private void btnSell_Click(object sender, EventArgs e)

@@ -183,6 +183,16 @@ namespace QuanLyMayTinh
 
         }
 
-        
+        private void nameCate_TextChanged(object sender, EventArgs e)
+        {
+            codeCate.Text = "";
+            dataGridView1.DataSource = bus.getAllData();
+        }
+
+        private void codeCate_TextChanged(object sender, EventArgs e)
+        {
+            nameCate.Text = "";
+            dataGridView1.DataSource = bus.getAllData();
+        }
     }
 }

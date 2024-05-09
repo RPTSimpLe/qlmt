@@ -81,7 +81,7 @@ namespace DAL_Manegement
                     "join product on options.product_id = product.id " +
                     "join customers on customers.id = bill.customer_id " +
                     "Group by bill.id,product.nameProduct, customers.fullname ,bill.created_at,customers.phone ,customers.addres " +
-                    "ORDER BY bill.created_at DESC";
+                    "ORDER BY bill.id DESC";
 
                 SqlCommand comm = new SqlCommand(sql, conn);
 

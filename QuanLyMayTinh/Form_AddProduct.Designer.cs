@@ -57,6 +57,7 @@
             // groupBox1
             // 
             this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -67,6 +68,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(187)))), ((int)(((byte)(119)))));
             this.groupBox2.Controls.Add(this.btnImagesProduct);
             this.groupBox2.Controls.Add(this.image);
             this.groupBox2.Controls.Add(this.picture);
@@ -86,9 +88,9 @@
             this.groupBox2.Controls.Add(this.nameProduct);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(610, 114);
+            this.groupBox2.Location = new System.Drawing.Point(775, 108);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(919, 802);
+            this.groupBox2.Size = new System.Drawing.Size(753, 722);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
@@ -113,7 +115,7 @@
             // 
             // picture
             // 
-            this.picture.Location = new System.Drawing.Point(18, 66);
+            this.picture.Location = new System.Drawing.Point(6, 104);
             this.picture.Name = "picture";
             this.picture.Size = new System.Drawing.Size(221, 211);
             this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -188,9 +190,9 @@
             this.btnsAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsAdd.Image = global::QuanLyMayTinh.Properties.Resources.plus__1_;
             this.btnsAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnsAdd.Location = new System.Drawing.Point(427, 632);
+            this.btnsAdd.Location = new System.Drawing.Point(344, 624);
             this.btnsAdd.Name = "btnsAdd";
-            this.btnsAdd.Size = new System.Drawing.Size(147, 75);
+            this.btnsAdd.Size = new System.Drawing.Size(161, 76);
             this.btnsAdd.TabIndex = 9;
             this.btnsAdd.Text = "Thêm";
             this.btnsAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -246,7 +248,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(444, 26);
+            this.label1.Location = new System.Drawing.Point(299, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(206, 34);
             this.label1.TabIndex = 0;

@@ -182,39 +182,46 @@ namespace QuanLyMayTinh
 
                 TextBox textBox2 = new TextBox();
                 textBox2.Location = new System.Drawing.Point(400, 60);
-                textBox2.Name = "sellingPrice_" + (i + 1);
+                textBox2.Name = "importPrice_" + (i + 1);
                 textBox2.Size = new System.Drawing.Size(88, 30);
                 textBox2.TabIndex = 49;
-                textBox2.Text = dataTable.Rows[i]["sellingPrice"].ToString();
+                textBox2.Text = dataTable.Rows[i]["importPrice"].ToString();
 
                 TextBox textBox = new TextBox();
                 textBox.Location = new System.Drawing.Point(520, 60);
-                textBox.Name = "importPrice_" + (i + 1);
+                textBox.Name = "sellingPrice_" + (i + 1);
                 textBox.Size = new System.Drawing.Size(88, 30);
                 textBox.TabIndex = 48;
-                textBox.Text = dataTable.Rows[i]["importPrice"].ToString();
+                textBox.Text = dataTable.Rows[i]["sellingPrice"].ToString();
+
+
+
 
                 Button button = new Button();
                 button.Cursor = System.Windows.Forms.Cursors.Hand;
-                button.Location = new System.Drawing.Point(650, 60);
+                button.Location = new System.Drawing.Point(620, 60);
                 button.Name = "btnDelete";
-                button.Size = new System.Drawing.Size(88, 30);
+                button.Size = new System.Drawing.Size(105, 40);
                 button.TabIndex = 58;
                 button.Text = "Xóa";
                 button.UseVisualStyleBackColor = true;
+                button.TextImageRelation = TextImageRelation.ImageBeforeText;
+                button.Image = Properties.Resources.bin;
+
                 button.Tag = (i + 1);
                 button.Click += new System.EventHandler(deleteOption_Click);
-
                 Button button1 = new Button();
                 button1.Cursor = System.Windows.Forms.Cursors.Hand;
-                button1.Location = new System.Drawing.Point(650, 32);
+                button1.Location = new System.Drawing.Point(620, 20);
                 button1.Name = "btnUpdate";
-                button1.Size = new System.Drawing.Size(88, 30);
+                button1.Size = new System.Drawing.Size(105, 40);
                 button1.TabIndex = 58;
                 button1.Text = "Cập nhật";
                 button1.UseVisualStyleBackColor = true;
                 button1.Tag = (i + 1);
                 button1.Click += new System.EventHandler(updateOptionClick);
+                button1.TextImageRelation = TextImageRelation.ImageBeforeText;
+                button1.Image = Properties.Resources.edit1;
 
                 TextBox textBox5 = new TextBox();
                 textBox5.Location = new System.Drawing.Point(298, 60);

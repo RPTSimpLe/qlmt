@@ -20,6 +20,7 @@ namespace QuanLyMayTinh
         public Form_ThongKeChi()
         {
             InitializeComponent();
+
         }
 
         private void Form_ThongKeChi_Load(object sender, EventArgs e)

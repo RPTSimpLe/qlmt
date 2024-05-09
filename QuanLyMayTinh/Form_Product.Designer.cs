@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Product));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnReset = new System.Windows.Forms.Button();
             this.btnDetail = new System.Windows.Forms.Button();
             this.ids = new System.Windows.Forms.TextBox();
             this.deleteUser = new System.Windows.Forms.Button();
@@ -53,6 +55,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.AliceBlue;
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -69,6 +72,7 @@
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(3, 18);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1552, 859);
@@ -79,7 +83,7 @@
             // 
             this.groupBox6.Controls.Add(this.dataGridView1);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(3, 117);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(1113, 739);
@@ -103,25 +107,39 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.btnReset);
             this.groupBox5.Controls.Add(this.btnDetail);
             this.groupBox5.Controls.Add(this.ids);
             this.groupBox5.Controls.Add(this.deleteUser);
             this.groupBox5.Controls.Add(this.addUser);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(1116, 117);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(433, 739);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Thao tác";
+            this.groupBox5.Text = "Chức năng";
+            // 
+            // btnReset
+            // 
+            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
+            this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReset.Location = new System.Drawing.Point(251, 208);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(151, 75);
+            this.btnReset.TabIndex = 41;
+            this.btnReset.Text = "Làm mới";
+            this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnDetail
             // 
             this.btnDetail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetail.Image = global::QuanLyMayTinh.Properties.Resources.pencil__2_;
             this.btnDetail.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDetail.Location = new System.Drawing.Point(30, 195);
+            this.btnDetail.Location = new System.Drawing.Point(30, 208);
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.Size = new System.Drawing.Size(154, 75);
             this.btnDetail.TabIndex = 40;
@@ -174,7 +192,7 @@
             this.groupBox4.Controls.Add(this.txt_findName);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(3, 18);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(1546, 99);
@@ -201,7 +219,7 @@
             this.cbo_Producer.FormattingEnabled = true;
             this.cbo_Producer.Location = new System.Drawing.Point(1013, 38);
             this.cbo_Producer.Name = "cbo_Producer";
-            this.cbo_Producer.Size = new System.Drawing.Size(179, 33);
+            this.cbo_Producer.Size = new System.Drawing.Size(179, 30);
             this.cbo_Producer.TabIndex = 3;
             this.cbo_Producer.Text = "Lọc theo hãng";
             // 
@@ -210,7 +228,7 @@
             this.cbo_category.FormattingEnabled = true;
             this.cbo_category.Location = new System.Drawing.Point(728, 38);
             this.cbo_category.Name = "cbo_category";
-            this.cbo_category.Size = new System.Drawing.Size(176, 33);
+            this.cbo_category.Size = new System.Drawing.Size(176, 30);
             this.cbo_category.TabIndex = 2;
             this.cbo_category.Text = "Lọc theo loại";
             // 
@@ -226,7 +244,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(104, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 25);
+            this.label1.Size = new System.Drawing.Size(151, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tìm kiếm theo tên";
             // 
@@ -237,7 +255,7 @@
             this.ClientSize = new System.Drawing.Size(1558, 880);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form_Product";
-            this.Text = "Danh sách sản phẩm";
+            this.Text = "       Danh sách sản phẩm";
             this.Load += new System.EventHandler(this.Form_Product_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -268,5 +286,6 @@
         private System.Windows.Forms.Button addUser;
         private System.Windows.Forms.TextBox ids;
         private System.Windows.Forms.Button btnDetail;
+        private System.Windows.Forms.Button btnReset;
     }
 }

@@ -60,6 +60,9 @@ namespace QuanLyMayTinh
                     Customer.addAccountCustomer(customer);
                     dataGridView1.DataSource = Customer.findCustomerByFullName(nameCus.Text);
                     MessageBox.Show("Thêm thành công!");
+                    names.Text="";
+                    phones.Text = "";
+                    address.Text = "";
                 }
                 else { MessageBox.Show("Vui lòng điền đầy đủ thông tin!"); }
             }
@@ -134,6 +137,15 @@ namespace QuanLyMayTinh
             String addres = address.Text;
             DTO_Customer customer = new DTO_Customer(id, name, phone, addres);
 
+        }
+
+        private void cancel_Click(object sender, EventArgs e)
+        {
+            names.Text = "";
+            phones.Text = "";
+            nameCus.Text = "";
+            address.Text = "";
+            dataGridView1.DataSource = Customer.getAllData();
         }
     }
 }
