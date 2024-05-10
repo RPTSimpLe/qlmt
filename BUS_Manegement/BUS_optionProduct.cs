@@ -30,6 +30,10 @@ namespace BUS_Manegement
         {
             return optionProduct.findId(ram, storage, sellingPrice);
         }
+        public DataTable findIdOp(int proId)
+        {
+            return optionProduct.findIdOp(proId);
+        }
         public bool addOption(DTO_optionProduct p)
         {
             return optionProduct.addOption(p);

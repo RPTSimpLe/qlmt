@@ -2,13 +2,9 @@
 using DTO_Manegement;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyMayTinh
@@ -20,7 +16,7 @@ namespace QuanLyMayTinh
         private BUS_optionProduct opProduct = new BUS_optionProduct();
         private BUS_bill bUS_Bill = new BUS_bill();
         private List<DTO_bill> dTO_Bills = new List<DTO_bill>();
-        private List<int> customerIds =new List<int>() ; 
+        private List<int> customerIds = new List<int>();
         public Form_Payment()
         {
             InitializeComponent();
@@ -57,7 +53,7 @@ namespace QuanLyMayTinh
         }
         private void txt_searchCus_TextChanged(object sender, EventArgs e)
         {
-            DataTable dt =  customer.findCustomerByFullName(txt_searchCus.Text);
+            DataTable dt = customer.findCustomerByFullName(txt_searchCus.Text);
             renderCbo(dt);
         }
         private void renderCbo(DataTable dt)
@@ -75,7 +71,7 @@ namespace QuanLyMayTinh
         {
             String value = comboBox1.SelectedItem.ToString().Trim();
             string[] parts = value.Split(new string[] { " - " }, StringSplitOptions.RemoveEmptyEntries);
-            
+
             txt_nameCus.Text = parts[0];
             txt_phone.Text = parts[1];
             txt_Address.Text = parts[2];
@@ -89,20 +85,20 @@ namespace QuanLyMayTinh
         private void addCustomer()
         {
             int i = comboBox1.SelectedIndex;
-            if(i == -1)
+            if (i == -1)
             {
-                    DTO_Customer dTO_Customer = new DTO_Customer();
-                    dTO_Customer.setfullname(txt_nameCus.Text);
-                    dTO_Customer.setphone(txt_phone.Text);
-                    dTO_Customer.setaddres(txt_Address.Text);
+                DTO_Customer dTO_Customer = new DTO_Customer();
+                dTO_Customer.setfullname(txt_nameCus.Text);
+                dTO_Customer.setphone(txt_phone.Text);
+                dTO_Customer.setaddres(txt_Address.Text);
 
-                    customer.addAccountCustomer(dTO_Customer);
-                    int cusId = customer.getId();
-                    
-                    foreach (var bill in this.dTO_Bills)
-                    {
-                        bill.setCustomer_id(cusId);
-                    }
+                customer.addAccountCustomer(dTO_Customer);
+                int cusId = customer.getId();
+
+                foreach (var bill in this.dTO_Bills)
+                {
+                    bill.setCustomer_id(cusId);
+                }
             }
         }
         private bool IsValidPhone(string phone)
@@ -131,6 +127,7 @@ namespace QuanLyMayTinh
                     bUS_Bill.addBill(this.dTO_Bills);
                     foreach (var bill in this.dTO_Bills)
                     {
+                    Console.WriteLine(bill.getoptionProduct_id());
                         updateOptionProduct(bill);
                     }
                     PrintDocument pd = new PrintDocument();
@@ -143,7 +140,8 @@ namespace QuanLyMayTinh
 
                     this.Close();
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -184,7 +182,7 @@ namespace QuanLyMayTinh
             g.DrawString(createdAT, font, brush, 100, yPos);
             yPos += 50;
 
-             int cellWidth = 100;
+            int cellWidth = 100;
             int cellHeight = (int)font.GetHeight(g) + 10;
 
             g.DrawRectangle(pen, 10, yPos, 30, cellHeight);
@@ -216,7 +214,7 @@ namespace QuanLyMayTinh
                 g.DrawRectangle(pen, 40, yPos, 150, cellHeight);
                 g.DrawString(dTO_Detail.getNamePro(), font, brush, 50, yPos);
 
-                g.DrawRectangle(pen, 190, yPos, cellWidth*3, cellHeight);
+                g.DrawRectangle(pen, 190, yPos, cellWidth * 3, cellHeight);
                 g.DrawString("ram: " + dTO_Detail.getRam() + " - ổ cứng: " + dTO_Detail.getStorage(), font, brush, 200, yPos);
 
                 g.DrawRectangle(pen, 490, yPos, 50, cellHeight);
@@ -233,13 +231,13 @@ namespace QuanLyMayTinh
                 i++;
             }
         }
-    private void updateOptionProduct(DTO_bill dTO_Bill)
+        private void updateOptionProduct(DTO_bill dTO_Bill)
         {
-            DTO_optionProduct dTO_OptionProduct= opProduct.findById(dTO_Bill.getoptionProduct_id());
-            if(dTO_OptionProduct.getSelllingPrice()!=dTO_Bill.getprice()) {
+            DTO_optionProduct dTO_OptionProduct = opProduct.findById(dTO_Bill.getoptionProduct_id());
+            if (dTO_OptionProduct.getSelllingPrice() != dTO_Bill.getprice())
+            {
                 dTO_OptionProduct.setSellingPrice(dTO_Bill.getprice());
             }
-
             long newQuantity = dTO_OptionProduct.getQuantity() - dTO_Bill.getQuantity();
             dTO_OptionProduct.setQuantity(newQuantity);
             opProduct.updateOption(dTO_OptionProduct, 1);

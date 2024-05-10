@@ -45,6 +45,7 @@ namespace QuanLyMayTinh
                 System.Windows.Forms.TextBox textBoxQuantity = groupBox5.Controls.Find("quantity" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
                 System.Windows.Forms.TextBox textBoxPrice = groupBox5.Controls.Find("price" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
                 System.Windows.Forms.TextBox textBoxTotalPrice = groupBox5.Controls.Find("totalPrice" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
+                System.Windows.Forms.TextBox textBoxProId = groupBox5.Controls.Find("idPro" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
 
                 if (groupBox.Visible == false)
                 {
@@ -56,6 +57,7 @@ namespace QuanLyMayTinh
                         String value = "Ram: " + dt.Rows[a]["ram"].ToString() + ", Ổ cứng:  " + dt.Rows[a]["storage"].ToString() + ", Tồn kho: " + dt.Rows[a]["quantity"].ToString() + ", Giá: " + dt.Rows[a]["sellingPrice"].ToString();
                         cbo.Items.Add(value);
                     }
+                    textBoxProId.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
                     cbo.Tag = j;
                     button.Tag = j;
                     textBoxQuantity.Tag = j;
@@ -74,12 +76,13 @@ namespace QuanLyMayTinh
             ComboBox cbo = sender as ComboBox;
             int j = (int)cbo.Tag;
             System.Windows.Forms.TextBox textBoxSellingPrice = groupBox5.Controls.Find("price" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
-            System.Windows.Forms.TextBox textBoxProId = groupBox5.Controls.Find("idCus" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
+            System.Windows.Forms.TextBox textBoxOpId = groupBox5.Controls.Find("idCus" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
+            System.Windows.Forms.TextBox textBoxProId = groupBox5.Controls.Find("idPro" + j, true).FirstOrDefault() as System.Windows.Forms.TextBox;
 
             String value = cbo.SelectedItem.ToString().Trim();
             string[] parts = value.Split(new string[] { ", ", ": " }, StringSplitOptions.RemoveEmptyEntries);
 
-            textBoxProId.Text = bUS_OptionProduct.findId(parts[1].Trim(), parts[3].Trim(), Convert.ToInt64(parts[7].Trim())).Rows[0]["id"].ToString();
+            textBoxOpId.Text = bUS_OptionProduct.findIdOp(Convert.ToInt32(textBoxProId.Text)).Rows[0]["id"].ToString();
             textBoxSellingPrice.Text = parts[7];
         }
 

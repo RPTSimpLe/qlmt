@@ -98,6 +98,19 @@ namespace DAL_Manegement
             return dt;
         }
 
+        public DataTable findIdOp(int proId)
+        {
+            string sql = "select id from options where product_id = @proId";
+
+            SqlCommand comm = new SqlCommand(sql, conn);
+            comm.Parameters.AddWithValue("@proId", proId);
+
+            dataAdapter = new SqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+            dataAdapter.Fill(dt);
+            return dt;
+        }
+
         public DataTable findName(int id)
         {
             string sql = "select product.nameProduct as [tensp], options.ram as [ram], options.storage as [storage] from options " +
@@ -133,7 +146,7 @@ namespace DAL_Manegement
 
             return new DTO_optionProduct(idOp, ram, storage, quantity, importPrice, sellingPrice, product_id);
         }
-        public bool updateOption(DTO_optionProduct optionProduct, int i=0)
+        public bool updateOption(DTO_optionProduct optionProduct, int i)
         {
             try
             {
