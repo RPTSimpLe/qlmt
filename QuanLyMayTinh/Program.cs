@@ -16,7 +16,7 @@ namespace QuanLyMayTinh
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Sidebar());
+            Application.Run(new Form_login());
         }
     }
 }
